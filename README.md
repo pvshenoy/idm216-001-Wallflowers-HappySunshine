@@ -1,5 +1,5 @@
 # idm216-001-Wallflowers-HappySunshine
-# Team Develoment Project: Happy Sunshine
+# Team Development Project: Happy Sunshine
 # Jervo
 # Boni
 # Ruxandra
