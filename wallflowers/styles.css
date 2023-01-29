@@ -1,0 +1,114 @@
+/* MEMBERS BLOCK DISPLAY */
+
+.members-container {
+    margin: 4rem;
+}
+
+.members-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 175px));
+    grid-gap: 40px 40px;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+
+/* MEMBERS COLORS */
+
+.cecilia p, .cecilia h2, .cecilia a {
+    color: #9B1060;
+}
+.cecilia h2 {
+    text-shadow: 1px 2px #580435;
+}
+
+.ruxandra p, .ruxandra a {
+    color: #B42000;
+}
+.ruxandra h2 {
+    color: #EC762E;
+    text-shadow: 1px 2px #B42000;
+}
+
+.cam p, .cam a {
+    color: #E25860;
+}
+.cam h2 {
+    color: #FC999F;
+    text-shadow: 1px 2px #E25860;
+}
+
+.preeti p, .preeti a {
+    color: #9D1A63;
+}
+.preeti h2 {
+    color: #D64D99;
+    text-shadow: 1px 2px #9D1A63;
+}
+
+.boni p, .boni a {
+    color: #DB4C2D;
+}
+.boni h2 {
+    color: #FF7759;
+    text-shadow: 1px 2px #DB4C2D;
+}
+
+.nikki p, .nikki a {
+    color: #C92D37;
+}
+.nikki h2 {
+    color: #F65B65;
+    text-shadow: 1px 2px #C92D37;
+}
+
+
+/* GENERAL */
+
+p, h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+}
+
+span {
+    font-weight: 500;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 3rem 2rem;
+}
+
+h2 {
+    font-family: nove, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 965px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 883px) {
+    .members {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .members p {
+        margin: 0px;
+    }
+
+    .space-fix {
+        padding-top: 16px;
+    }
+}
