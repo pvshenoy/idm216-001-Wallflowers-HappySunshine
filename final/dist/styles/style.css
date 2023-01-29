@@ -133,9 +133,30 @@ p {
     }
 }
 
+@media screen and (max-width: 988px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .personas, .journey-map, .wireframes {
+        margin-top: 3rem;
+    }
+}
+
+
 @media screen and (max-width: 880px) {
     .persona-1, .persona-2, .img-journeyMap, .img-wireframe, .mood-board, .style-guide {
         width: 600px;
+    }
+}
+
+@media screen and (max-width: 781px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .personas, .journey-map, .wireframes {
+        margin-top: 2.5rem;
     }
 }
 
@@ -283,6 +304,10 @@ p {
     .mood-board, .journey-map-mobile, .wireframes-mobile, .typography {
         width: 375px;
     }
+
+    h2 {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -300,5 +325,13 @@ p {
 
     .img-owner {
         margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 }
