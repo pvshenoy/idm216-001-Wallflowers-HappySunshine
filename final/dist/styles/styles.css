@@ -1,0 +1,51 @@
+body {
+    margin: 9rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFBF4;
+}
+
+h1 {
+    margin: 0px;
+    color: #90C5D3;
+    font-size: 10rem;
+    font-family: chauncy-pro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.logo {
+    width: 402px;
+}
+
+@media screen and (max-width: 850px) {
+    h1 {
+        font-size: 7rem;
+    }
+    body {
+        margin: 12rem 0;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .logo {
+        width: 300px;
+    }
+    body {
+        margin: 14rem 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    h1 {
+        font-size: 4rem;
+    }
+    .logo {
+        width: 250px;
+    }
+}
