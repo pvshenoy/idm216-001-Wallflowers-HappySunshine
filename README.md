@@ -1,6 +1,5 @@
 # IDM 216 Wallflowers Develoment Project: Happy Sunshine
 LIVE: https://camkelly.net/idm216/final/
-# preeti
 ***
 
 ### Gitignore
