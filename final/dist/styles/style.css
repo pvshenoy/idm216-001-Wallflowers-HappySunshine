@@ -92,8 +92,36 @@ p {
     margin-bottom: 3rem;
 }
 
-.wave-yellow-2, .blurb-1, .blurb-2, .users, .styles, .mapping, .wireframing {
+.mood-board {
+    width: 750px;
+}
+
+.style-guide {
+    width: 660px;
+}
+
+.wave-yellow-2, .blurb-1, .blurb-2, .users, .styles, .mapping, .wireframing, .style-guide1 {
     display: none;
+}
+
+@media screen and (max-width: 1592px) {
+    .mood-board {
+        width: 650px;
+    }
+    
+    .style-guide {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 1435px) {
+    .mood-board {
+        width: 550px;
+    }
+    
+    .style-guide {
+        width: 600px;
+    }
 }
 
 @media screen and (max-width: 1350px) {
@@ -148,45 +176,9 @@ p {
     .persona-1, .persona-2, .img-journeyMap, .img-wireframe, .mood-board, .style-guide {
         width: 600px;
     }
-}
 
-@media screen and (max-width: 781px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .personas, .journey-map, .wireframes {
-        margin-top: 2.5rem;
-    }
-}
-
-@media screen and (max-width: 649px) {
-    .wave-yellow, .blurb, .personas, .journey-map, .wireframes, .style-guide {
-        display: none;
-    }
-
-    .mood-board {
-        width: 450px;
-    }
-
-    .wave-orange {
-        width: 250px;
-    }
-    
-    .wave-yellow-2 {
+    .users, .style-guide1 {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 175px;
-    }
-
-    .blurb-1, .blurb-2, .users {
-        display: block;
-    }
-
-    .blurb-2 {
-        margin-top: 1rem;
     }
 
     .row1-opening {
@@ -226,6 +218,77 @@ p {
 
     .user-para {
         margin-top: 1rem;
+    }
+
+    .mood-board {
+        margin-top: 2rem;
+    }
+
+    .personas, .journey-map, .wireframes, .style-guide {
+        display: none;
+    }
+
+    .mapping, .wireframing {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mapping-header {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+    .mapping-header-text {
+        margin-left: 1rem;
+    }
+
+    .goals-expectations, .journey-map-mobile, .wireframes-mobile {
+        margin-top: 2rem;
+    }
+
+    .goals-expectations p, .mapping-bold {
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 781px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .personas, .journey-map, .wireframes {
+        margin-top: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 649px) {
+    .wave-yellow, .blurb, .style-guide1 {
+        display: none;
+    }
+
+    .blurb-1, .blurb-2, .users {
+        display: block;
+    }
+
+    .blurb-2 {
+        margin-top: 1rem;
+    }
+
+    .mood-board {
+        width: 450px;
+    }
+
+    .wave-orange {
+        width: 250px;
+    }
+    
+    .wave-yellow-2 {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 175px;
     }
 
     .styles {
@@ -276,28 +339,6 @@ p {
         margin: 3rem 0 1rem;
     }
 
-    .mapping, .wireframing {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .mapping-header {
-        display: flex;
-        align-items: center;
-        margin: 2rem 0;
-    }
-
-    .mapping-header-text {
-        margin-left: 1rem;
-    }
-
-    .goals-expectations, .journey-map-mobile, .wireframes-mobile {
-        margin-top: 2rem;
-    }
-
-    .goals-expectations p, .mapping-bold {
-        font-weight: 600;
-    }
 }
 
 @media screen and (max-width: 495px) {
