@@ -105,10 +105,21 @@ p {
     z-index: 990
 }
 
+.back {
+    flex-direction: row;
+}
+
 .cart-icon {
     position: relative;
     z-index: 999;
     margin: 2rem 1.8rem 0rem 0rem;
+}
+
+.back-icon {
+    position: relative;
+    z-index: 999;
+    margin: 1.6rem 0rem 0rem 1rem;
+
 }
 
 .icon-filled {
