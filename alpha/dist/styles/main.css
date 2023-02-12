@@ -1,0 +1,276 @@
+/* 2/11/23 - This is the css file preeti is working out of */
+
+/* GENERAL */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--text-color-eggshell);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color-mushroom);
+}
+
+:root {
+    --text-color-mushroom: #361E10;
+    --text-color-eggshell: #FFFBF4;
+    --accent-color-eggshell-dark: #FFF2DB;
+    --accent-color-salmon: #F2764F;
+    --accent-color-salmon-dark: #E1592E;
+    --accent-color-tangerine: #FCA05B;
+    --accent-color-tangerine-dark: #F6842F;
+    --accent-color-yolk: #FFCD6C;
+    --accent-color-yolk-dark: #FDBB3B;
+    --accent-color-flip-flop: #90C5D3;
+    --accent-color-flip-flop-dark: #47A4BD;
+}
+
+main {
+    margin: 0rem 1.25rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: var(--text-color-mushroom);
+}
+
+a:hover {
+    color: var(--text-color-mushroom);
+}
+
+a:visited {
+    color: var(--text-color-mushroom);
+}
+
+a:active {
+    color: var(--text-color-mushroom);
+}
+
+
+/* font sizes match the heading styles in the coding page of the figma*/
+
+/* 
+h1 - heading 1 (36px - 2.25rem)
+h2 - heading 2 (24px - 1.5rem)
+h3 - subheading 1 (18px - 1.125rem)
+h4 - subheading 2 (16px - 1rem)
+*/
+
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 2.66rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: .875rem;
+}
+
+/* HEADER / NAVIGATION */
+
+.cloud-header {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.cart-icon {
+    position: relative;
+    z-index: 999;
+    margin: 2rem 1.8rem 0rem 0rem;
+}
+
+.page-title {
+    font-family: "chauncy-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 2.25rem;
+    margin: .5rem 0 .2rem 0;
+}
+
+        /* mobile nav */
+
+.mobile-bottom-nav {
+    background-color: var(--text-color-eggshell);
+    position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:1000;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 5.375rem;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-link {
+    margin: auto 0rem;
+}
+
+.menu-icon {
+    width: 1.5rem;
+    height: 2rem;
+}
+
+.rewards-icon {
+    height: 2.2rem;
+}
+
+.profile-icon {
+    height: 2.2rem;
+}
+
+.nav-button-text {
+    margin: 0rem;
+}
+
+
+.menu-line {
+    border: .8px solid var(--text-color-mushroom);
+    opacity: .4;
+    margin: 0rem;
+}
+
+/* MAIN CONTENT */
+
+.hero-statement {
+    margin-bottom: .5rem;
+}
+
+.search-bar {
+    border: 1.5px solid var(--text-color-mushroom);
+    border-radius: 1.563rem; 
+    padding: 0rem 1.063rem;
+    height: 2.313rem;
+    font-size: 1rem;
+    color: var(--text-color-mushroom);
+    background-color: var(--text-color-eggshell);
+    width: 90%;
+}
+
+.menu-categories {
+    margin: 1.5rem 0rem;
+}
+
+/* menu cards */
+
+.menu-card {
+    width: 100%;
+    height: 15rem;
+    border-radius: .813rem;
+    margin: 1rem 0rem;
+}
+
+.menu-category-title-left {
+    margin: 0rem 0rem 0rem 1rem;
+    padding-top: 1rem;
+}
+
+.menu-category-title-right {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0rem 1rem 0rem 0rem;
+    padding-top: 1rem;
+    text-align: right;
+}
+
+.breakfast-sandwiches {
+    background-image: url("../images/preeti-img/menu-cards/breakfast-sandwiches.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.french-toast {
+    background-image: url("../images/preeti-img/menu-cards/french-toast.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.cheesesteaks {
+    background-image: url("../images/preeti-img/menu-cards/cheesesteaks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lunch-sandwiches {
+    background-image: url("../images/preeti-img/menu-cards/lunch-sandwiches.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.club-sandwiches {
+    background-image: url("../images/preeti-img/menu-cards/club-sandwiches.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hot-dogs-sausages {
+    background-image: url("../images/preeti-img/menu-cards/hot-dogs-sausages.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hoagies {
+    background-image: url("../images/preeti-img/menu-cards/hoagies.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.burgers {
+    background-image: url("../images/preeti-img/menu-cards/burgers.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grilled-cheese {
+    background-image: url("../images/preeti-img/menu-cards/grilled-cheese.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.side-orders {
+    background-image: url("../images/preeti-img/menu-cards/side-orders.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.drinks {
+    background-image: url("../images/preeti-img/menu-cards/drinks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
