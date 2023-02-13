@@ -383,6 +383,7 @@ p {
 }
 
 .add-to-cart {
+    border: none;
     border-radius: 2rem;
     padding: 1.3rem 1rem;
     margin: .5rem 1.25rem;
@@ -425,7 +426,7 @@ p {
     height: 6.583rem;
     background-color: var(--accent-color-eggshell-dark);
     border-radius: .375rem;
-    margin: .5rem 0rem;
+    margin: 0rem;
 }
 
 .cart-item-image {
@@ -506,7 +507,7 @@ p {
 
 .item-quantity {
     position: relative;
-    top: 2.3rem;
+    top: 2rem;
     left: 2rem;
     display: flex;
     flex-direction: row;
@@ -552,12 +553,19 @@ p {
 }
 
 .add-ons {
-    margin: 1.25rem;
+    margin: 1.25rem 0rem 12rem 1.25rem;
+}
+
+.add-on-scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
 }
 
 .item-add-on {
     display: flex;
     flex-direction: column;
+    margin-right: 1rem;
 }
 
 .add-on-image {
@@ -574,31 +582,56 @@ p {
     margin: 0rem;
 }
 
-.add-button {
-    width: .5rem;
-    height: .5rem;
-    background-color: var(--text-color-mushroom);
-    color: var(--text-color-eggshell);
+.add-to-cart-link {
+    height: .1rem;
+    position:relative;
+    top: 4.8rem;
+	left: 4rem;
+	right:0;
+    bottom: 0;
+	z-index:1000;
+}
+
+.circle-button {
+    border: none;
     border-radius: 50%;
-    padding: 1rem;
-}
-
-.add-button-text {
-    margin: 0rem 0rem .5rem 0rem;
+    padding: .5rem .8rem;
+    margin: .5rem 1.25rem;
+    text-decoration: none;
+    background: var(--text-color-mushroom);
+    color: var(--text-color-eggshell);
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
     text-align: center;
-    font-size: 1.25rem;
-}
-.add-button:link {
-    background-color: var(--text-color-mushroom);
-    color: var(--text-color-eggshell);
 }
 
-.add-button:visited {
-    background-color: var(--text-color-mushroom);
-    color: var(--text-color-eggshell);
+/* CART EMPTY PAGE */
+
+.empty-cart-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 4rem 0rem 0rem 0rem;
+    height: 70vh;
 }
 
+.empty-cart {
+    margin: 1.25rem; 
+}
 
+.logo {
+    display: flex; 
+    justify-content: center;
+    width: 15rem;
+    margin: auto;
+}
+
+.cart-is-empty {
+    color: var(--accent-color-tangerine-dark);
+    text-align: center;
+    margin-top: 0rem;
+}
 
 
 
