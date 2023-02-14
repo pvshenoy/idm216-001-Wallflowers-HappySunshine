@@ -1,5 +1,4 @@
 /* 2/11/23 - This is the css file preeti is working out of */
-
 /* GENERAL */
 
 body {
@@ -129,11 +128,9 @@ p {
 }
 
 .page-title {
-    font-family: "chauncy-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Single Day', cursive;
     text-align: center;
-    font-size: 2.25rem;
+    font-size: 2.8rem;
     margin: 2rem 0 .2rem 0;
 }
 
@@ -478,10 +475,11 @@ p {
 .edit-icon {
     width: 1rem;
     height: 1rem;
-    margin-top: .15rem;
+    margin-top: .2rem;
 }
 
 .edit-text {
+    font-size: 1rem;
     font-weight:600; 
     color: var(--accent-color-flip-flop-dark);
     margin: 0rem .2rem;
@@ -496,10 +494,11 @@ p {
 .delete-icon {
    width: 1rem;
    height: 1rem;
-   margin-top: .15rem;
+   margin-top: .2rem;
 }
 
 .delete-text {
+    font-size: 1rem;
     font-weight:600; 
     color: var(--accent-color-tangerine-dark);
     margin: 0rem .2rem;
@@ -585,8 +584,10 @@ p {
 .add-to-cart-link {
     height: .1rem;
     position:relative;
-    top: 4.8rem;
-	left: 4rem;
+    /* top: 4.8rem;
+	left: 4rem; */
+    top: 3.2rem;
+	left: 3rem;
 	right:0;
     bottom: 0;
 	z-index:1000;
@@ -595,12 +596,15 @@ p {
 .circle-button {
     border: none;
     border-radius: 50%;
-    padding: .5rem .8rem;
-    margin: .5rem 1.25rem;
+    /* padding: .5rem .8rem;
+    margin: .5rem 1.25rem; */
+    padding: .5rem 1rem;
+    margin: 1rem 1.25rem;
     text-decoration: none;
     background: var(--text-color-mushroom);
     color: var(--text-color-eggshell);
-    font-size: 1.125rem;
+    /* font-size: 1.125rem; */
+    font-size: 2rem;
     font-weight: 500;
     cursor: pointer;
     text-align: center;
