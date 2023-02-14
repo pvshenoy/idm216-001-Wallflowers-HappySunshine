@@ -25,7 +25,12 @@ include_once '_components/header.php';
 
     <div class="hero-img" style="background-image: url(<?php echo site_url(); ?><?php echo $menu['img']?>);"></div>
 
+
     <div class="details-container">
+        <div class="back-button">
+                <a href='main.php'><p class='back-button-arrow'><</p></a>
+        </div>
+
         <div class="overview">
             <div class="overview-line1">
                 <h2 class="ingredients-headers"><?php echo $menu['cat']?></h2>
@@ -37,6 +42,11 @@ include_once '_components/header.php';
         <div class="ingredients">
             <h2 class="ingredients-headers">Image</h2>
             <div class="ingredient-bullet"><?php echo $menu['img']?></div>
+        </div>
+
+        <div class="ingredients">
+            <h2 class="ingredients-headers">ID</h2>
+            <div class="ingredient-bullet"><?php echo $menu['id']?></div>
         </div>
     </div>
 
