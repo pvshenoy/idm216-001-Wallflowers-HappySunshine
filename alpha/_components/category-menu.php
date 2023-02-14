@@ -1,3 +1,4 @@
+
 <?php
 if (!isset($menus)) {
     echo '$menu variable is not defined. Please check the code.';
@@ -9,12 +10,13 @@ if (!isset($menus)) {
     // Cant combine functions with string so we have to assign the function to a variable here.
     $site_url = site_url();
     while ($menu = mysqli_fetch_array($menus)) {
+        $dollarPrice = number_format("{$menu['price']}", 2);
         echo "
               <div>
                   <a href='../category-details.php?id={$menu['id']}'><img class='menu-img' src='..{$menu['img']}' alt=''></a>
                   <div class='top-line'>
                       <h3>{$menu['cat']}</h3>
-                      <p>{$menu['price']}</p>
+                      <p><span>$</span>{$dollarPrice}</p>
                   </div>
                   <p>{$menu['descrip']}</p>
               </div>
