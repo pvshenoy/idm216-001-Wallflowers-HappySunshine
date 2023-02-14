@@ -18,6 +18,7 @@ if ($result->num_rows > 0) {
 
 <?php 
 $page_title = $menu['cat'];
+$dollarPrice = number_format("{$menu['price']}", 2);
 include_once '_components/header.php';
 ?>
 
@@ -34,7 +35,7 @@ include_once '_components/header.php';
         <div class="overview">
             <div class="overview-line1">
                 <h2 class="ingredients-headers"><?php echo $menu['cat']?></h2>
-                <div>$<?php echo $menu['price']?></div>
+                <div>$<?php echo $dollarPrice?></div>
             </div>
             <div class="overview-para"><?php echo $menu['descrip']?></div>
         </div>
