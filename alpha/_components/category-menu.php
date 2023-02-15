@@ -13,7 +13,7 @@ if (!isset($menus)) {
         $dollarPrice = number_format("{$menu['price']}", 2);
         echo "
               <div>
-                  <a href='../category-details.php?id={$menu['id']}'><img class='menu-img' src='..{$menu['img']}' alt=''></a>
+                  <a href='{$site_url}/category-details.php?id={$menu['id']}'><img class='menu-img' src='{$site_url}{$menu['img']}' alt=''></a>
                   <div class='top-line'>
                       <h3>{$menu['cat']}</h3>
                       <p><span>$</span>{$dollarPrice}</p>
