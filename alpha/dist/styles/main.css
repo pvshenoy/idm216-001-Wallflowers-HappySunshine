@@ -637,5 +637,76 @@ p {
     margin-top: 0rem;
 }
 
+/* LOGIN PAGE */
+
+.login-background {
+    background-image: url(../images/preeti-img/background-elements/background.png);
+    background-origin: content-box;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-bg {
+    position: relative;
+    width: 100vw;
+    z-index: 30;
+}
+
+.login-nav {
+    position: relative;
+    z-index: 40;
+}
+
+.logo-login {
+    position: relative;
+    width: 10rem;
+    z-index: 60;
+}
+
+.login {
+    margin: 1rem;
+    height: 100vh;
+}
+
+.login-warning {
+
+    text-align: center;
+    color: var(--accent-color-salmon-dark);
+    margin: 1rem 1rem 0rem 1rem;
+}
+
+.user-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.login-bar {
+    width: 60%;
+    margin: .5rem auto;
+}
+
+.submit-login {
+    width: 30%;
+    border: none;
+    border-radius: 1.563rem; 
+    padding: 0rem 1.063rem;
+    height: 2.313rem;
+    margin: .5rem auto; 
+    text-decoration: none;
+    background: var(--accent-color-flip-flop);
+    color: var(--text-color-eggshell);
+    font-size: .875rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
 
 
