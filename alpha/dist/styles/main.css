@@ -706,6 +706,185 @@ p {
     text-align: center;
 }
 
+/* PAYMENT PAGE */
+
+.pickup-location-title {
+    text-align: left;
+    margin-bottom: .5rem;
+}
+.payment-details {
+    margin: 1rem 1rem 12rem 1rem;
+}
+
+.location-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 6.583rem;
+    background-color: var(--accent-color-eggshell-dark);
+    border-radius: .375rem;
+    margin: 0rem;
+}
+
+.location-img {
+    width: 6.583rem;
+    height: 6.583rem;
+    border-radius: .375rem;
+}
+
+.location-text {
+    margin: auto 0rem auto .5rem;
+}
+
+.location-truck {
+    text-align: left;
+    margin: 0rem;
+    color: var(--accent-color-salmon-dark);
+}
+
+.truck-address {
+    text-align: left;
+    margin: 0rem;
+    line-height: 1rem;
+    color: var(--text-color-mushroom);
+}
+
+.payment-method {
+    margin-bottom: .5rem;
+}
+
+.venmo-payment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--accent-color-eggshell-dark);
+    border-radius: .375rem;
+}
+
+.right-icon {
+    width: .5rem;
+    height: 1rem;
+    margin: auto 1rem;
+}
+
+.venmo-payment-icon-text {
+    display: flex;
+}
+
+.venmo-icon {
+    width: 2rem;
+    height: 2rem;   
+    margin: auto .5rem;
+}
+
+.reward-box {
+    display: flex;
+    flex-direction: row;
+    border: 2px dashed var(--accent-color-yolk-dark);
+    border-radius: .375rem;
+    padding: .5rem;
+    margin: 2rem 0rem;
+}
+
+.drink-rewards {
+    width: 3rem;
+    height: 3.5rem;
+    margin: auto;
+}
+
+.rewards-alert {
+    margin: auto;
+    color: var(--accent-color-flip-flop-dark);
+}
+
+.order-summary-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-summary-title {
+    text-align: left;
+}
+
+.order-summary-item-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.order-summary-item-and-qty {
+    margin: 0rem;
+}
+
+.order-summary-item-qty {
+    color: var(--accent-color-flip-flop-dark);
+    margin-right: .5rem;
+}
+
+.order-summary-price {
+    color: var(--accent-color-salmon-dark);
+    margin: 0rem;
+}
+
+.order-summary-item-details-text {
+    text-align: left;
+    margin: 0rem 0rem 0rem 1rem;
+    opacity: .7;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ORDER CONFIRMATION PAGE  */
+
+.order-confirmation {
+    text-align: center;
+    margin: 1rem 1rem 8rem 1rem;
+}
+
+.barcode {
+    width: 100%;
+    margin: .5rem 0rem 1rem 0rem;
+}
+
+.barcode-details {
+    margin-top: 0rem;
+}
+
+/* FINAL PAGE  */
+
+.order-details {
+    width: 100%;
+    height: 9rem;
+    background-image: url("../images/preeti-img/background-elements/order-details.png");
+    background-size: cover;
+    border-radius: .29rem;
+}
+
+.order-details-button {
+    width: 10rem;
+    border: 1px solid var(--text-color-mushroom);
+    border-radius: 1.75rem;
+    padding: 1rem 1rem;
+    margin: 0rem 1rem 1rem 53%;
+    text-decoration: none;
+    color: var(--text-color-eggshell);
+    background: var(--text-color-mushroom);
+    font-size: .875rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.order-confirmation-details-text {
+    margin: 0rem 0rem 0rem 1rem;
+    padding-top: 1rem;
+}
+
+
+
+
 
 
 

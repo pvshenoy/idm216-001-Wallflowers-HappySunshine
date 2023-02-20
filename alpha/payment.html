@@ -9,28 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
-    <title>Happy Sunshine - Menu</title>
+    <title>Complete Your Purchase</title>
 </head>
 <body>
     <header>
         <img src="dist/images/preeti-img/background-elements/cloud-header.png" alt="cloud header" class="cloud-header">
-        <div class="top-nav-inner-page">
-            <a href="menu-order-confirmed.html" class="back-button">
-                <img src="dist/images/preeti-img/icons/x-icon.png" alt="" class="back-icon">
-            </a>
-            <a href="empty.html" class="cart-button">
-                <img src="dist/images/preeti-img/icons/cart-icon.png" alt="" class="cart-icon">
-            </a>
-        </div>
-        <h1 class="page-title">YOUR ORDER HAS<br>BEEN CONFIRMED!</h1>
+        <a href="login.html" class="back-button">
+            <img src="dist/images/preeti-img/icons/back-icon.png" alt="" class="back-icon">
+        </a>
+        <h1 class="page-title">PAYMENT</h1>
     </header>
-    <section class="order-confirmation">
-        <h3 class="date">FEBRUARY 21, 2023</h3>
-        <img src="dist/images/logo.png" alt="" class="logo logo-login" style="margin-top: 1rem;">
-        <h3 class="wait-time">Wait time: <span style="color:var(--accent-color-tangerine-dark);">15 minutes</span></h3>
-        <img src="dist/images/preeti-img/background-elements/barcode.png" alt="barcode" class="barcode">
-        <h3 class="barcode-details">SHOW THIS BARCODE AT THE TRUCK 
-            TO PICK UP YOUR ORDER</h3>
+    <section class="payment-details">
         <h3 class="pickup-location-title">PICKUP LOCATION</h3>
         <div class="location-box">
             <img src="dist/images/preeti-img/background-elements/location.png" alt="" class="location-img">
@@ -41,6 +30,18 @@
                     <br>Philadelphia, PA 19104
                 </p>
             </div>
+        </div>
+        <h3 class="payment-method">PAYMENT METHOD</h3>
+        <div class="venmo-payment">
+        <div class="venmo-payment-icon-text">
+            <img src="dist/images/preeti-img/icons/venmo-icon.png" alt="venmo" class="venmo-icon">
+            <p class="venmo-account">Venmo Account</p>
+        </div>
+        <img src="dist/images/preeti-img/icons/right-icon.png" alt="" class="right-icon">
+        </div>
+        <div class="reward-box">
+            <img src="dist/images/preeti-img/background-elements/drink-reward.png" alt="" class="drink-rewards">
+            <h3 class="rewards-alert">Orders until a free Thai Iced Tea!</h3>
         </div>
         <div class="order-summary">
             <h3 class="order-summary-title">ORDER SUMMARY</h3>
@@ -60,13 +61,14 @@
                 </div>
             </div>
             <hr class="cart-linebreak">
-            <h3 class="total-price">TOTAL: $17.00</h3>
         </div>
-        <div class="reward-box">
-            <img src="dist/images/preeti-img/background-elements/drink-reward-v2.png" alt="" class="drink-rewards">
-            <h3 class="rewards-alert">Orders until a free Thai Iced Tea!</h3>
-        </div>
+        <h3 class="total-price">TOTAL: $17.00</h3>
     </section>
+    <a href="order-confirmation.html" class="add-button">
+        <button class="add-to-cart">
+            PLACE ORDER
+        </button>
+    </a>
     <nav class="mobile-bottom-nav">
         <hr class="menu-line">
         <div class="nav-items">
