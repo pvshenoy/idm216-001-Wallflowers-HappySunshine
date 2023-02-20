@@ -11,18 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
     <title>Happy Sunshine - Menu</title>
 </head>
-<body>
+<body class="login-background">
     <header>
-        <img src="dist/images/preeti-img/background-elements/cloud-header.png" alt="cloud header" class="cloud-header">
-         <div class="top-nav">
-             <a href="empty.html" class="cart-button">
-                 <img src="dist/images/preeti-img/icons/cart-icon.png" alt="" class="cart-icon">
-             </a>
-         </div>
-         <h1 class="page-title">LOGIN</h1>
+        <div class="top-nav-inner-page login-nav">
+            <a href="cart.html" class="back-button">
+                <img src="dist/images/preeti-img/icons/back-icon.png" alt="" class="back-icon">
+            </a>
+        </div>
     </header>
-    <img src="dist/images/logo.png" alt="" class="logo" style="margin-top: 3rem;">
-    <h2 style="text-align: center; margin-bottom: 0rem;">COMING SOON</h2>
+    <section class="login">
+        <img src="dist/images/logo.png" alt="" class="logo logo-login" style="margin-top: 3rem;">
+        <h4 class="login-warning">
+            Please sign in to your Happy Sunshine account to complete your purchase!
+        </h4>
+        <form action="payment.html" class="user-login">
+            <input type="text" class="search-bar login-bar" placeholder="username">
+            <input type="text" class="search-bar login-bar" placeholder="password">
+            <input type="submit" class="submit-login">
+        </form>
+    </section>
     <nav class="mobile-bottom-nav">
         <hr class="menu-line">
         <div class="nav-items">
