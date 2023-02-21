@@ -24,6 +24,15 @@ include_once __DIR__ . '/_components/header.php';
         <br>
 
         <div>
+          <label for="phone">Phone Number</label>
+          <div>
+            <input id="phone" name="phone" type="text" required>
+          </div>
+        </div>
+        
+        <br>
+
+        <div>
           <label for="pass">Password</label>
           <div class="mt-1">
             <input id="pass" name="pass" type="password" required>
