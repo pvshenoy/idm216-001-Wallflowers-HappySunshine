@@ -25,8 +25,8 @@ function add_user ($username, $password)
     global $db_connection;
 
     $query = 'INSERT INTO users';
-    $query .= ' (username, pass)';
-    $query .= " VALUES ('{$username}', '{$password}')";
+    $query .= ' (username, phone, pass)';
+    $query .= " VALUES ('{$username}', '{$phone}, '{$password}')";
     $result = mysqli_query($db_connection, $query);
     return $result;
 }
@@ -61,21 +61,28 @@ function get_user_by_id($id)
  */
 
 
-function get_user_by_username($username, $password)
+function get_user_by_username($username, $phone, $password)
 {
     global $db_connection;
     $query = "SELECT id FROM users WHERE pass = '$password' AND username = '$username'";
     $result = mysqli_query($db_connection, $query);
 
     if ($result->num_rows > 0) {
-        redirect_to('/main.php');
+        echo "Returning Customer";
+
+        while($row = $result->fetch_assoc()) {
+            echo "<br>" . "id: " . $row["id"];
+          }
+
+        // redirect_to('/main.php');
     } 
     else {
-        $query = "INSERT INTO users (username, pass) VALUES ('$username', '$password')";
+        $query = "INSERT INTO users (username, phone, pass) VALUES ('$username', '$phone', '$password')";
         $result2 = mysqli_query($db_connection, $query);
 
         if ($result2) {
-            redirect_to('/main.php');
+            echo "New Customer";
+            // redirect_to('/main.php');
         } 
         else {
             $error_message = 'User was not created';
