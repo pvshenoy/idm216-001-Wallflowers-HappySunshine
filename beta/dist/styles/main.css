@@ -1,4 +1,5 @@
 /* 2/11/23 - This is the css file preeti is working out of */
+
 /* GENERAL */
 
 body {
@@ -82,6 +83,19 @@ h4 {
 p {
     font-size: .875rem;
 }
+
+.blue-text {
+    color: var(--accent-color-flip-flop-dark);
+}
+
+.orange-text {
+    color: var(--accent-color-tangerine-dark);
+}
+
+.red-text {
+    color: var(--accent-color-salmon-dark);
+}
+
 
 /* HEADER / NAVIGATION */
 
@@ -321,6 +335,8 @@ p {
 }
 
 .item-name {
+    font-family: 'Single Day', cursive;
+    font-size: 2rem;
     margin: 0rem;
     padding: 2rem 0rem .5rem 0rem;
     text-align: center;
@@ -845,12 +861,21 @@ p {
 }
 
 .barcode {
-    width: 100%;
+    width: 16rem;
     margin: .5rem 0rem 1rem 0rem;
 }
 
 .barcode-details {
     margin-top: 0rem;
+}
+
+.wait-time {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.date {
+    margin-bottom: 0rem;
 }
 
 /* FINAL PAGE  */
