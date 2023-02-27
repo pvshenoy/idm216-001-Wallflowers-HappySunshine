@@ -427,7 +427,7 @@ p {
     text-decoration: none;
     list-style: none;
     padding: 0rem;
-    margin-top: 0rem;
+    margin: 0rem;
 }
 
 .cart-content {
@@ -439,7 +439,7 @@ p {
     height: 6.583rem;
     background-color: var(--accent-color-eggshell-dark);
     border-radius: .375rem;
-    margin: 0rem;
+    margin: 0 0 1rem 0;
 }
 
 .cart-item-image {
@@ -478,7 +478,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin: .5rem .5rem;
+    margin: .2rem .5rem 0rem .5rem;
 }
 
 .edit-button {
@@ -521,22 +521,18 @@ p {
 }
 
 .item-quantity {
-    position: relative;
-    top: 2rem;
-    left: 2rem;
     display: flex;
     flex-direction: row;
     background-color: var(--text-color-mushroom);
     color: var(--text-color-eggshell);
     border-radius: 1.169rem;
-    height: 1.25rem;
+    height: 1.8rem;
     font-size: .75rem;
     z-index: 30;
-    width: fit-content;
 }
 
 .quantity {
-    margin: 0rem .8rem;
+    margin: .2rem .8rem 0rem .8rem;
 }
 
 .decrease {
@@ -558,6 +554,7 @@ p {
 }
 
 .cart-linebreak {
+    margin-top: 0rem;
     border: .5px solid var(--text-color-mushroom);
     opacity: .4;
 }
