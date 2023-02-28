@@ -1,4 +1,5 @@
 /* 2/11/23 - This is the css file preeti is working out of */
+
 /* GENERAL */
 
 body {
@@ -82,6 +83,19 @@ h4 {
 p {
     font-size: .875rem;
 }
+
+.blue-text {
+    color: var(--accent-color-flip-flop-dark);
+}
+
+.orange-text {
+    color: var(--accent-color-tangerine-dark);
+}
+
+.red-text {
+    color: var(--accent-color-salmon-dark);
+}
+
 
 /* HEADER / NAVIGATION */
 
@@ -210,21 +224,28 @@ p {
 }
 
 .menu-categories {
+    display: grid;
+    grid-template-columns: 11rem 11rem;
     margin: 1.5rem 0rem 7rem 0rem;
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
+    justify-content: center;
 }
 
 /* menu cards */
 
 .menu-card {
     width: 100%;
-    height: 15rem;
+    height: 10rem;
     border-radius: .813rem;
-    margin: 1.25rem 0rem;
+    margin: 0rem;
 }
 
 .menu-category-title-left {
     margin: 0rem 0rem 0rem 1rem;
     padding-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.481rem;
 }
 
 .menu-category-title-right {
@@ -233,6 +254,8 @@ p {
     margin: 0rem 1rem 0rem 0rem;
     padding-top: 1rem;
     text-align: right;
+    font-size: 1.3rem;
+    line-height: 1.481rem;
 }
 
 .breakfast-sandwiches {
@@ -246,7 +269,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 .cheesesteaks {
     background-image: url("../images/preeti-img/menu-cards/cheesesteaks.png");
@@ -321,6 +343,8 @@ p {
 }
 
 .item-name {
+    font-family: 'Single Day', cursive;
+    font-size: 2rem;
     margin: 0rem;
     padding: 2rem 0rem .5rem 0rem;
     text-align: center;
@@ -337,6 +361,153 @@ p {
 
 .ingredient-title {
     margin-bottom: .5rem;
+}
+
+/* radio button styling + animation */
+
+/* The container */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .radio-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-top: .3rem;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .radio-container:hover input ~ .radio-button {
+    background-color: var(--accent-color-eggshell-dark);
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-container input:checked ~ .radio-button {
+    background-color: var(--accent-color-flip-flop);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radio-button:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-container input:checked ~ .radio-button:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radio-container .radio-button:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-color-eggshell);
+  }
+
+/* end of radio styling */
+
+/* checkbox styling */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--text-color-eggshell);
+  border: 1px solid var(--text-color-mushroom);
+  margin-top: .2rem;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: var(--accent-color-eggshell-dark);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--accent-color-flip-flop);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* end of checkbox styling */
+
+.toppings {
+    margin-bottom: 8rem; 
 }
 
 .customization-pill-buttons {
@@ -402,7 +573,7 @@ p {
 /* CART PAGE CONTENT  */
 
 .cart {
-    margin: 0rem 1.25rem;
+    margin: 1rem 1.25rem 0rem 1.25rem;
 }
 
 .cart-item-list {
@@ -411,7 +582,12 @@ p {
     text-decoration: none;
     list-style: none;
     padding: 0rem;
-    margin-top: 0rem;
+    margin: 0rem;
+}
+
+.wait-time-cart {
+    display: flex;
+    flex-direction: row;
 }
 
 .cart-content {
@@ -423,7 +599,7 @@ p {
     height: 6.583rem;
     background-color: var(--accent-color-eggshell-dark);
     border-radius: .375rem;
-    margin: 0rem;
+    margin: 0 0 1rem 0;
 }
 
 .cart-item-image {
@@ -435,6 +611,38 @@ p {
 .cart-item-text-content {
     width: 100%;
     margin: .5rem 0rem 0rem 1rem;
+    /* color: var(--text-color-mushroom); */
+}
+
+.item-quantity {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--text-color-mushroom);
+    color: var(--text-color-eggshell);
+    border-radius: 1.169rem;
+    height: 1.8rem;
+    font-size: .75rem;
+    z-index: 30;
+}
+
+.add-one:link {
+    color: var(--text-color-eggshell);
+}
+
+.add-one:visited {
+    color: var(--text-color-eggshell);
+}
+
+.decrease-one:link {
+    color: var(--text-color-eggshell);
+}
+
+.decrease-one:visited {
+    color: var(--text-color-eggshell);
+}
+.quantity {
+    color: var(--text-color-eggshell);
+    margin: .2rem .8rem 0rem .8rem;
 }
 
 .cart-item-name-and-price {
@@ -462,7 +670,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin: .5rem .5rem;
+    margin: .2rem .5rem 0rem .5rem;
 }
 
 .edit-button {
@@ -504,25 +712,6 @@ p {
     margin: 0rem .2rem;
 }
 
-.item-quantity {
-    position: relative;
-    top: 2rem;
-    left: 2rem;
-    display: flex;
-    flex-direction: row;
-    background-color: var(--text-color-mushroom);
-    color: var(--text-color-eggshell);
-    border-radius: 1.169rem;
-    height: 1.25rem;
-    font-size: .75rem;
-    z-index: 30;
-    width: fit-content;
-}
-
-.quantity {
-    margin: 0rem .8rem;
-}
-
 .decrease {
     margin-right: .5rem;
     cursor: pointer;
@@ -533,17 +722,14 @@ p {
     cursor: pointer;
 }
 
-.add-one:link {
-    color: var(--text-color-eggshell);
-}
-
-.add-one:visited {
-    color: var(--text-color-eggshell);
-}
-
 .cart-linebreak {
+    margin-top: 0rem;
     border: .5px solid var(--text-color-mushroom);
     opacity: .4;
+}
+
+.linebreak {
+    border: 1px solid var(--text-color-mushroom);
 }
 
 .cart-total {
@@ -780,6 +966,7 @@ p {
 .reward-box {
     display: flex;
     flex-direction: row;
+    text-align: left;
     border: 2px dashed var(--accent-color-yolk-dark);
     border-radius: .375rem;
     padding: .5rem;
@@ -787,13 +974,13 @@ p {
 }
 
 .drink-rewards {
-    width: 3rem;
-    height: 3.5rem;
+    width: 5rem;
+    height: 4.5rem;
     margin: auto;
 }
 
 .rewards-alert {
-    margin: auto;
+    margin-left: 1rem;
     color: var(--accent-color-flip-flop-dark);
 }
 
@@ -845,12 +1032,21 @@ p {
 }
 
 .barcode {
-    width: 100%;
+    width: 16rem;
     margin: .5rem 0rem 1rem 0rem;
 }
 
 .barcode-details {
     margin-top: 0rem;
+}
+
+.wait-time {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.date {
+    margin-bottom: 0rem;
 }
 
 /* FINAL PAGE  */

@@ -22,11 +22,13 @@
          <h1 class="page-title">CART</h1>
     </header>
 <section class="cart">
+    <!-- <div class="wait-time-cart">
+        <h4>Wait Time</h4>
+        <hr class="linebreak">
+        <h4 class="red-text">15 minutes</h4>
+    </div> -->
     <ul class="cart-item-list">
-        <li class="cart-item">
-            <div class="item-quantity">
-                <p class="quantity"><span class="decrease">-</span>1<a href="cart-cheesesteak.html" class="add-one"><span class="increase">+</span></a></p>
-            </div>
+        <a href="item-details.html" class="cart-item-link"><li class="cart-item">
             <div class="cart-content">
                 <div class="cart-image">
                     <img src="dist/images/preeti-img/item-images/cheesesteaks.png" alt="" class="cart-item-image">
@@ -38,18 +40,13 @@
                     </div>
                     <p class="cart-item-description">chicken, mushroom, mayo</p>
                     <div class="cart-item-actions">
-                        <div class="edit-button">
-                            <p class="edit-text">EDIT</p>
-                            <img src="dist/images/preeti-img/icons/edit-icon.png" alt="" class="edit-icon">
-                        </div>
-                        <div class="delete-button">
-                            <p class="delete-text">DELETE</p>
-                            <img src="dist/images/preeti-img/icons/delete-icon.png" alt="" class="delete-icon">
+                        <div class="item-quantity">
+                            <a href="cart-cheesesteak.html" class="add-one"><p class="quantity">1<span class="increase">+</span></p></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </li>
+        </li></a>
     </ul>
     <hr class="cart-linebreak">
     <h3 class="cart-total">TOTAL: $7.00</h3>
@@ -82,13 +79,14 @@
             </div>
         </div>
     </div>
-
 </section>
+
 <a href="login.html" class="add-button">
     <button class="add-to-cart">
         CONTINUE TO PAYMENT
     </button>
 </a>
+
 <nav class="mobile-bottom-nav">
     <hr class="menu-line">
     <div class="nav-items">
