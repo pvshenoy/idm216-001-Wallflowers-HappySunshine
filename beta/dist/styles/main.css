@@ -430,6 +430,11 @@ p {
     margin: 0rem;
 }
 
+.wait-time-cart {
+    display: flex;
+    flex-direction: row;
+}
+
 .cart-content {
     position: relative;
     z-index: 20;
@@ -451,6 +456,38 @@ p {
 .cart-item-text-content {
     width: 100%;
     margin: .5rem 0rem 0rem 1rem;
+    /* color: var(--text-color-mushroom); */
+}
+
+.item-quantity {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--text-color-mushroom);
+    color: var(--text-color-eggshell);
+    border-radius: 1.169rem;
+    height: 1.8rem;
+    font-size: .75rem;
+    z-index: 30;
+}
+
+.add-one:link {
+    color: var(--text-color-eggshell);
+}
+
+.add-one:visited {
+    color: var(--text-color-eggshell);
+}
+
+.decrease-one:link {
+    color: var(--text-color-eggshell);
+}
+
+.decrease-one:visited {
+    color: var(--text-color-eggshell);
+}
+.quantity {
+    color: var(--text-color-eggshell);
+    margin: .2rem .8rem 0rem .8rem;
 }
 
 .cart-item-name-and-price {
@@ -520,21 +557,6 @@ p {
     margin: 0rem .2rem;
 }
 
-.item-quantity {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--text-color-mushroom);
-    color: var(--text-color-eggshell);
-    border-radius: 1.169rem;
-    height: 1.8rem;
-    font-size: .75rem;
-    z-index: 30;
-}
-
-.quantity {
-    margin: .2rem .8rem 0rem .8rem;
-}
-
 .decrease {
     margin-right: .5rem;
     cursor: pointer;
@@ -545,18 +567,14 @@ p {
     cursor: pointer;
 }
 
-.add-one:link {
-    color: var(--text-color-eggshell);
-}
-
-.add-one:visited {
-    color: var(--text-color-eggshell);
-}
-
 .cart-linebreak {
     margin-top: 0rem;
     border: .5px solid var(--text-color-mushroom);
     opacity: .4;
+}
+
+.linebreak {
+    border: 1px solid var(--text-color-mushroom);
 }
 
 .cart-total {
@@ -793,6 +811,7 @@ p {
 .reward-box {
     display: flex;
     flex-direction: row;
+    text-align: left;
     border: 2px dashed var(--accent-color-yolk-dark);
     border-radius: .375rem;
     padding: .5rem;
@@ -800,13 +819,13 @@ p {
 }
 
 .drink-rewards {
-    width: 3rem;
-    height: 3.5rem;
+    width: 5rem;
+    height: 4.5rem;
     margin: auto;
 }
 
 .rewards-alert {
-    margin: auto;
+    margin-left: 1rem;
     color: var(--accent-color-flip-flop-dark);
 }
 
