@@ -96,6 +96,25 @@ p {
     color: var(--accent-color-salmon-dark);
 }
 
+.flip-flop {
+    background-color: var(--accent-color-flip-flop);
+}
+
+.tangerine {
+    background-color: var(--accent-color-tangerine);
+}
+
+.yolk {
+    background-color: var(--accent-color-yolk)
+}
+
+.salmon {
+    background-color: var(--accent-color-salmon);
+}
+
+.bottom-margin {
+    margin-bottom: 8rem;
+}
 
 /* HEADER / NAVIGATION */
 
@@ -856,9 +875,7 @@ p {
 }
 
 .login-warning {
-
     text-align: center;
-    color: var(--accent-color-salmon-dark);
     margin: 1rem 1rem 0rem 1rem;
 }
 
@@ -1079,9 +1096,102 @@ p {
 }
 
 
+/* EXTRA PAGES - PROFILE */
 
+.profile {
+    margin: 1rem 1.25rem 2rem 1.25rem;
+    text-align: center;
+}
 
+.profile-name {
+    margin-top: .2rem;
+    margin-bottom: 0rem;
+}
 
+.profile-details {
+    margin-top: 0rem;
+    line-height: .4rem;
+}
 
+.order-history {
+    line-height: 1rem;
+    margin-bottom: 0rem;
+}
 
+.past-orders {
+    margin-bottom: 0rem;
+}
+
+.profile-reward {
+    margin-bottom: 8rem;
+}
+
+.profile-picture {
+    width: 10.625rem;
+    height: 10.625rem;
+    text-align: center;
+}
+
+.old-order {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-betweens;
+    width: 100%;
+    height: 4.813rem;
+    border-radius: .375rem;
+    background-color: var(--accent-color-eggshell-dark);
+    margin: .8rem 0rem
+}
+
+.old-order-title {
+    margin: .3rem 0rem 0rem 0rem;
+}
+
+.old-order-date {
+    margin: 0rem;
+    line-height: 1rem;
+}
+
+.old-order-rewards {
+    margin: 0rem;
+}
+
+.old-order-tag {
+    width: 3%;
+    height: 4.813rem;
+    border-top-left-radius: .375rem;
+    border-bottom-left-radius: .375rem;
+}
+
+.old-order-text-content {
+    display: flex;
+    flex-direction: column;
+    margin: auto .5rem;
+    width: 82%;
+}
+
+.sun-img {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: auto 1rem;
+    justify-self: flex-end;
+}
+
+/* REWARDS PAGE  */
+
+.qr-code {
+    display: flex;
+    width: 18rem;
+    height: 18rem;
+    margin: 0rem auto;
+}
+
+.qr-text {
+    text-align: center;
+    margin-top: 0rem;
+}
+
+.rewards-info {
+    text-align: center;
+}
 
