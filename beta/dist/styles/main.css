@@ -224,21 +224,28 @@ p {
 }
 
 .menu-categories {
+    display: grid;
+    grid-template-columns: 11rem 11rem;
     margin: 1.5rem 0rem 7rem 0rem;
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
+    justify-content: center;
 }
 
 /* menu cards */
 
 .menu-card {
     width: 100%;
-    height: 15rem;
+    height: 10rem;
     border-radius: .813rem;
-    margin: 1.25rem 0rem;
+    margin: 0rem;
 }
 
 .menu-category-title-left {
     margin: 0rem 0rem 0rem 1rem;
     padding-top: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.481rem;
 }
 
 .menu-category-title-right {
@@ -247,6 +254,8 @@ p {
     margin: 0rem 1rem 0rem 0rem;
     padding-top: 1rem;
     text-align: right;
+    font-size: 1.3rem;
+    line-height: 1.481rem;
 }
 
 .breakfast-sandwiches {
@@ -260,7 +269,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 .cheesesteaks {
     background-image: url("../images/preeti-img/menu-cards/cheesesteaks.png");
@@ -565,7 +573,7 @@ p {
 /* CART PAGE CONTENT  */
 
 .cart {
-    margin: 0rem 1.25rem;
+    margin: 1rem 1.25rem 0rem 1.25rem;
 }
 
 .cart-item-list {
