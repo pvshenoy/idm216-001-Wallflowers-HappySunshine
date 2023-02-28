@@ -26,38 +26,44 @@
         <p class="item-description">
             A delicious cheesesteak made with fresh veggies and provolone cheese. Comes with mayo, fried onion, salt, pepper, and ketchup.
         </p>
-        <div class="customizations">
-            <div class="ingredient">
-                <h4 class="ingredient-title">Protein: <span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">Choose 1</span></h4>
-                <div class="customization-pill-buttons">
-                    <button class="pill-button">Chicken</button>
-                    <button class="pill-button">Steak</button>
-                    <button class="pill-button">Ham</button>
-                </div>
+        <form action="" class="customizations">
+            <h4 class="ingredient-title">Protein: <span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">Choose 1</span></h4>
+            <div class="protein">
+                <label class="radio-container">CHICKEN
+                    <input type="radio" name="chicken">
+                    <span class="radio-button"></span>
+                  </label>
+                  <hr class="cart-linebreak">
+                  <label class="radio-container">STEAK
+                    <input type="radio" name="steak">
+                    <span class="radio-button"></span>
+                  </label>
+                  <hr class="cart-linebreak">
             </div>
-            <div class="ingredient">
+            <div class="toppings">
                 <h4 class="ingredient-title">Toppings: <span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">(Optional)</span></h4>
-                <div class="customization-pill-buttons">
-                    <button class="pill-button">Mushroom</button>
-                    <button class="pill-button">Pepper</button>
-                    <button class="pill-button">Pepperoni</button>
-                    <button class="pill-button">Hoagie</button>
-                    <button class="pill-button">Buffalo</button>
-                    <button class="pill-button ghost"></button>
-                </div>
+                <label class="container">MUSHROOM
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                </label>
+                <hr class="cart-linebreak">
+                <label class="container">PEPPERONI
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                </label>
+                <hr class="cart-linebreak">
+                <label class="container">BLUE CHEESE
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                </label>
+                <hr class="cart-linebreak">
+                <label class="container">PROVOLONE CHEESE
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                </label>
+                <hr class="cart-linebreak">
             </div>
-            <div class="ingredient">
-                <h4 class="ingredient-title">Add-ons: <span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">(Optional)</span></h4>
-                <div class="customization-pill-buttons">
-                    <button class="pill-button">Onions</button>
-                    <button class="pill-button">Mayo</button>
-                    <button class="pill-button">Salt</button>
-                    <button class="pill-button">Pepper</button>
-                    <button class="pill-button">Ketchup</button>
-                    <button class="pill-button ghost"></button>
-                </div>
-            </div>
-        </div>
+        </form>
     </section>
     <a href="cart.html" class="add-button">
         <button class="add-to-cart">
