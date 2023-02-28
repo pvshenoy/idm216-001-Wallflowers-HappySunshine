@@ -141,6 +141,14 @@ p {
     flex-direction: row;
 }
 
+.jervo-made-me-do-it {
+    font-family: 'Single Day', cursive;
+    text-align: center;
+    font-size: 2.8rem;
+    margin-top: 0rem;
+    padding-top: 7rem;
+}
+
 .cart-icon {
     position: relative;
     z-index: 999;
