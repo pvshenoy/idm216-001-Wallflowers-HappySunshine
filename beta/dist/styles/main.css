@@ -222,6 +222,8 @@ p {
 
 .nav-button-text {
     margin: 0rem;
+    padding-top: .6rem;
+    line-height: .5rem;
 }
 
 .menu-line {
@@ -366,8 +368,8 @@ p {
 .item {
     position: relative;
     background-color: var(--text-color-eggshell);
-    height: 100vh;
-    margin: 30vh 0rem 4rem 0rem;
+    height: fit-content;
+    margin: 30vh 0rem 12rem 0rem;
     z-index: 3;
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
@@ -387,7 +389,7 @@ p {
 }
 
 .customizations {
-    margin: 0rem 1.25rem;
+    margin: 0rem 1.25rem 0rem 1.25rem;
 }
 
 .ingredient-title {
@@ -400,11 +402,12 @@ p {
 .radio-container {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-top: .1rem;
+    padding-left: 45px;
     margin-top: 12px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1.25rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -425,7 +428,8 @@ p {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    border: 1px solid var(--text-color-mushroom);
+    /* background-color: #eee; */
     border-radius: 50%;
     margin-top: .3rem;
   }
@@ -438,6 +442,7 @@ p {
   /* When the radio button is checked, add a blue background */
   .radio-container input:checked ~ .radio-button {
     background-color: var(--accent-color-flip-flop);
+    border: 1px solid var(--accent-color-flip-flop);
   }
   
   /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -469,11 +474,11 @@ p {
 .container {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 45px;
     margin-top: 12px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 1.25rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -509,6 +514,7 @@ p {
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: var(--accent-color-flip-flop);
+  border: 1px solid var(--accent-color-flip-flop);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -529,17 +535,13 @@ p {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid var(--text-color-eggshell);
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 /* end of checkbox styling */
-
-.toppings {
-    margin-bottom: 8rem; 
-}
 
 .customization-pill-buttons {
     display: flex;
@@ -583,13 +585,14 @@ p {
 
 .add-to-cart {
     border: none;
-    border-radius: 2rem;
+    border-radius: 4rem;
     padding: 1.3rem 1rem;
     margin: .5rem 1.25rem;
     text-decoration: none;
     background: var(--text-color-mushroom);
     color: var(--text-color-eggshell);
-    font-size: .875rem;
+    font-family: 'Poppins', sans-serif;
+    /* font-size: .875rem; */
     font-size: 1.125rem;
     font-weight: 500;
     cursor: pointer;
@@ -619,6 +622,18 @@ p {
 .wait-time-cart {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+}
+
+.wait-time-cart-text {
+    margin: 0rem;
+}
+
+.time-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-top: .25rem;
+    margin-right: .3rem;
 }
 
 .cart-content {
