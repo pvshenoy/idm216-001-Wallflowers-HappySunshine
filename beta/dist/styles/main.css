@@ -222,6 +222,8 @@ p {
 
 .nav-button-text {
     margin: 0rem;
+    padding-top: .2rem;
+    line-height: .5rem;
 }
 
 .menu-line {
