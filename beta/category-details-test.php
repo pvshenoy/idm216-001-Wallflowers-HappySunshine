@@ -1,5 +1,6 @@
 <?php 
 include_once 'app.php';
+$site_url = site_url();
 ?>
 
 <?php
@@ -51,257 +52,153 @@ include_once '_components/header.php';
         </div>
     </div>
 
-<div>
+<form action='<?php echo "{$site_url}/_includes/process-orders.php" ?>' method='POST'>
     <?php
     // Content based on ID of category chosen
-    $site_url = site_url();
-    $id = $_GET['id'];
-    if ($id == 1) {
-        $query = "SELECT * FROM bread";
-        $result = mysqli_query($db_connection, $query);
-        if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Bread</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+    $catID = $_GET['id'];
 
-        $query = "SELECT * FROM protein WHERE price > 0";
+    //BREAKFAST SANDWICHES
+    if ($catID == 1) {
+        // $query = "SELECT * FROM bread";
+        // $result = mysqli_query($db_connection, $query);
+        // if ($result->num_rows > 0) {
+        //     echo "<h2 class='ingredients-headers'>Bread</h2>";
+        //     while($row = $result->fetch_assoc()) {
+        //         echo $row["name"] . "<br>";
+        //     }
+        // } 
+
+        $query = "SELECT * FROM protein WHERE proteinPrice > 0";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Protein</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . " " . "$" . $row["price"] . ".00" . "<br>";
-            }
+            include_once '_components/protein-options.php';
         }
 
         $query = "SELECT * FROM toppings WHERE id < 5 OR id > 17";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Toppings</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/topping-options.php';
+        }
     }
-    elseif ($id == 2) {
+
+    //FRENCH TOAST
+    elseif ($catID == 2) {
         $query = "SELECT * FROM protein WHERE id < 3 OR id = 22 OR id = 7 OR id = 10 OR id = 11";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Protein</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/protein-options.php';
+        }
     }
 
-    elseif ($id == 3) {
-        $site_url = site_url();
+    //CHEESESTEAKS
+    elseif ($catID == 3) {
         $query = "SELECT * FROM protein WHERE (id = 8) OR (id BETWEEN 12 AND 13)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "
-            <form action='<?php echo {$site_url}/_includes/process-orders.php?>' method='POST'>
-            <h4>Protein: <span>Choose 1</span></h4>
-            <div>
-            ";
-            while($row = $result->fetch_assoc()) {
-                echo "
-                <div>
-                    <label for='protein'>{$row['proteinName']}</label>
-                    <div>
-                        <input id='protein' name='protein' type='radio'>
-                    </div>
-                 </div>
-                <hr>";
-            }
-        echo "
-        </div>
-        </form
-        ";
+            include_once '_components/protein-options.php';
         } 
 
         $query = "SELECT * FROM toppings WHERE (id BETWEEN 2 AND 6) OR (id BETWEEN 12 AND 13) OR (id BETWEEN 15 AND 17)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "
-            <form action='<?php echo {$site_url}/_includes/process-orders.php?>' method='POST'>
-            <h4>Toppings: <span>(Optional)</span></h4>
-            <div>
-            ";
-            while($row = $result->fetch_assoc()) {
-                echo "
-                <div>
-                    <label for='toppings'>{$row['toppingName']}</label>
-                    <div>
-                        <input id='toppings' name='toppings' type='checkbox'>
-                    </div>
-                 </div>
-                ";
-            }
-        echo "
-        </div>
-        </form>
-        <button type='submit'>Submit</button>
-        ";
-        } 
+            include_once '_components/topping-options.php';
+        }
     }
-    
-    // <form action="" class="customizations">
-    //         <h4 class="ingredient-title">Protein: <span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">Choose 1</span></h4>
-    //         <div class="protein">
-    //             <label class="radio-container">CHICKEN
-    //                 <input type="radio" name="protein">
-    //                 <span class="radio-button"></span>
-    //               </label>
-    //               <hr class="cart-linebreak">
-    //               <label class="radio-container">STEAK
-    //                 <input type="radio" name="protein">
-    //                 <span class="radio-button"></span>
-    //               </label>
-    //               <hr class="cart-linebreak">
-            
-    //         <div class="toppings">
-    //             <h4 class="ingredient-title">Toppings: <span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">(Optional)</span></h4>
-    //             <label class="container">MUSHROOM
-    //             <input type="checkbox">
-    //             <span class="checkmark"></span>
-    //             </label>
-    //             <hr class="cart-linebreak">
-    //             <label class="container">PEPPERONI
-    //             <input type="checkbox">
-    //             <span class="checkmark"></span>
-    //             </label>
-    //             <hr class="cart-linebreak">
-    //             <label class="container">BLUE CHEESE
-    //             <input type="checkbox">
-    //             <span class="checkmark"></span>
-    //             </label>
-    //             <hr class="cart-linebreak">
-    //             <label class="container">PROVOLONE CHEESE
-    //             <input type="checkbox">
-    //             <span class="checkmark"></span>
-    //             </label>
-    //             <hr class="cart-linebreak">
-    //         </div>
-    //     </form>
 
-    elseif ($id == 4) {
+    //LUNCH SANDWHICHES
+    elseif ($catID == 4) {
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id = 14) OR (id = 19)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Protein</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/protein-options.php';
+        }
 
         $query = "SELECT * FROM toppings WHERE (id = 5) OR (id = 7) OR (id = 9) OR (id = 14)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Toppings</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/topping-options.php';
+        }
     }
 
-    elseif ($id == 5) {
+    //CLUB SANDWHICHES
+    elseif ($catID == 5) {
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id BETWEEN 14 AND 15) OR (id = 19)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Protein</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/protein-options.php';
+        }
 
         $query = "SELECT * FROM toppings WHERE (id = 5) OR (id BETWEEN 7 AND 9)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Toppings</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/topping-options.php';
+        }
     }
 
-    elseif ($id == 6) {
+    //HOT DOG & SAUSAGE
+    elseif ($catID == 6) {
         $query = "SELECT * FROM protein WHERE (id = 7) OR (id = 10) OR (id BETWEEN 20 AND 21)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Protein</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/protein-options.php';
+        }
     }
 
-    elseif ($id == 7) {
+    //HOAGIES
+    elseif ($catID == 7) {
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id = 16) OR (id BETWEEN 23 AND 24)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Protein</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/protein-options.php';
+        }
 
         $query = "SELECT * FROM toppings WHERE (id BETWEEN 3 AND 4) OR (id = 5) OR (id = 7) OR (id BETWEEN 9 AND 14)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Toppings</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/topping-options.php';
+        }
     }
 
-    elseif ($id == 8) {
+    //BURGERS
+    elseif ($catID == 8) {
         $query = "SELECT * FROM toppings WHERE (id BETWEEN 3 AND 4) OR (id = 5) OR (id = 7) OR (id BETWEEN 9 AND 11) OR (id = 14)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Toppings</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/topping-options.php';
+        }
     }
 
-    elseif ($id == 9) {
+    //GRILLED CHEESE
+    elseif ($catID == 9) {
         $query = "SELECT * FROM protein WHERE (id BETWEEN 1 AND 2) OR (id BETWEEN 4 AND 5) OR (id BETWEEN 17 AND 18)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Protein</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/protein-options.php';
+        }
     }
 
-    elseif ($id == 10) {
+    //SIDES
+    elseif ($catID == 10) {
         $query = "SELECT * FROM sides";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Side Orders</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/side-options.php';
+        }
     }
 
-    elseif ($id == 11) {
+    //DRINKS
+    elseif ($catID == 11) {
         $query = "SELECT * FROM drinks";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            echo "<h2 class='ingredients-headers'>Drinks</h2>";
-            while($row = $result->fetch_assoc()) {
-                echo $row["name"] . "<br>";
-            }
-        } 
+            include_once '_components/drink-options.php';
+        }
     }
     ?>
-</div>
+    <input type='hidden' name='userID' value='<?php echo "{$currentUser['id']}"; ?>'/>
+    <input type='hidden' name='catID' value='<?php echo "{$catID}"; ?>'/>
+    <button type='submit'>Submit</button>
+</form>
 
 <?php 
 include_once '_components/footer.php'; 

@@ -29,3 +29,17 @@ if (in_array($_SERVER['REMOTE_ADDR'], $whitelist_host)) {
 include_once __DIR__ . '/_includes/database.php';
 include_once __DIR__ . '/_includes/helper-functions.php';
 include_once __DIR__ . '/_includes/user-functions.php';
+
+//make sure everything works here then split out into users functions and call here
+
+// check if there is a user in session (logged in)
+// if no user, create guest user up unitl check in page 
+
+//create function to insert dummy user data into database 
+//maybe make is guest user column to easily delete and differentiate real from guest
+
+//login page check if guest user
+//then after login, upadte orders with new user id order
+//then delete previous guest user
+
+$currentUser = ["id" => 3];
