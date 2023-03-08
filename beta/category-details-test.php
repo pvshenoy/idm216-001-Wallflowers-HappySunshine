@@ -59,14 +59,11 @@ include_once '_components/header.php';
 
     //BREAKFAST SANDWICHES
     if ($catID == 1) {
-        // $query = "SELECT * FROM bread";
-        // $result = mysqli_query($db_connection, $query);
-        // if ($result->num_rows > 0) {
-        //     echo "<h2 class='ingredients-headers'>Bread</h2>";
-        //     while($row = $result->fetch_assoc()) {
-        //         echo $row["name"] . "<br>";
-        //     }
-        // } 
+        $query = "SELECT * FROM bread";
+        $result = mysqli_query($db_connection, $query);
+        if ($result->num_rows > 0) {
+            include_once '_components/bread-options.php';
+        }
 
         $query = "SELECT * FROM protein WHERE proteinPrice > 0";
         $result = mysqli_query($db_connection, $query);

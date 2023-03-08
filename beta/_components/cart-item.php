@@ -1,8 +1,9 @@
 <?php 
 
-$price = intval($row['price']);
 $quantity = intval($row['quantity']);
+$price = intval($row['price']);
 $orderTotal += $price * $quantity;
+$orderTotalPrice = number_format("{$orderTotal}", 2);
 // $site_url = site_url();
 
 ?>
@@ -14,9 +15,10 @@ $orderTotal += $price * $quantity;
         <div class="cart-item-text-content">
             <div class="cart-item-name-and-price">
                 <h3 class="cart-item-name"><?php echo $row['cat']; ?></h3>
-                <h3 class="cart-item-price"><?php echo $row['price']?></h3>
+                <h3 class="cart-item-price"><?php echo "$" . $row['price'];?></h3>
             </div>
-            <p class="cart-item-description">chicken, mushroom, mayo</p>
+            <!-- for toppingName, it is going to have to loop through the array -->
+            <p class="cart-item-description"><?php echo $row['proteinName'] . ", " . $row['toppingNames']; ?></p>
             <div class="cart-item-actions">
                 <div class="item-quantity">
                     <p class="quantity"><?php echo $quantity; ?></p>
