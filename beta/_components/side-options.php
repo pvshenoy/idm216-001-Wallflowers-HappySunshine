@@ -8,7 +8,7 @@
       <div>
         <input
           id='sides-<?php echo $row['id']; ?>'
-          name='sideID' type='checkbox'
+          name='sideID[]' type='checkbox'
           value='<?php echo $row['id']; ?>'>
       </div>
     </div>

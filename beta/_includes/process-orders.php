@@ -16,8 +16,8 @@ $catID_value = sanitize_value($_POST['catID']);
 // optional values
 $protein_value = isset($_POST['proteinID']) ? sanitize_value($_POST['proteinID']) : 0;
 $topping_value = isset($_POST['toppingID']) ? sanitize_value(implode(",", $_POST['toppingID'])) : 0;
-$side_value = isset($_POST['sideID']) ? sanitize_value($_POST['sideID']) : 0;
-$drink_value = isset($_POST['drinkID']) ? sanitize_value($_POST['drinkID']) : 0;
+$drink_value = isset($_POST['drinkID']) ? sanitize_value(implode(",", $_POST['drinkID'])) : 0;
+$side_value = isset($_POST['sideID']) ? sanitize_value(implode(",", $_POST['sideID'])) : 0;
 $bread_value = isset($_POST['breadID']) ? sanitize_value($_POST['breadID']) : 0;
 
 
