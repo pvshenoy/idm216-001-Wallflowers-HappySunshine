@@ -3,7 +3,7 @@ include_once 'app.php';
 
 $orderTotal = 0;
 
-$query = "SELECT orders.id, orders.quantity, users.username, menu.cat, menu.price, menu.descrip, menu.img, protein.proteinName, protein.proteinPrice, GROUP_CONCAT(toppings.toppingName SEPARATOR ', ') AS toppingNames, sides.sideName, drinks.drinkName, bread.breadName \n"
+$query = "SELECT orders.id, orders.quantity, users.username, menu.id AS catID, menu.cat, menu.price, menu.descrip, menu.img, protein.proteinName, protein.proteinPrice, GROUP_CONCAT(toppings.toppingName SEPARATOR ', ') AS toppingNames, GROUP_CONCAT(sides.sideName SEPARATOR ', ') AS sideNames, GROUP_CONCAT(drinks.drinkName SEPARATOR ', ') AS drinkNames, bread.breadName \n"
 
     . "FROM orders \n"
 
@@ -15,15 +15,15 @@ $query = "SELECT orders.id, orders.quantity, users.username, menu.cat, menu.pric
 
     . "LEFT JOIN toppings ON FIND_IN_SET(toppings.id, orders.toppingID) > 0 \n"
 
-    . "LEFT JOIN sides ON orders.sideID = sides.id \n"
+    . "LEFT JOIN sides ON FIND_IN_SET(sides.id, orders.sideID) > 0 \n"
 
-    . "LEFT JOIN drinks ON orders.drinkID = drinks.id \n"
+    . "LEFT JOIN drinks ON FIND_IN_SET(drinks.id, orders.drinkID) > 0 \n"
 
     . "LEFT JOIN bread ON orders.breadID = bread.id \n"
 
     . "WHERE users.id = '{$currentUser['id']}'"
 
-    . "GROUP BY orders.id, orders.quantity, users.username, menu.cat, menu.price, menu.descrip, menu.img, protein.proteinName, protein.proteinPrice, sides.sideName, drinks.drinkName, bread.breadName";
+    . "GROUP BY orders.id, orders.quantity, users.username, menu.id, menu.cat, menu.price, menu.descrip, menu.img, protein.proteinName, protein.proteinPrice, bread.breadName";
  
 $result = mysqli_query($db_connection, $query);
 if ($result->num_rows > 0) {
