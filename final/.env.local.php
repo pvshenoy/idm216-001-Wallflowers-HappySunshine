@@ -3,7 +3,7 @@
 $APP_CONFIG = [
     'environment' => 'development',
     'site_name' => 'HappySunshine',
-    'site_url' => 'http://localhost:7888/final',
+    'site_url' => 'http://localhost:7888',
     'database_host' => 'localhost',
     'database_user' => 'root',
     'database_pass' => 'root',
