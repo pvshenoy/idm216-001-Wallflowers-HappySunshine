@@ -4,6 +4,9 @@
  * logic for the application.
  */
 
+//ADDED FOR LOGIN
+session_start();
+
 // An array of values that will determine if you're working locally or on a production server.
 // @link https://stackoverflow.com/questions/2053245/how-can-i-detect-if-the-user-is-on-localhost-in-php
 $whitelist_host = ['127.0.0.1', '::1'];
@@ -29,17 +32,20 @@ if (in_array($_SERVER['REMOTE_ADDR'], $whitelist_host)) {
 include_once __DIR__ . '/_includes/database.php';
 include_once __DIR__ . '/_includes/helper-functions.php';
 include_once __DIR__ . '/_includes/user-functions.php';
+include_once __DIR__ . '/_includes/users.php';
+include_once __DIR__ . '/_includes/menu-functions.php';
 
-//make sure everything works here then split out into users functions and call here
+//ADDED FOR LOGIN
+$isLoginPage = strpos($_SERVER['REQUEST_URI'], '/auth/login') !== false;
+$sessionUserId = $_SESSION['user']['id'] ?? null;
+$user = $sessionUserId ? get_user_by_id($sessionUserId) : create_guest_user();
 
-// check if there is a user in session (logged in)
-// if no user, create guest user up unitl check in page 
+// $currentUser = ["id" => 3];
 
-//create function to insert dummy user data into database 
-//maybe make is guest user column to easily delete and differentiate real from guest
-
-//login page check if guest user
-//then after login, upadte orders with new user id order
-//then delete previous guest user
-
-$currentUser = ["id" => 3];
+//ADDED FOR LOGIN
+$userOrder = null;
+if (!$user) {
+    $user = create_guest_user();
+}
+$currentUserOrder = getOrderByUserId($user['id']);
+$userOrder= mysqli_fetch_array($currentUserOrder);

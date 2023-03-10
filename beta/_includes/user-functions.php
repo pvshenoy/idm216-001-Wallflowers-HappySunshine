@@ -60,7 +60,6 @@ function get_user_by_id($id)
  * @return object - mysqli_result
  */
 
-
 function get_user_by_username($username, $phone, $password)
 {
     global $db_connection;

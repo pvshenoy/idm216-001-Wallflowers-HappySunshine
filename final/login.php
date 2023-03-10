@@ -41,7 +41,7 @@ include_once __DIR__ . '/_components/header.php';
 
         <div>
           <button class="button" type="submit">
-            Sign in
+            Go
           </button>
         </div>
       </form>
