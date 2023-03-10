@@ -192,7 +192,7 @@ include_once '_components/header.php';
         }
     }
     ?>
-    <input type='hidden' name='userID' value='<?php echo "{$currentUser['id']}"; ?>'/>
+    <input type='hidden' name='userID' value='<?php echo "{$user['id']}"; ?>'/>
     <input type='hidden' name='catID' value='<?php echo "{$catID}"; ?>'/>
     <button type='submit'>Submit</button>
 </form>
