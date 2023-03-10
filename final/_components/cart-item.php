@@ -74,7 +74,25 @@ $id = $row['catID'];
             </p>
             <div class="cart-item-actions">
                 <div class="item-quantity">
-                    <p class="quantity"><?php echo $quantity; ?></p>
+                <p class="quantity">
+                        <?php 
+                            if ($id == 10) {
+                                $sideNamesArray = explode(', ', $row['sideNames']);
+                                $sideNamesCount = count($sideNamesArray);
+                                $sideQuantity = $quantity * $sideNamesCount;
+                                echo $sideQuantity;
+                            }
+                            elseif ($id == 11) {
+                                $drinkNamesArray = explode(', ', $row['drinkNames']);
+                                $drinkNamesCount = count($drinkNamesArray);
+                                $drinkQuantity = $quantity * $drinkNamesCount;
+                                echo $drinkQuantity;
+                            }
+                            else {
+                                echo $quantity;
+                            }
+                        ?>
+                    </p>
                 </div>
             </div>
         </div>
