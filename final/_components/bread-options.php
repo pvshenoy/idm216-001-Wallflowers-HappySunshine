@@ -9,7 +9,7 @@
         <input
           id='bread-<?php echo $row['id']; ?>'
           name='breadID' type='radio'
-          value='<?php echo $row['id']; ?>'>
+          value='<?php echo $row['id']; ?>' required>
       </div>
     </div>
     <?php } // End while loop ?>

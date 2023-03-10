@@ -4,12 +4,12 @@
     <?php while($row = $result->fetch_assoc()) { ?>
     <div class="protein-option">
       <label
-        for='protein-<?php echo $row['id']; ?>'><?php echo $row['proteinName']; ?></label>
+        for='protein-<?php echo $row['id']; ?>'><?php echo $row['proteinName'] . ' $' . number_format("{$row['proteinPrice']}", 2);; ?></label>
       <div>
         <input
           id='protein-<?php echo $row['id']; ?>'
           name='proteinID' type='radio'
-          value='<?php echo $row['id']; ?>' required>
+          value='<?php echo $row['id']; ?>'>
       </div>
     </div>
     <?php } // End while loop ?>

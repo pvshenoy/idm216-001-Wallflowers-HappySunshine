@@ -16,7 +16,7 @@ if ($order->num_rows > 0) {
     } // End while loop
     echo '</ul>';
 } 
-echo "$" . $orderTotal;
+echo "$" . $orderTotalPrice;
 
 
 ?>

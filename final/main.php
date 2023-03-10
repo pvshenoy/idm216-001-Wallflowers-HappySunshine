@@ -10,7 +10,7 @@ $menus = get_menu();
 if (!$user['isGuest']) {
     echo 'your order is in the works!';
     echo '<br>';
-    echo 'what are tou hungry for, ' . $user['username'] . '?';
+    echo 'what are you hungry for, ' . $user['username'] . '?';
 }
 ?>
 

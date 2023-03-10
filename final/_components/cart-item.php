@@ -15,37 +15,59 @@ $id = $row['catID'];
                 <h3 class="cart-item-price">
                 
                 <?php 
-                    if ($id == 10) {
+                    if ($id ==1 ) {
+                        $price = ($row['price']) + $row['proteinPrice'];
+                        $finalPrice = number_format("{$price}", 2);
+                        echo "$" . $finalPrice;
+                    }
+                    elseif ($id == 10) {
                         $sideNamesArray = explode(', ', $row['sideNames']);
                         $sideNamesCount = count($sideNamesArray);
                         $price = ($row['price']) * $sideNamesCount;
-                        echo "$" . $price;
+                        $finalPrice = number_format("{$price}", 2);
+                        echo "$" . $finalPrice;
                     }
                     elseif ($id == 11) {
                         $drinkNamesArray = explode(', ', $row['drinkNames']);
                         $drinkNamesCount = count($drinkNamesArray);
                         $price = ($row['price']) * $drinkNamesCount;
-                        echo "$" . $price;
+                        $finalPrice = number_format("{$price}", 2);
+                        echo "$" . $finalPrice;
                     }
                     else {
-                        echo "$" . $row['price'];
+                        $price = ($row['price']);
+                        $finalPrice = number_format("{$price}", 2);
+                        echo "$" . $finalPrice;
                     }
                 ?>
 
                 </h3>
             </div>
-            <!-- for toppingName, it is going to have to loop through the array -->
             <p class="cart-item-description">
             
             <?php 
-             if ($id == 10) {
+            
+             if ($id == 1) {
+                if (!$row['toppingNames']) {
+                    echo $row['breadName'] . ", " . $row['proteinName'];
+                 }
+                 else {
+                    echo $row['breadName'] . ", " . $row['proteinName'] . ", " . $row['toppingNames'];
+                 }
+             }
+             elseif ($id == 10) {
                 echo $row['sideNames'];
              }
              elseif ($id == 11) {
                 echo $row['drinkNames'];
              }
              else {
-                echo $row['proteinName'] . ", " . $row['toppingNames']; 
+                 if (!$row['toppingNames']) {
+                    echo $row['proteinName'];
+                 }
+                 else {
+                    echo $row['proteinName'] . ", " . $row['toppingNames'];
+                 }
              }
             ?>
             
