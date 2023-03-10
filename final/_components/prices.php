@@ -3,7 +3,11 @@
 $id = $row['catID'];
 $quantity = intval($row['quantity']);
 
-if ($id == 10) {
+if ($id ==1 ) {
+    $price = ($row['price']) + $row['proteinPrice'];
+    $orderTotal += $price * $quantity;
+}
+elseif ($id == 10) {
     $sideNamesArray = explode(', ', $row['sideNames']);
     $sideNamesCount = count($sideNamesArray);
     $price = ($row['price']) * $sideNamesCount;
@@ -16,11 +20,10 @@ elseif ($id == 11) {
     $orderTotal += $price;
 }
 else {
-    $price = intval($row['price']);
+    $price = floatval($row['price']);
     $orderTotal += $price * $quantity;
 }
 
 $orderTotalPrice = number_format("{$orderTotal}", 2);
-// $site_url = site_url();
 
 ?>
