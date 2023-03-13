@@ -22,7 +22,8 @@ $bread_value = isset($_POST['breadID']) ? sanitize_value($_POST['breadID']) : 0;
 
 
 // $query = "UPDATE orders SET catID='{$catID_value}', proteinID='{$protein_value}', toppingID='{$topping_value}', sideID='{$side_value}', drinkID='{$drink_value}', breadID='{$bread_value}' WHERE id={$userOrder['id']}";
-$query = "INSERT INTO orders (userID, catID, proteinID, toppingID, sideID, drinkID, breadID) VALUES ('{$userID_value}', '{$catID_value}', '{$protein_value}', '{$topping_value}', '{$side_value}', '{$drink_value}', '{$bread_value}')";$result = mysqli_query($db_connection, $query);
+$query = "INSERT INTO orders (userID, catID, proteinID, toppingID, sideID, drinkID, breadID) VALUES ('{$userID_value}', '{$catID_value}', '{$protein_value}', '{$topping_value}', '{$side_value}', '{$drink_value}', '{$bread_value}')";
+$result = mysqli_query($db_connection, $query);
 if ($result) {
     
     redirect_to('/cart.php');

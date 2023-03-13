@@ -20,6 +20,8 @@ if ($result->num_rows > 0) {
 <?php 
 $page_title = $menu['cat'];
 $dollarPrice = number_format("{$menu['price']}", 2);
+// Content based on ID of category chosen
+$catID = $_GET['id'];
 include_once '_components/header.php';
 ?>
 
@@ -36,7 +38,14 @@ include_once '_components/header.php';
         <div class="overview">
             <div class="overview-line1">
                 <h2 class="ingredients-headers"><?php echo $menu['cat']?></h2>
-                <div>$<?php echo $dollarPrice?></div>
+
+                <?php
+                // var_dump($catID);
+                // die;
+                if($catID !== '11') {
+                    echo "<div><span>$</span>{$dollarPrice}</div>";
+                }
+                ?>
             </div>
             <div class="overview-para"><?php echo $menu['descrip']?></div>
         </div>
@@ -54,8 +63,6 @@ include_once '_components/header.php';
 
 <form action='<?php echo "{$site_url}/_includes/process-orders.php" ?>' method='POST'>
     <?php
-    // Content based on ID of category chosen
-    $catID = $_GET['id'];
 
     //BREAKFAST SANDWICHES
     if ($catID == 1) {
