@@ -40,6 +40,9 @@ $isLoginPage = strpos($_SERVER['REQUEST_URI'], '/auth/login') !== false;
 $sessionUserId = $_SESSION['user']['id'] ?? null;
 $user = $sessionUserId ? get_user_by_id($sessionUserId) : create_guest_user();
 
+// var_dump($user);
+// die;
+
 // $currentUser = ["id" => 3];
 
 //ADDED FOR LOGIN

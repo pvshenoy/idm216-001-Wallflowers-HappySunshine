@@ -14,11 +14,6 @@ if (!isset($menus)) {
         echo "
               <div>
                   <a href='{$site_url}/category-details.php?id={$menu['id']}'><img class='menu-img' src='{$site_url}{$menu['hero']}' alt=''></a>
-                  <div class='top-line'>
-                      <h3>{$menu['cat']}</h3>
-                      <p><span>$</span>{$dollarPrice}</p>
-                  </div>
-                  <p>{$menu['descrip']}</p>
               </div>
         ";
     }

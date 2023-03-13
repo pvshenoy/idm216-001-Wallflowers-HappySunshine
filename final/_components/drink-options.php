@@ -4,7 +4,7 @@
     <?php while($row = $result->fetch_assoc()) { ?>
     <div class="drinks-option">
       <label
-        for='drinks-<?php echo $row['id']; ?>'><?php echo $row['drinkName']; ?></label>
+        for='drinks-<?php echo $row['id']; ?>'><?php echo $row['drinkName'] . ' $' . number_format("{$row['drinkPrice']}", 2); ?></label>
       <div>
         <input
           id='drinks-<?php echo $row['id']; ?>'

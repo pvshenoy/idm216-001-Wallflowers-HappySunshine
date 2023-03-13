@@ -14,10 +14,12 @@ elseif ($id == 10) {
     $orderTotal += $price;
 }
 elseif ($id == 11) {
-    $drinkNamesArray = explode(', ', $row['drinkNames']);
-    $drinkNamesCount = count($drinkNamesArray);
-    $price = ($row['price']) * $drinkNamesCount;
-    $orderTotal += $price;
+    $totalDrinkPrice = 0;
+    $drinkPrices = explode(',', $row['drinkPrices']);
+    foreach ($drinkPrices as $drinkPrice) {
+        $totalDrinkPrice += (float) $drinkPrice;
+    }
+    $orderTotal += $totalDrinkPrice;
 }
 else {
     $price = floatval($row['price']);
