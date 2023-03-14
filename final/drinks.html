@@ -9,64 +9,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
-    <title>Happy Sunshine - Menu</title>
+    <title>Drinks</title>
 </head>
 <body>
-    <header>
-        <img src="dist/images/preeti-img/background-elements/cloud-header.png" alt="cloud header" class="cloud-header">
-        <div class="top-nav-inner-page">
-            <a href="menu-order-confirmed.html" class="back-button">
-                <img src="dist/images/preeti-img/icons/x-icon.png" alt="" class="back-icon">
-            </a>
-            <a href="empty.html" class="cart-button">
-                <img src="dist/images/preeti-img/icons/cart-icon.png" alt="" class="cart-icon">
-            </a>
-        </div>
-        <h1 class="page-title">YOUR ORDER HAS<br>BEEN CONFIRMED!</h1>
-    </header>
-    <section class="order-confirmation">
-        <h3 class="date">FEBRUARY 21, 2023</h3>
-        <!-- <img src="dist/images/logo.png" alt="" class="logo logo-login" style="margin-top: 1rem;"> -->
-        <h3 class="wait-time">Wait time: <span style="color:var(--accent-color-tangerine-dark);">15 minutes</span></h3>
-        <img src="dist/images/preeti-img/background-elements/qr-code-stylized.png" alt="barcode" class="barcode">
-        <h3 class="barcode-details">SHOW THIS QR CODE AT THE TRUCK 
-            TO PICK UP YOUR ORDER</h3>
-        <h3 class="pickup-location-title">PICKUP LOCATION</h3>
-        <div class="location-box">
-            <img src="dist/images/preeti-img/background-elements/location.png" alt="" class="location-img">
-            <div class="location-text">
-                <h4 class="location-truck">HAPPY SUNSHINE</h4>
-                <p class="truck-address">
-                    33rd & Arch St.
-                    <br>Philadelphia, PA 19104
-                </p>
+    <img src="dist/images/preeti-img/item-images/drinks.png" alt="drinks" class="item-image">
+    <div class="top-nav-inner-page">
+        <a href="menu.html" class="back-button">
+            <img src="dist/images/preeti-img/icons/back-icon-filled.png" alt="" class="icon-filled">
+        </a>
+        <a href="empty.html" class="cart-button">
+            <img src="dist/images/preeti-img/icons/cart-icon-filled.png" alt="" class="icon-filled">
+        </a>
+    </div>
+    <section class="item">
+        <h2 class="item-name">DRINKS<span class="blue-text"> $1.50-$3</span></h2>
+        <p class="item-description">
+            Get a refreshing drink to go along with your meal!
+        </p>
+        <form action="" class="customizations">
+            <h4 class="ingredient-title"><span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">Choose 1</span></h4>
+            <div class="protein">
+                <label class="radio-container">THAI ICED TEA
+                    <input type="radio" name="protein" checked>
+                    <span class="radio-button"></span>
+                    <h3 class="price-addition">+$1.00</h3>
+                </label>
+                <hr class="item-linebreak">
+                <label class="radio-container">HOT COFFEE
+                    <input type="radio" name="protein" checked>
+                    <span class="radio-button"></span>
+                    <h3 class="price-addition">+$1.00</h3>
+                </label>
+                <hr class="item-linebreak">
             </div>
-        </div>
-        <div class="order-summary">
-            <h3 class="order-summary-title">ORDER SUMMARY</h3>
-            <div class="order-summary-item">
-                <div class="order-summary-item-title">
-                    <h4 class="order-summary-item-and-qty"><span class="order-summary-item-qty">2</span>Cheesesteak</h4>
-                    <p class="order-summary-price">$14.00</p>
-                </div>
-                <div class="order-summary-item-details">
-                    <p class="order-summary-item-details-text">chicken, mushroom, mayo</p>
-                </div>
-            </div>
-            <div class="order-summary-item">
-                <div class="order-summary-item-title">
-                    <h4 class="order-summary-item-and-qty"><span class="order-summary-item-qty">1</span>Thai Iced Tea</h4>
-                    <p class="order-summary-price">$3.00</p>
-                </div>
-            </div>
-            <hr class="cart-linebreak">
-            <h3 class="total-price">TOTAL: $17.00</h3>
-        </div>
-        <div class="reward-box">
-            <img src="dist/images/preeti-img/background-elements/drink-reward-v2.png" alt="" class="drink-rewards">
-            <h3 class="rewards-alert">Orders until a free Thai Iced Tea!</h3>
-        </div>
+        </form>
     </section>
+    <a href="cart.html" class="add-button">
+        <button class="add-to-cart">
+            ADD TO CART
+        </button>
+    </a>
     <nav class="mobile-bottom-nav">
         <hr class="menu-line">
         <div class="nav-items">
