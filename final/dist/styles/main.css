@@ -280,9 +280,9 @@ p {
 /* menu cards */
 
 .menu-categories {
-    display: grid; 
-    grid-template-columns: repeat(2, 170px); 
-    grid-template-rows: repeat(6, 160px); 
+    display: grid;  
+    grid-template-columns: repeat(2, minmax(170px, 350px));
+    grid-template-rows: repeat(6, minmax(160px));
     grid-column-gap: 1.25rem;
     grid-row-gap: 1.25rem; 
     justify-content: center;
@@ -290,12 +290,20 @@ p {
 
 /* menu cards */
 
-.menu-card {
+.menu-link {
+    height: 139px;
+}
+
+.menu-img {
+    width: 100%;
+}
+
+/* .menu-card {
     width: 100%;
     height: 10rem;
     border-radius: .813rem;
     margin: 0rem;
-}
+} */
 
 .menu-category-title-left {
     margin: 0rem 0rem 0rem 1rem;
@@ -316,68 +324,46 @@ p {
 
 .breakfast-sandwiches {
     background-image: url("../images/preeti-img/menu-cards/breakfast-sandwiches.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .french-toast {
     background-image: url("../images/preeti-img/menu-cards/french-toast.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .cheesesteaks {
     background-image: url("../images/preeti-img/menu-cards/cheesesteaks.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .lunch-sandwiches {
     background-image: url("../images/preeti-img/menu-cards/lunch-sandwiches.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .club-sandwiches {
     background-image: url("../images/preeti-img/menu-cards/club-sandwiches.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .hot-dogs-sausages {
     background-image: url("../images/preeti-img/menu-cards/hot-dogs-sausages.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .hoagies {
     background-image: url("../images/preeti-img/menu-cards/hoagies.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .burgers {
     background-image: url("../images/preeti-img/menu-cards/burgers.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .grilled-cheese {
     background-image: url("../images/preeti-img/menu-cards/grilled-cheese.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .side-orders {
     background-image: url("../images/preeti-img/menu-cards/side-orders.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 } 
 
 .drinks {
     background-image: url("../images/preeti-img/menu-cards/drinks.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* MAIN CONTENT - ITEM DETAIL PAGE */
@@ -1324,9 +1310,10 @@ p {
 
     .menu-categories {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 170px));
+        grid-template-columns: repeat(auto-fill, minmax(170px, 170px));
         grid-gap: 1rem .5rem;
         justify-content: space-evenly;
         align-items: baseline;
     }
+
 }
