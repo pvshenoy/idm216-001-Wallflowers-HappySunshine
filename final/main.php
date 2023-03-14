@@ -8,9 +8,20 @@ $menus = get_menu();
 
 <?php 
 if (!$user['isGuest']) {
-    echo 'your order is in the works!';
-    echo '<br>';
-    echo 'what are you hungry for, ' . $user['username'] . '?';
+    
+    global $db_connection;
+
+    $query= "SELECT * FROM orders WHERE userID = {$user['id']} AND status = 'archived' AND catID != 'NULL'";
+    $result = mysqli_query($db_connection, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo 'your order is in the works!';
+        echo '<br>';
+        echo 'what are you hungry for, ' . $user['username'] . '?';
+    }
+    else {
+        echo 'what are you hungry for, ' . $user['username'] . '?';
+    }
 }
 ?>
 
