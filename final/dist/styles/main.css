@@ -1286,7 +1286,7 @@ p {
 
 /* MEDIA QUERIES  */
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 620px) {
 
     .menu-categories {
         display: grid;
