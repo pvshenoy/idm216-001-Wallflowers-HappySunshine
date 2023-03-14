@@ -85,6 +85,10 @@ p {
     font-size: .875rem;
 }
 
+.single-day {
+    font-family: 'Single Day', cursive;
+}
+
 .blue-text {
     color: var(--accent-color-flip-flop-dark);
 }
@@ -99,6 +103,10 @@ p {
 
 .yellow-text {
     color: var(--accent-color-yolk);
+}
+
+.white-text {
+    color: var(--text-color-eggshell);
 }
 
 .flip-flop {
@@ -1091,6 +1099,16 @@ p {
     border-radius: .375rem;
     padding: .5rem;
     margin: 2rem 0rem;
+}
+
+.reward-cup-text {
+    position: absolute;
+    left: 3.5rem;
+    margin-top: 1.4rem;
+}
+
+.idk-tbh {
+    left: 3.65rem;
 }
 
 .drink-rewards {
