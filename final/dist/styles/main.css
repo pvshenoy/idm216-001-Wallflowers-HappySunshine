@@ -243,23 +243,16 @@ p {
     margin-bottom: .5rem;
 }
 
-.search-bar {
-    border: 1.5px solid var(--text-color-mushroom);
-    border-radius: 1.563rem; 
-    padding: 0rem 1.063rem;
-    height: 2.313rem;
-    font-size: 1rem;
-    color: var(--text-color-mushroom);
-    background-color: var(--text-color-eggshell);
-    width: 90%;
-}
+
+
+/* menu cards */
 
 .menu-categories {
-    display: grid;
-    grid-template-columns: 11rem 11rem;
-    margin: 1.5rem 0rem 7rem 0rem;
-    column-gap: 1.25rem;
-    row-gap: 1.25rem;
+    display: grid; 
+    grid-template-columns: repeat(2, 170px); 
+    grid-template-rows: repeat(6, 160px); 
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 1.25rem; 
     justify-content: center;
 }
 
@@ -409,6 +402,7 @@ p {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    height: 2.25rem;
   }
   
   /* Hide the browser's default radio button */
@@ -462,6 +456,22 @@ p {
       background: var(--text-color-eggshell);
   }
 
+.price-addition {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 400;
+    bottom: 3.3rem;
+    z-index: 40;
+    color: var(--text-color-mushroom);
+    opacity: .5;
+}
+
+.radio-container input:checked ~ .price-addition{
+    color: var(--accent-color-salmon-dark);
+    opacity: 1;
+}
+
 /* end of radio styling */
 
 /* checkbox styling */
@@ -478,6 +488,7 @@ p {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    height: 2.25rem;
   }
 
 /* Hide the browser's default checkbox */
@@ -534,6 +545,11 @@ p {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.container input:checked ~ .price-addition{
+    color: var(--accent-color-salmon-dark);
+    opacity: 1;
 }
 /* end of checkbox styling */
 
@@ -755,7 +771,7 @@ p {
 
 .cart-linebreak {
     margin-top: 0rem;
-    border: .5px solid var(--text-color-mushroom);
+    border: .8px solid var(--text-color-mushroom);
     opacity: .4;
 }
 
@@ -1207,3 +1223,15 @@ p {
     text-align: center;
 }
 
+/* MEDIA QUERIES  */
+
+@media screen and (min-width: 420px) {
+
+    .menu-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 170px));
+        grid-gap: 1rem .5rem;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+}
