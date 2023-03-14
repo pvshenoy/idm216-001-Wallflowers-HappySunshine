@@ -116,6 +116,10 @@ p {
     margin-bottom: 8rem;
 }
 
+.no-bottom {
+    margin-bottom: 0rem;
+}
+
 /* HEADER / NAVIGATION */
 
 .cloud-header {
@@ -237,6 +241,7 @@ p {
 
 .content {
     margin-top: 1.5rem;
+    margin-bottom: 8rem;
 }
 
 .hero-statement {
@@ -600,7 +605,7 @@ p {
 .add-to-cart {
     border: none;
     border-radius: 2rem;
-    padding: 1.3rem 1rem;
+    padding: 1.2rem 1rem;
     margin: .5rem 1.25rem;
     text-decoration: none;
     background: var(--text-color-mushroom);
@@ -635,6 +640,39 @@ p {
 .wait-time-cart {
     display: flex;
     flex-direction: row;
+}
+
+.wait-time-cart-text {
+    margin: 0rem;
+}
+
+.time-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-top: .25rem;
+    margin-right: .3rem;
+}
+
+.x {
+    display: flex;
+    justify-content: flex-end;
+    height: .1rem;
+}
+
+.x-button {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    color: var(--text-color-eggshell);
+    background-color: var(--accent-color-salmon);
+    border: none;
+    text-decoration: none;
+    z-index: 45;
+    bottom: 1rem;
+    left: 1rem;
+    cursor: pointer;
 }
 
 .cart-content {
@@ -696,16 +734,18 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0rem;
+    margin: .2rem 0rem 0rem 0rem;
 }
 
 .cart-item-name {
     margin: 0rem;
+    line-height: 1.5rem;
 }
 
 .cart-item-price {
-    color: var(--accent-color-salmon-dark);
-    margin: 0rem .5rem 0rem auto;
+    color: var(--text-color-mushroom);
+    margin: 0rem 1.5rem 0rem auto;
+    line-height: 1.5rem;
 }
 
 .cart-item-description {
@@ -769,6 +809,12 @@ p {
     cursor: pointer;
 }
 
+.item-linebreak {
+    margin-top: 0rem;
+    border: .8px solid var(--text-color-mushroom);
+    opacity: .4;
+}
+
 .cart-linebreak {
     margin-top: 0rem;
     border: .8px solid var(--text-color-mushroom);
@@ -785,7 +831,7 @@ p {
 }
 
 .add-ons {
-    margin: 1.25rem 0rem 12rem 1.25rem;
+    margin: 1.25rem 1.25rem 12rem 1.25rem;
 }
 
 .add-on-scroll {
@@ -816,7 +862,7 @@ p {
 
 .add-to-cart-link {
     height: .1rem;
-    position:relative;
+    position: relative;
     /* top: 4.8rem;
 	left: 4rem; */
     top: 3.2rem;
@@ -1109,7 +1155,7 @@ p {
     border: 1px solid var(--text-color-mushroom);
     border-radius: 1.75rem;
     padding: 1rem 1rem;
-    margin: 0rem 1rem 1rem 53%;
+    margin: .5rem 0rem 0rem 1rem;
     text-decoration: none;
     color: var(--text-color-eggshell);
     background: var(--text-color-mushroom);
@@ -1121,6 +1167,7 @@ p {
 .order-confirmation-details-text {
     margin: 0rem 0rem 0rem 1rem;
     padding-top: 1rem;
+    line-height: 1.5rem;
 }
 
 
