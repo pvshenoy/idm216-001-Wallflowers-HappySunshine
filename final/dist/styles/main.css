@@ -248,6 +248,16 @@ p {
     margin-bottom: .5rem;
 }
 
+.search-bar {
+    border: 1.5px solid var(--text-color-mushroom);
+    border-radius: 1.563rem; 
+    padding: 0rem 1.063rem;
+    height: 2.313rem;
+    font-size: 1rem;
+    color: var(--text-color-mushroom);
+    background-color: var(--text-color-eggshell);
+    width: 90%;
+}
 
 
 /* menu cards */
