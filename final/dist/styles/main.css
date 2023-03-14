@@ -96,6 +96,10 @@ p {
     color: var(--accent-color-salmon-dark);
 }
 
+.yellow-text {
+    color: var(--accent-color-yolk);
+}
+
 .flip-flop {
     background-color: var(--accent-color-flip-flop);
 }
