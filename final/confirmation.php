@@ -18,9 +18,11 @@ if ($order->num_rows > 0) {
 } 
 echo "$" . $orderTotalPrice;
 
+$current_date = date('m-d-y');
+
 global $db_connection;
    
-$query= "UPDATE orders SET status = 'complete' WHERE userID = {$user['id']}";
+$query= "UPDATE orders SET status = 'archived', total = {$orderTotalPrice}, orderDate = '{$current_date}' WHERE userID = {$user['id']}";
 $result = mysqli_query($db_connection, $query);
 
 ?>

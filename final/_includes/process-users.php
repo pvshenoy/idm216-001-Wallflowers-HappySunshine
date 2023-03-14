@@ -27,7 +27,17 @@ if ($newUser) {
     delete_user_by_id($user['id']);
     add_user_to_session($newUser);
    
-    redirect_to('/checkout.php');   
+    $query = "SELECT * FROM orders WHERE userID = {$newUser['id']} AND status = 'active' AND catID != 'NULL'";
+    $result = mysqli_query($db_connection, $query);
+    if (mysqli_num_rows($result) > 0) {
+        redirect_to('/checkout.php'); 
+    }
+    else {
+        // redirect_to('/profile.php');
+        $return_to = isset($_SESSION['return_to']) ? $_SESSION['return_to'] : '/';
+        header('Location: ' . $return_to);
+        exit;
+    }  
 } else {
     $error_message = 'User was not logged in: ' . mysqli_error($db_connection);
     redirect_to('/auth/login.php?error=' . $error_message);
