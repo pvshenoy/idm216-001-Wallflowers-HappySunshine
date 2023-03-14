@@ -1306,7 +1306,7 @@ p {
 
 /* MEDIA QUERIES  */
 
-@media screen and (min-width: 620px) {
+/* @media screen and (min-width: 620px) {
 
     .menu-categories {
         display: grid;
@@ -1316,4 +1316,14 @@ p {
         align-items: baseline;
     }
 
+} */
+
+@media only screen and (max-width: 1800px) and (min-width: 415px) {
+    .menu-categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 170px));
+        grid-gap: 1rem .5rem;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
 }
