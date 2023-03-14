@@ -374,7 +374,7 @@ p {
 .item {
     position: relative;
     background-color: var(--text-color-eggshell);
-    height: 100vh;
+    height: fit-content;
     margin: 30vh 0rem 4rem 0rem;
     z-index: 3;
     border-top-left-radius: 3rem;
@@ -395,7 +395,7 @@ p {
 }
 
 .customizations {
-    margin: 0rem 1.25rem;
+    margin: 0rem 1.25rem 8rem 1.25rem;
 }
 
 .ingredient-title {
