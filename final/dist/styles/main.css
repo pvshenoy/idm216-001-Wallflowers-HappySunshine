@@ -12,6 +12,7 @@ body {
 
 :root {
     --text-color-mushroom: #361E10;
+    --text-color-accent-mushroom: #5A3B2B;
     --text-color-eggshell: #FFFBF4;
     --accent-color-eggshell-dark: #FFF2DB;
     --accent-color-salmon: #F2764F;
@@ -84,6 +85,10 @@ p {
     font-size: .875rem;
 }
 
+.single-day {
+    font-family: 'Single Day', cursive;
+}
+
 .blue-text {
     color: var(--accent-color-flip-flop-dark);
 }
@@ -98,6 +103,10 @@ p {
 
 .yellow-text {
     color: var(--accent-color-yolk);
+}
+
+.white-text {
+    color: var(--text-color-eggshell);
 }
 
 .flip-flop {
@@ -118,6 +127,10 @@ p {
 
 .bottom-margin {
     margin-bottom: 8rem;
+}
+
+.bottom-margin {
+    margin-bottom: 12rem;
 }
 
 .no-bottom {
@@ -229,7 +242,7 @@ p {
 }
 
 .nav-button-text {
-    margin: 0rem;
+    margin: .2rem 0rem 0rem 0rem;
 }
 
 .menu-line {
@@ -267,9 +280,9 @@ p {
 /* menu cards */
 
 .menu-categories {
-    display: grid; 
-    grid-template-columns: repeat(2, 170px); 
-    grid-template-rows: repeat(6, 160px); 
+    display: grid;  
+    grid-template-columns: repeat(2, minmax(170px, 350px));
+    grid-template-rows: repeat(6, minmax(160px));
     grid-column-gap: 1.25rem;
     grid-row-gap: 1.25rem; 
     justify-content: center;
@@ -277,12 +290,20 @@ p {
 
 /* menu cards */
 
-.menu-card {
+.menu-link {
+    height: 139px;
+}
+
+.menu-img {
+    width: 100%;
+}
+
+/* .menu-card {
     width: 100%;
     height: 10rem;
     border-radius: .813rem;
     margin: 0rem;
-}
+} */
 
 .menu-category-title-left {
     margin: 0rem 0rem 0rem 1rem;
@@ -303,68 +324,46 @@ p {
 
 .breakfast-sandwiches {
     background-image: url("../images/preeti-img/menu-cards/breakfast-sandwiches.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .french-toast {
     background-image: url("../images/preeti-img/menu-cards/french-toast.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .cheesesteaks {
     background-image: url("../images/preeti-img/menu-cards/cheesesteaks.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .lunch-sandwiches {
     background-image: url("../images/preeti-img/menu-cards/lunch-sandwiches.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .club-sandwiches {
     background-image: url("../images/preeti-img/menu-cards/club-sandwiches.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .hot-dogs-sausages {
     background-image: url("../images/preeti-img/menu-cards/hot-dogs-sausages.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .hoagies {
     background-image: url("../images/preeti-img/menu-cards/hoagies.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .burgers {
     background-image: url("../images/preeti-img/menu-cards/burgers.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .grilled-cheese {
     background-image: url("../images/preeti-img/menu-cards/grilled-cheese.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .side-orders {
     background-image: url("../images/preeti-img/menu-cards/side-orders.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 } 
 
 .drinks {
     background-image: url("../images/preeti-img/menu-cards/drinks.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* MAIN CONTENT - ITEM DETAIL PAGE */
@@ -379,7 +378,7 @@ p {
     position: relative;
     background-color: var(--text-color-eggshell);
     height: fit-content;
-    margin: 30vh 0rem 4rem 0rem;
+    margin: 30vh 0rem 12rem 0rem;
     z-index: 3;
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
@@ -487,7 +486,7 @@ p {
 }
 
 .radio-container input:checked ~ .price-addition{
-    color: var(--accent-color-salmon-dark);
+    color: var(--accent-color-flip-flop-dark);
     opacity: 1;
 }
 
@@ -539,6 +538,7 @@ p {
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: var(--accent-color-flip-flop);
+  border: 1px solid var(--accent-color-flip-flop);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -567,13 +567,13 @@ p {
 }
 
 .container input:checked ~ .price-addition{
-    color: var(--accent-color-salmon-dark);
+    color: var(--accent-color-flip-flop-dark);
     opacity: 1;
 }
 /* end of checkbox styling */
 
 .toppings {
-    margin-bottom: 8rem; 
+    margin-bottom: 12rem; 
 }
 
 .customization-pill-buttons {
@@ -636,6 +636,14 @@ p {
 	z-index:1000;
 }
 
+.add-to-cart:hover {
+    background-color: var(--text-color-accent-mushroom);
+}
+
+.add-to-cart:active {
+    background-color: var(--text-color-accent-mushroom);
+}
+
 /* CART PAGE CONTENT  */
 
 .cart {
@@ -677,7 +685,8 @@ p {
     position: relative;
     width: 2rem;
     height: 2rem;
-    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
     border-radius: 50%;
     color: var(--text-color-eggshell);
     background-color: var(--accent-color-salmon);
@@ -1078,15 +1087,26 @@ p {
     margin: 2rem 0rem;
 }
 
+.reward-cup-text {
+    position: absolute;
+    left: 3.5rem;
+    margin-top: 1.4rem;
+}
+
+.idk-tbh {
+    left: 3.65rem;
+}
+
 .drink-rewards {
-    width: 5rem;
+    width: auto;
     height: 4.5rem;
     margin: auto;
 }
 
 .rewards-alert {
-    margin-left: 1rem;
+    margin: 0rem 1rem;
     color: var(--accent-color-flip-flop-dark);
+    align-self: center;
 }
 
 .order-summary-item {
@@ -1114,7 +1134,7 @@ p {
 }
 
 .order-summary-price {
-    color: var(--accent-color-salmon-dark);
+    color: var(--text-color-mushroom);
     margin: 0rem;
 }
 
@@ -1286,11 +1306,11 @@ p {
 
 /* MEDIA QUERIES  */
 
-@media screen and (min-width: 420px) {
 
+@media only screen and (max-width: 1800px) and (min-width: 415px) {
     .menu-categories {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 170px));
+        grid-template-columns: repeat(auto-fill, minmax(170px, 170px));
         grid-gap: 1rem .5rem;
         justify-content: space-evenly;
         align-items: baseline;
