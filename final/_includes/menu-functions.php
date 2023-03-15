@@ -14,7 +14,7 @@ function get_menu()
 
 function get_order_by_user_id($userID) {
     global $db_connection;
-    $query = "SELECT orders.id, orders.quantity, users.username, menu.id AS catID, menu.cat, menu.price, menu.descrip, menu.img, protein.proteinName, protein.proteinPrice, GROUP_CONCAT(toppings.toppingName SEPARATOR ', ') AS toppingNames, GROUP_CONCAT(sides.sideName SEPARATOR ', ') AS sideNames, GROUP_CONCAT(drinks.drinkName SEPARATOR ', ') AS drinkNames, GROUP_CONCAT(drinks.drinkPrice SEPARATOR ', ') AS drinkPrices, bread.breadName \n"
+    $query = "SELECT orders.id, orders.quantity, users.username, users.amount, menu.id AS catID, menu.cat, menu.price, menu.descrip, menu.img, protein.proteinName, protein.proteinPrice, GROUP_CONCAT(toppings.toppingName SEPARATOR ', ') AS toppingNames, GROUP_CONCAT(sides.sideName SEPARATOR ', ') AS sideNames, GROUP_CONCAT(drinks.drinkName SEPARATOR ', ') AS drinkNames, GROUP_CONCAT(drinks.drinkPrice SEPARATOR ', ') AS drinkPrices, bread.breadName \n"
 
     . "FROM orders \n"
 
@@ -34,7 +34,7 @@ function get_order_by_user_id($userID) {
 
     . "WHERE users.id = '{$userID}' AND status = 'active'"
 
-    . "GROUP BY orders.id, orders.quantity, users.username, menu.id, menu.cat, menu.price, menu.descrip, menu.img, protein.proteinName, protein.proteinPrice, bread.breadName";
+    . "GROUP BY orders.id, orders.quantity, users.username, users.amount, menu.id, menu.cat, menu.price, menu.descrip, menu.img, protein.proteinName, protein.proteinPrice, bread.breadName";
     
     // . "ORDER BY id DESC LIMIT 1";
  
