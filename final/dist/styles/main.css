@@ -685,8 +685,7 @@ p {
     position: relative;
     width: 2rem;
     height: 2rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     border-radius: 50%;
     color: var(--text-color-eggshell);
     background-color: var(--accent-color-salmon);
@@ -696,6 +695,7 @@ p {
     bottom: 1rem;
     left: 1rem;
     cursor: pointer;
+    line-height: .5rem;
 }
 
 .cart-content {
