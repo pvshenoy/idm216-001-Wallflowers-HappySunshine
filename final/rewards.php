@@ -15,7 +15,9 @@ if (!$user['isGuest']) {
 
     if (mysqli_num_rows($result) > 0) {
         // LOGIC FOR REWARDS
-        $count = mysqli_num_rows($result);
+        $query= "SELECT amount FROM users WHERE user = {$user['id']}";
+        $result = mysqli_query($db_connection, $query);
+        $count = $user['amount'];
         if ($count < 10) {
             $ordersLeft = 10 - $count;
             if ($ordersLeft == 1) {

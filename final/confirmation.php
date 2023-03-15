@@ -15,14 +15,25 @@ if ($order->num_rows > 0) {
         include '_components/checkout-item.php';
     } // End while loop
     echo '</ul>';
+    echo "$" . $orderTotalPrice;
 } 
-echo "$" . $orderTotalPrice;
 
 $current_date = date('m-d-y');
+$current_time = date('H:i:s');
+$time_integer = intval(str_replace(':', '', $current_time));
 
 global $db_connection;
    
-$query= "UPDATE orders SET status = 'archived', total = {$orderTotalPrice}, orderDate = '{$current_date}' WHERE userID = {$user['id']}";
+$query= "UPDATE orders SET status = 'archived', total = {$orderTotalPrice}, orderDate = '{$current_date}', orderTime = '{$time_integer}' WHERE userID = {$user['id']} AND status = 'active'";
+$result = mysqli_query($db_connection, $query);
+
+$query = "SELECT amount FROM users WHERE id = {$user['id']}";
+$result = mysqli_query($db_connection, $query);
+
+$amount = $user['amount'];
+$amount += 1;
+
+$query= "UPDATE users SET amount = {$amount} WHERE id = {$user['id']}";
 $result = mysqli_query($db_connection, $query);
 
 ?>

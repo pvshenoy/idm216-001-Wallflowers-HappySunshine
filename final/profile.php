@@ -15,18 +15,27 @@ if (!$user['isGuest']) {
     $result = mysqli_query($db_connection, $query);
 
     if (mysqli_num_rows($result) > 0) {
-        $count = mysqli_num_rows($result);
+        $count = $user['amount'];
         echo '<p>' . $count . ' Orders</p>';
         echo '<ul>';
+        $currentTime = 0;
         while($row = $result->fetch_assoc()) {
-            echo '<li>' . 'ORDER #' . $count . '</br>' . $row['orderDate'] . '</br> REWARDS LOGGED' . '</li>';
-            $count -= 1;
+            if ($row['orderTime'] != $currentTime){
+                echo '<li>' . 'ORDER #' . $count . '</br>' . $row['orderDate'] . '</br> REWARDS LOGGED' . '</li>';
+                $currentTime = $row['orderTime'];
+                $count -= 1;
+            }
         } // End while loop
         echo '</ul>';
         
         
+
+        $query= "SELECT amount FROM users WHERE user = {$user['id']}";
+        $result = mysqli_query($db_connection, $query);
+        $count = $user['amount'];
+
         // LOGIC FOR REWARDS
-        $count = mysqli_num_rows($result);
+        
         if ($count < 10) {
             $ordersLeft = 10 - $count;
             if ($ordersLeft == 1) {
