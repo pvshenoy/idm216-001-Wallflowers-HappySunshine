@@ -2,6 +2,7 @@
 
 include '_components/prices.php';
 $id = $row['catID'];
+$site_url = site_url();
 
 ?>
 <li class="cart-item">
@@ -107,6 +108,12 @@ $id = $row['catID'];
                     </p>
                 </div>
             </div>
+            <form action='<?php echo "{$site_url}/_includes/delete-item.php" ?>' method='POST'>
+                <input type='hidden' name='orderID' value='<?php echo "{$row['id']}"; ?>'/>
+                <button  class='delete-button'type='submit'>
+                <p class='text-decoration-underline'>Delete</p>
+                </button>
+            </form>
         </div>
     </div>
 </li>
