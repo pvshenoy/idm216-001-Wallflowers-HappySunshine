@@ -1016,6 +1016,10 @@ p {
     text-align: center;
 }
 
+.submit-login:hover {
+    background: var(--accent-color-flip-flop-dark);
+}
+
 /* PAYMENT PAGE */
 
 .pickup-location-title {
@@ -1366,6 +1370,10 @@ a.desktop-link:active {
     display: none;
 }
 
+.barcode-details-desktop {
+    display: none;
+}
+
 /* MEDIA QUERIES  */
 
 
@@ -1377,6 +1385,19 @@ a.desktop-link:active {
 
     .mobile-bottom-nav {
         display: none;
+    }
+
+    .barcode-details {
+        display: none;
+    }
+
+    .barcode-details-desktop {
+        display: block;
+        cursor: pointer;
+    }
+
+    .barcode-details-desktop:hover {
+        color: var(--accent-color-flip-flop-dark);
     }
 
     .menu-categories {
