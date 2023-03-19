@@ -49,6 +49,9 @@ a:active {
     color: var(--text-color-mushroom);
 }
 
+ul {
+    list-style: none;
+}
 
 /* font sizes match the heading styles in the coding page of the figma*/
 
@@ -125,6 +128,10 @@ p {
     background-color: var(--accent-color-salmon);
 }
 
+.no-margin {
+    margin: 0rem;
+}
+
 .bottom-margin {
     margin-bottom: 8rem;
 }
@@ -137,6 +144,9 @@ p {
     margin-bottom: 0rem;
 }
 
+.line-height {
+    line-height: .5rem;
+}
 /* HEADER / NAVIGATION */
 
 .cloud-header {
@@ -1304,10 +1314,53 @@ p {
     text-align: center;
 }
 
+/* DESKTOP STYLING */
+
+.desktop-header {
+    display: none;
+}
+
+.desktop-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.desktop-menu-link-item {
+    margin: 0rem;
+    line-height: .5rem;
+}
+
+.desktop-cart-icon {
+    width: 1.5rem;
+    margin: auto;
+}
+
+.desktop-cart-icon:hover path {
+    stroke: var(--accent-color-eggshell-dark);
+}
+
+.menu-item-desktop:hover {
+    color: var(--accent-color-eggshell-dark);
+    cursor: pointer;
+}
+
+a.desktop-link:hover {
+    color: var(--accent-color-eggshell-dark);
+}
+
+a.desktop-link:active {
+    color: var(--accent-color-eggshell-dark);
+}
+
 /* MEDIA QUERIES  */
 
 
 @media only screen and (max-width: 1800px) and (min-width: 415px) {
+
+    .mobile-header {
+        display: none;
+    }
+
     .menu-categories {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(170px, 170px));
@@ -1315,4 +1368,36 @@ p {
         justify-content: space-evenly;
         align-items: baseline;
     }
+
+    .desktop-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        background-color: var(--accent-color-flip-flop);
+    }
+
+    .desktop-menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding: 0rem;
+    
+    }
+
+    .menu-item-desktop {
+        margin: auto 1rem;
+    }
+
 }
+
+/* @media only screen and (max-width: 940px) and (min-width: 415px) {
+
+    .desktop-header {
+        height: 6rem;
+    }
+    .desktop-logo {
+        
+    }
+
+} */
