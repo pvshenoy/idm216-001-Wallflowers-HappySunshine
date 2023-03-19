@@ -1313,16 +1313,24 @@ p {
 .rewards-info {
     text-align: center;
 }
+/* TABLET STYLING */
+
+.tablet-header {
+    display: none;
+}
 
 /* DESKTOP STYLING */
 
 .desktop-header {
     display: none;
+    /* background-image: url('../images/preeti-img/background-elements/desktop-navbar.png');
+    background-size: contain;
+    background-repeat: no-repeat; */
 }
 
 .desktop-logo {
     max-width: 100%;
-    height: auto;
+    height: 4rem;
 }
 
 .desktop-menu-link-item {
@@ -1331,7 +1339,7 @@ p {
 }
 
 .desktop-cart-icon {
-    width: 1.5rem;
+    width: 1.125rem;
     margin: auto;
 }
 
@@ -1355,7 +1363,7 @@ a.desktop-link:active {
 /* MEDIA QUERIES  */
 
 
-@media only screen and (max-width: 1800px) and (min-width: 415px) {
+@media only screen and (max-width: 1800px) and (min-width: 445px) {
 
     .mobile-header {
         display: none;
@@ -1369,20 +1377,21 @@ a.desktop-link:active {
         align-items: baseline;
     }
 
-    .desktop-header {
+     .desktop-header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        height: auto;
         background-color: var(--accent-color-flip-flop);
     }
-
+    
     .desktop-menu {
         display: flex;
         flex-direction: row;
         list-style-type: none;
         padding: 0rem;
-    
+        margin: 0rem;
     }
 
     .menu-item-desktop {
@@ -1391,13 +1400,71 @@ a.desktop-link:active {
 
 }
 
-/* @media only screen and (max-width: 940px) and (min-width: 415px) {
+@media only screen and (max-width: 590px) and (min-width: 445px) {
+
+    .mobile-header {
+        display: none;
+    }
 
     .desktop-header {
-        height: 6rem;
-    }
-    .desktop-logo {
-        
+        display: none;
     }
 
-} */
+    .tablet-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: var(--accent-color-flip-flop);
+    }
+
+    .desktop-menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding: 0rem;
+        margin: 0rem;
+    }
+
+    .menu-item-desktop {
+        margin: auto 1rem;
+    }
+
+    .desktop-link {
+        height: .1rem;
+    }
+
+    .menu-icon {
+        height: 1.15rem;
+        margin-top: .6rem;
+    }
+
+    .menu-icon:hover path {
+        fill: var(--accent-color-eggshell-dark);
+    }
+
+    .menu-icon:hover path {
+        fill: var(--accent-color-eggshell-dark);
+    }
+
+    .rewards-icon {
+        height: 1.15rem;
+        margin-top: .5rem;
+    }
+
+    .rewards-icon:hover path {
+        stroke: var(--accent-color-eggshell-dark);
+    }
+
+    .profile-icon {
+        height: 1.15rem;
+        margin-top: .5rem;
+    }
+
+    .profile-icon:hover path {
+        fill: var(--accent-color-eggshell-dark);
+    }
+
+    .desktop-cart-icon {
+        margin-top: .375rem;
+    }
+}
