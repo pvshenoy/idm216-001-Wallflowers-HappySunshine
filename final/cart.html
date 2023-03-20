@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="dist/styles/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/ner2naf.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="scripts" href="dist/scripts/main.js">
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
     <title>Cart</title>
 </head>
@@ -15,9 +16,21 @@
 <div class="headers">
     <header class="mobile-header">
         <img src="dist/images/preeti-img/background-elements/cloud-header.png" alt="cloud header" class="cloud-header">
-            <div class="top-nav">
+            <div class="top-nav-inner-page">
+                <a href="menu.html" class="back-button">
+                    <svg class="back-icon" viewbox="0 0 14.5 26.5">
+                        <defs><style>.cls-1{fill:none;stroke:#361e10;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5px;}</style></defs>
+                        <path class="cls-1" d="m13.25,1.25L1.25,13.25l12,12"/>
+                    </svg>
+                </a>
                 <a href="empty.html" class="cart-button">
-                    <img src="dist/images/preeti-img/icons/cart-icon.png" alt="" class="cart-icon">
+                    <svg class="cart-icon shopping-bag" viewbox="0 0 34.96 39.96"><defs>
+                        <style>.stroke{stroke-linecap:round;}.stroke,.fill{fill:none;stroke:#361e10;stroke-width:3.02px;}</style></defs>
+                        <path class="fill" d="m2.68,16.71c.12-1.37.19-2.05.64-2.47.45-.41,1.14-.41,2.52-.41h23.29c1.38,0,2.06,0,2.52.41.45.41.52,1.1.64,2.47l.72,7.91c.59,6.47.88,9.7-1,11.77-1.89,2.07-5.13,2.07-11.63,2.07h-5.78c-6.5,0-9.74,0-11.63-2.07-1.89-2.07-1.59-5.3-1-11.77l.72-7.91Z"/>
+                        <path class="fill" d="m9.58,10.04v-.63c0-4.36,3.53-7.9,7.9-7.9h0c4.36,0,7.9,3.54,7.9,7.9v.63"/>
+                        <path class="stroke" d="m9.58,21.4v-2.84"/>
+                        <path class="stroke" d="m25.37,21.4v-2.84"/>
+                    </svg>
                 </a>
             </div>
             <h1 class="page-title">CART</h1>
@@ -95,7 +108,7 @@
         <h4 class="wait-time-cart-text">Wait time: <span class="red-text">15 minutes</span></h4>
     </div>
     <ul class="cart-item-list">
-        <a href="item-details.html" class="cart-item-link"><li class="cart-item">
+        <li class="cart-item">
             <div class="x"><button class="x-button single-day">x</button></div>
             <div class="cart-content">
                 <div class="cart-image">
@@ -108,13 +121,30 @@
                     </div>
                     <p class="cart-item-description">chicken, mushroom, mayo</p>
                     <div class="cart-item-actions">
-                        <div class="item-quantity">
-                            <a href="cart-cheesesteak.html" class="add-one"><p class="quantity">1<span class="increase">+</span></p></a>
+                        <div class="quantity-field" >
+                            <button 
+                              id="minus-button" class="value-button decrease-button" 
+                              onclick="decreaseValue(this)" 
+                              title="Azalt">-</button>
+                              <div id="num" class="number">1</div>
+                            <button 
+                              class="value-button increase-button" 
+                              onclick="increaseValue(this, 99)"
+                              title="Arrtır"
+                            >+
+                            </button>
+                          </div>
+                          <div class="edit-button">
+                            <p class="edit-text">EDIT</p>
+                            <img src="dist/images/preeti-img/icons/edit-icon.png" alt="" class="edit-icon">
                         </div>
+                        <!-- <div class="item-quantity">
+                            <a href="cart-cheesesteak.html" class="add-one"><p class="quantity">1<span class="increase">+</span></p></a>
+                        </div> -->
                     </div>
                 </div>
             </div>
-        </li></a>
+        </li>
     </ul>
     <hr class="cart-linebreak">
     <h3 class="cart-total">TOTAL: $7.00</h3>
