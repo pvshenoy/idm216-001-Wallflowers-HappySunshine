@@ -1703,3 +1703,87 @@ a.desktop-link:active {
             bottom: 0rem;
         }
 }
+
+/* MICROINTERACTIONS */
+
+:root{
+    --accent-color-flip-flop: #90C5D3;
+    --text-color-mushroom: #361E10;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.microinteraction-container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100vw;
+    position: relative;
+    width: 18rem;
+    margin: 1rem auto 3rem auto;
+}
+
+.progress-container::before {
+    background-color: #d1d2d4;
+    content: "";
+    height: 0.5rem;
+    left: 0;
+    position: absolute;
+    top: 58%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: -1;
+}
+
+.progress {
+    background-color: #90C5D3;
+    height: 0.5rem;
+    left: 0;
+    position: absolute;
+    top: 58%;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+    width: 0%;
+    z-index: -1;
+  animation: progress-forward 4s infinite;
+}
+
+.circle {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #868991;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    transition: 0.4s ease;
+    width: 1rem;
+}
+
+.circle.active {
+    border-color: #90C5D3;
+}
+
+.item-img{
+  height: 3.5rem;
+}
+
+
+@keyframes progress-forward {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
