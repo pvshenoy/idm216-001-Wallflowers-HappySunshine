@@ -443,6 +443,7 @@ p {
 }
 
 .ingredient-title {
+    margin-top: 1rem;
     margin-bottom: .5rem;
 }
 
@@ -520,7 +521,7 @@ p {
     display: flex;
     justify-content: flex-end;
     font-weight: 400;
-    bottom: 3.3rem;
+    bottom: 2.3rem;
     z-index: 40;
     color: var(--text-color-mushroom);
     opacity: .5;
@@ -728,9 +729,9 @@ p {
     height: 2rem;
     font-size: 2rem;
     border-radius: 50%;
-    color: var(--text-color-eggshell);
-    background-color: var(--accent-color-salmon);
-    border: none;
+    color: var(--accent-color-tangerine);
+    background-color: var(--accent-color-eggshell-dark);
+    border: 4px solid var(--accent-color-tangerine);
     text-decoration: none;
     z-index: 45;
     bottom: 1rem;
@@ -819,15 +820,15 @@ p {
 
 .cart-item-actions {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: flex-end;
-    margin: .2rem .5rem 0rem .5rem;
+    margin: .2rem .5rem 0rem 0rem;
 }
 
 .edit-button {
     display: flex; 
     flex-direction: row;
-    margin: 0rem .5rem 0rem 0rem;
+    margin: .2rem 0rem 0rem 0rem;
     cursor: pointer;
 }
 
@@ -841,7 +842,7 @@ p {
     font-size: 1rem;
     font-weight:600; 
     color: var(--accent-color-flip-flop-dark);
-    margin: 0rem .2rem;
+    margin: 0rem;
 }
 
 .delete-button {
@@ -1450,13 +1451,21 @@ a.desktop-link:active {
     display: none;
 }
 
+.tablet {
+    display: none;
+}
+
 /* MEDIA QUERIES  */
 
 
 @media only screen and (min-width: 445px) {
-
     .mobile {
         display: none;
+    }
+
+    .tablet {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .mobile-header {
@@ -1536,6 +1545,37 @@ a.desktop-link:active {
         z-index: 35;
     }
 
+    .add-to-cart-tablet {
+        border: none;
+        border-radius: 2rem;
+        padding: 1.2rem 1rem;
+        margin: 1rem 1.25rem;
+        text-decoration: none;
+        background: var(--text-color-mushroom);
+        color: var(--text-color-eggshell);
+        font-size: .875rem;
+        font-size: 1.125rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 800;
+    }
+
+    .item {
+        height: auto;
+        margin-bottom: 0rem;
+    }
+
+    .customizations {
+        margin-bottom: 0rem;
+    }
+
+    .toppings {
+        margin-bottom: 6rem;
+    }
 }
 
 /* TABLET SIZE */
@@ -1615,8 +1655,11 @@ a.desktop-link:active {
 
 /* FOR CENTERING / ALTER */
 @media only screen and (min-width: 680px) {
-
     .desktop {
+        display: block;
+    }
+
+    .tablet {
         display: block;
     }
         /* centering everything */
@@ -1702,6 +1745,7 @@ a.desktop-link:active {
             position: relative;
             bottom: 0rem;
         }
+
 }
 
 /* MICROINTERACTIONS */
@@ -1813,4 +1857,63 @@ a.desktop-link:active {
     40% { -webkit-transform: rotateZ(-6deg); }
     60% { -webkit-transform: rotateZ(7deg); }
     80% { -webkit-transform: rotateZ(-9deg); }
+  }
+
+
+  /* qty indication */
+
+  .quantity-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px; 
+    height: 30px;
+    margin: 0 0 0 auto;    
+  }
+  
+  .quantity-field .value-button{ 
+    border: 1px solid #361E10;
+    margin: 0px;
+    width: 40px;
+    height: 100%;   
+    padding: 0;
+    background: #361E10; 
+    color: #FFFBF4;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .quantity-field .decrease-button {
+    transform: translate(20px);
+    margin-right: -4px;
+    border-radius: 22px 0 0 22px;
+    z-index: -1;
+  }
+  
+  .quantity-field .increase-button {
+    margin-left: -4px;
+    border-radius: 0 22px 22px 0;
+  }
+   
+  .quantity-field .number{
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-top: 1px solid #361E10;
+    border-bottom: 1px solid #361E10;
+    margin: 0px;
+    width: 40px;
+    height: 100%;
+    line-height: 30px;
+    font-size: 11pt;
+    border-radius: 11px 0 0 11px;
+    box-sizing: border-box; 
+    background: #361E10;
+    color: #FFFBF4;
+    font-family: calibri;
+    z-index: 5;
+  }
+  
+  .quantity-field .number::selection{
+    background: none;
   }

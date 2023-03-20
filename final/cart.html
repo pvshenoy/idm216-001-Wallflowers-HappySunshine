@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="dist/styles/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/ner2naf.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="scripts" href="dist/scripts/main.js">
     <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
     <title>Cart</title>
 </head>
@@ -95,7 +96,7 @@
         <h4 class="wait-time-cart-text">Wait time: <span class="red-text">15 minutes</span></h4>
     </div>
     <ul class="cart-item-list">
-        <a href="item-details.html" class="cart-item-link"><li class="cart-item">
+        <li class="cart-item">
             <div class="x"><button class="x-button single-day">x</button></div>
             <div class="cart-content">
                 <div class="cart-image">
@@ -108,13 +109,30 @@
                     </div>
                     <p class="cart-item-description">chicken, mushroom, mayo</p>
                     <div class="cart-item-actions">
-                        <div class="item-quantity">
-                            <a href="cart-cheesesteak.html" class="add-one"><p class="quantity">1<span class="increase">+</span></p></a>
+                        <div class="quantity-field" >
+                            <button 
+                              id="minus-button" class="value-button decrease-button" 
+                              onclick="decreaseValue(this)" 
+                              title="Azalt">-</button>
+                              <div id="num" class="number">1</div>
+                            <button 
+                              class="value-button increase-button" 
+                              onclick="increaseValue(this, 99)"
+                              title="Arrtır"
+                            >+
+                            </button>
+                          </div>
+                          <div class="edit-button">
+                            <p class="edit-text">EDIT</p>
+                            <img src="dist/images/preeti-img/icons/edit-icon.png" alt="" class="edit-icon">
                         </div>
+                        <!-- <div class="item-quantity">
+                            <a href="cart-cheesesteak.html" class="add-one"><p class="quantity">1<span class="increase">+</span></p></a>
+                        </div> -->
                     </div>
                 </div>
             </div>
-        </li></a>
+        </li>
     </ul>
     <hr class="cart-linebreak">
     <h3 class="cart-total">TOTAL: $7.00</h3>
