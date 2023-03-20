@@ -220,18 +220,46 @@ p {
 }
 
 .back-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     position: relative;
     z-index: 999;
-    margin: 1.6rem 0rem 0rem 1rem;
+    margin: 2.1rem 0rem 0rem 2rem;
+}
 
+.x-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    z-index: 999;
+    margin: 2.4rem 0rem 0rem 2rem;
 }
 
 .icon-filled {
     position: relative;
     margin: 1rem;
     z-index: 990;
+}
+
+.filled-container {
+    width: 4rem;
+    height: 4rem;
+    margin: 2rem;
+    position: relative;
+    background-color: var(--accent-color-eggshell-dark);
+    border-radius: 1rem;
+    z-index: 400;
+    text-align: center;
+}
+
+.item-details-cart-icon {
+    width: 2rem;
+    margin: .75rem;
+}
+
+.item-details-back-icon {
+    width: 1.15rem;
+    margin: 1rem 0 0 0;
 }
 
 .page-title {
