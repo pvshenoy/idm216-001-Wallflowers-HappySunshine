@@ -1787,3 +1787,30 @@ a.desktop-link:active {
     width: 100%;
   }
 }
+
+
+.shopping-bag{
+   transform-origin: top center;
+  }
+  
+  .shopping-bag:hover{
+    cursor: pointer;
+    -webkit-animation: sway 1s .1s ease-in-out;
+    animation: sway 1s .1s ease-in-out;
+  }
+  
+  @-webkit-keyframes sway {
+    0% { -webkit-transform: rotateZ(0); }
+    20% { -webkit-transform: rotateZ(8deg); }
+    40% { -webkit-transform: rotateZ(-6deg); }
+    60% { -webkit-transform: rotateZ(7deg); }
+    80% { -webkit-transform: rotateZ(-9deg); }
+  }
+
+  @keyframes sway {
+    0% { -webkit-transform: rotateZ(0); }
+    20% { -webkit-transform: rotateZ(8deg); }
+    40% { -webkit-transform: rotateZ(-6deg); }
+    60% { -webkit-transform: rotateZ(7deg); }
+    80% { -webkit-transform: rotateZ(-9deg); }
+  }
