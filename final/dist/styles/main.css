@@ -1080,6 +1080,34 @@ p {
     background: var(--accent-color-flip-flop-dark);
 }
 
+.top-right {
+    position: absolute;
+    width: 12rem;
+    top: 0;
+    right: 0;
+}
+
+.top-left {
+    position: absolute;
+    width: 12rem;
+    top: 0;
+    left: 0;
+}
+
+.bottom-right {
+    position: absolute;
+    width: 10rem;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-left {
+    position: absolute;
+    width: 10rem;
+    bottom: 0;
+    left: 0;
+}
+
 /* PAYMENT PAGE */
 
 .pickup-location-title {
