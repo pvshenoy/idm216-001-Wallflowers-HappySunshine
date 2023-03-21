@@ -31,7 +31,6 @@ $document_title = $page_title;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="<?php echo site_url(); ?>/dist/images/favicon.ico">
   <link rel="stylesheet" href="<?php echo site_url()?>/dist/styles/main.css">
-  <link rel="scripts" href="<?php echo site_url(); ?>dist/scripts/main.js">
   <link rel="stylesheet" href="https://use.typekit.net/ner2naf.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

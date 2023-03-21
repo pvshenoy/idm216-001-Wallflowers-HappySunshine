@@ -91,12 +91,14 @@ if (!$user['isGuest']) {
                 <h2 style='text-align: center; margin-bottom: 0rem;'>Looks like you have no orders yet . . .</h2>
                 <h3 class='cart-is-empty'>Start an order to begin earning rewards!</h3>
             </div>
+            <div class='empty-button-container'>
+            <a href='{$site_url}/index.php'>
+                <button class='empty-button'>
+                START ORDER
+                </button>
+            </a>
+            </div>
         </section>
-        <a href='{$site_url}/index.php'>
-            <button class='empty-button'>
-            START ORDER
-            </button>
-        </a>
         ";
 
     }
@@ -109,14 +111,14 @@ else {
             <h2 style='text-align: center; margin-bottom: 0rem;'>Looks like you're not logged in . . .</h2>
             <h3 class='cart-is-empty'>Login or create an account to order food and start tracking your orders!</h3>
         </div>
+        <div class='empty-button-container'>
+            <a href='{$site_url}/login.php'>
+                <button class='empty-button'>
+                LOGIN
+                </button>
+            </a>
+        </div>
     </section>
-    <div class='empty-button-container'>
-    <a href='{$site_url}/login.php'>
-        <button class='empty-button'>
-        LOGIN
-        </button>
-    </a>
-    </div>
     ";
 
 }

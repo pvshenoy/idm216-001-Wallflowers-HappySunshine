@@ -97,29 +97,46 @@ $site_url = site_url();
             ?>
             
             </p>
-            <div class="cart-item-actions">
-                <div class="item-quantity">
-                <p class="quantity">
-                        <?php 
-                            if ($id == 10) {
-                                $sideNamesArray = explode(', ', $row['sideNames']);
-                                $sideNamesCount = count($sideNamesArray);
-                                $sideQuantity = $quantity * $sideNamesCount;
-                                echo $sideQuantity;
-                            }
-                            elseif ($id == 11) {
-                                $drinkNamesArray = explode(', ', $row['drinkNames']);
-                                $drinkNamesCount = count($drinkNamesArray);
-                                $drinkQuantity = $quantity * $drinkNamesCount;
-                                echo $drinkQuantity;
-                            }
-                            else {
-                                echo $quantity;
-                            }
-                        ?>
-                    </p>
+
+            <?php if ($id != 10 AND $id != 11) { ?>
+                <div class="cart-item-actions">
+                    <div class="item-quantity">
+                        <div class="quantity-field" >
+                            <button 
+                                id="minus-button" class="value-button decrease-button" 
+                                onclick="decreaseValue(this)" 
+                                title="Azalt">-</button>
+                                <div id="num" class="number">
+                                    <p class="quantity">
+                                        <?php 
+                                            if ($id == 10) {
+                                                $sideNamesArray = explode(', ', $row['sideNames']);
+                                                $sideNamesCount = count($sideNamesArray);
+                                                $sideQuantity = $quantity * $sideNamesCount;
+                                                echo $sideQuantity;
+                                            }
+                                            elseif ($id == 11) {
+                                                $drinkNamesArray = explode(', ', $row['drinkNames']);
+                                                $drinkNamesCount = count($drinkNamesArray);
+                                                $drinkQuantity = $quantity * $drinkNamesCount;
+                                                echo $drinkQuantity;
+                                            }
+                                            else {
+                                                echo $quantity;
+                                            }
+                                        ?>
+                                    </p>
+                                </div>
+                            <button 
+                                class="value-button increase-button" 
+                                onclick="increaseValue(this, 99)"
+                                title="Arrtır"
+                            >+
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            <?php } // END IF ?>
         </div>
     </div>
 </li>
