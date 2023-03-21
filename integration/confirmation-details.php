@@ -37,6 +37,7 @@ $order = get_recent_order_by_user_id($user['id']);
         <h3 class="date">FEBRUARY 21, 2023</h3>
         <h3 class="wait-time">Wait time: <span style="color:var(--accent-color-tangerine-dark);">15 minutes</span></h3>
         <img src="dist/images/preeti-img/background-elements/qr-code.png" alt="barcode" class="barcode">
+        <p class="order-number"> ORDER #1234</p>
         <h3 class="barcode-details">SHOW THIS QR CODE AT THE TRUCK 
             TO PICK UP YOUR ORDER
         </h3>
@@ -66,7 +67,7 @@ $order = get_recent_order_by_user_id($user['id']);
         <?php include '_components/checkout-item.php'; ?>
     <?php } // End while loop ?>
     <hr class="cart-linebreak">
-            <h3 class="total-price">TOTAL: <?php $orderTotal ?></h3>
+            <h3 class="total-price">TOTAL: $<?php echo $orderTotalPrice; ?></h3>
         </div>
         <div class="reward-box">
             <div class="reward-cup">

@@ -1010,9 +1010,10 @@ p {
 
 .empty-cart-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin: 0rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 8rem 0rem;
 }
 
 .empty-cart {
@@ -1262,9 +1263,13 @@ p {
     margin: 1rem 1rem 8rem 1rem;
 }
 
+.order-number {
+    margin-bottom: 1rem;
+}
+
 .barcode {
     width: 16rem;
-    margin: .5rem 0rem 1rem 0rem;
+    margin: .5rem 0rem 0rem 0rem;
 }
 
 .barcode-details {

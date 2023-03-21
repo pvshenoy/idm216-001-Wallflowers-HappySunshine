@@ -87,14 +87,14 @@ echo "
         <h2 style='text-align: center; margin-bottom: 0rem;'>YOUR CART IS EMPTY</h2>
         <h3 class='cart-is-empty'>Fill it up with a breakfast sandwich or two!</h3>
     </div>
-</section>
-<div class='empty-button-container'>
+    <div class='empty-button-container'>
 <a href='{$site_url}/index.php'>
     <button class='empty-button'>
     START ORDER
     </button>
 </a>
 </div>
+</section>
 ";
 }
 
