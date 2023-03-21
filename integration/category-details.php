@@ -115,7 +115,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id = 8) OR (id BETWEEN 12 AND 13)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options.php';
+            include_once '_components/protein-options-required.php';
         } 
 
         $query = "SELECT * FROM toppings WHERE (id BETWEEN 2 AND 6) OR (id BETWEEN 12 AND 13) OR (id BETWEEN 15 AND 17)";
@@ -130,7 +130,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id = 14) OR (id = 19)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options.php';
+            include_once '_components/protein-options-required.php';
         }
 
         $query = "SELECT * FROM toppings WHERE (id = 5) OR (id = 7) OR (id = 9) OR (id = 14)";
@@ -145,7 +145,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id BETWEEN 14 AND 15) OR (id = 19)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options.php';
+            include_once '_components/protein-options-required.php';
         }
 
         $query = "SELECT * FROM toppings WHERE (id = 5) OR (id BETWEEN 7 AND 9)";
@@ -160,7 +160,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id = 7) OR (id = 10) OR (id BETWEEN 20 AND 21)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options.php';
+            include_once '_components/protein-options-required.php';
         }
     }
 
@@ -169,7 +169,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id = 16) OR (id BETWEEN 23 AND 24)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options.php';
+            include_once '_components/protein-options-required.php';
         }
 
         $query = "SELECT * FROM toppings WHERE (id BETWEEN 3 AND 4) OR (id = 5) OR (id = 7) OR (id BETWEEN 9 AND 14)";

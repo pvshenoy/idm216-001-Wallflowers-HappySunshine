@@ -66,7 +66,7 @@ $order = get_order_by_user_id($user['id']);
         <?php include '_components/checkout-item.php'; ?>
     <?php } // End while loop ?>
     <hr class="cart-linebreak">
-            <h3 class="total-price">TOTAL: <?php $orderTotal ?></h3>
+            <h3 class="total-price">TOTAL: $<?php echo $orderTotalPrice; ?></h3>
         </div>
         <div class="reward-box">
             <div class="reward-cup">
