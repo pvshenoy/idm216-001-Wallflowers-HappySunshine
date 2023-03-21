@@ -102,4 +102,5 @@ echo "
 
 <?php 
 include_once '_includes/mobile-footer.php'; 
+include_once '_includes/js-footer.php'; 
 ?>
