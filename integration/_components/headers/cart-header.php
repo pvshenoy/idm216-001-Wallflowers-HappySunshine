@@ -17,7 +17,7 @@
         <a href="<?php echo site_url()?>/index.php" class="logo-link"><img src="dist/images/preeti-img/background-elements/happy-sunshine-desktop-logo.png" alt="" class="desktop-logo"></a>
         <ul class="desktop-menu">
             <li class="menu-item-desktop">
-                    <a href="" class="desktop-link">
+                    <a href="<?php echo site_url()?>/index.php" class="desktop-link">
                         <svg viewbox="0 0 21.33 26.67" class="menu-icon">
                             <defs><style>.menu-svg-tablet{fill:#361e10;stroke:#90C5D3;stroke-width:.4px;}</style></defs>
                             <path class="menu-svg-tablet" d="m7.47,12.13c-.21.21-.5.33-.8.33s-.59-.12-.8-.33c-.21-.21-.33-.5-.33-.8s.12-.59.33-.8c.21-.21.5-.33.8-.33s.59.12.8.33c.21.21.33.5.33.8s-.12.59-.33.8Zm2.07-.8c0-.3.12-.59.33-.8.21-.21.5-.33.8-.33h4c.3,0,.59.12.8.33.21.21.33.5.33.8s-.12.59-.33.8c-.21.21-.5.33-.8.33h-4c-.3,0-.59-.12-.8-.33-.21-.21-.33-.5-.33-.8Zm.33,3.2c.21-.21.5-.33.8-.33h4c.3,0,.59.12.8.33.21.21.33.5.33.8s-.12.59-.33.8c-.21.21-.5.33-.8.33h-4c-.3,0-.59-.12-.8-.33-.21-.21-.33-.5-.33-.8s.12-.59.33-.8Zm0,4c.21-.21.5-.33.8-.33h4c.3,0,.59.12.8.33s.33.5.33.8-.12.59-.33.8c-.21.21-.5.33-.8.33h-4c-.3,0-.59-.12-.8-.33-.21-.21-.33-.5-.33-.8s.12-.59.33-.8Zm-2.07-3.2c0,.3-.12.59-.33.8-.21.21-.5.33-.8.33s-.59-.12-.8-.33c-.21-.21-.33-.5-.33-.8s.12-.59.33-.8c.21-.21.5-.33.8-.33s.59.12.8.33c.21.21.33.5.33.8Zm-.33,4.8c-.21.21-.5.33-.8.33s-.59-.12-.8-.33c-.21-.21-.33-.5-.33-.8s.12-.59.33-.8c.21-.21.5-.33.8-.33s.59.12.8.33c.21.21.33.5.33.8s-.12.59-.33.8Z"/>
@@ -55,7 +55,7 @@
         </ul>
     </header>
     <header class="flip-flop desktop-header">
-        <a href="https://camkelly.net/idm216/final/" class="logo-link"><img src="dist/images/preeti-img/background-elements/happy-sunshine-desktop-logo.png" alt="" class="desktop-logo"></a>
+        <a href="<?php echo site_url()?>/index.php" class="logo-link"><img src="dist/images/preeti-img/background-elements/happy-sunshine-desktop-logo.png" alt="" class="desktop-logo"></a>
         <ul class="desktop-menu">
             <li class="menu-item-desktop">
                     <a href="<?php echo site_url()?>/index.php" class="desktop-link"><h3 class="desktop-menu-link-item">MENU</h3></a>

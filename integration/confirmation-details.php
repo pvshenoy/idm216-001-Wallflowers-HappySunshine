@@ -1,58 +1,75 @@
 <?php
 include_once 'app.php';
-$page_title = 'Checkout';
+$page_title = 'Confirmation';
 include_once '_components/header.php';
-include_once '_components/headers/payment-header.php';
+include_once '_components/headers/order-confirmation-header.php';
 $site_url = site_url();
 
 
 ($user['isGuest']==0) ? "success": redirect_to('/auth/login.php') ;
 
 $orderTotal = 0;
-$order = get_order_by_user_id($user['id']);
+$order = get_recent_order_by_user_id($user['id']);
+
 ?>
 
 <?php if ($order->num_rows > 0) { ?>
-    <section class="payment-details">
-        <div class="row-one">
-            <div class="order-summary">
-                <h3 class="order-summary-title">ORDER SUMMARY</h3>
-                <div class="order-summary-item">
-                    <div class="order-summary-item-title small-font low-opacity">
-                        <h4 class="order-summary-item-and-qty small-font"><span class="order-summary-item-qty">#</span>ITEM</h4>
-                        <p class="order-summary-price small-font">PRICE</p>
-                    </div>
+    <div class="top-nav-inner-page x-icon-order-confirmed">
+    <a href="<?php echo site_url()?>/index.php" class="back-button">
+        <img src="dist/images/preeti-img/icons/x-icon.png" alt="" class="back-icon">
+    </a>
+</div>
+<h1 class="page-title desktop">YOUR ORDER HAS BEEN CONFIRMED!</h1>
+    <section class="order-confirmation">
+    <div class="row-one">
+        <div class="microinteraction-container">
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+              
+                <div class="circle active"><img src="https://nytrea.com/idm216-codepen-content/full-egg.png" class="item-img"></div>
+                <div class="circle">
+        <img src="https://nytrea.com/idm216-codepen-content/cracked-egg.png" class="item-img"></div>
+              
+                <div class="circle"><img src="https://nytrea.com/idm216-codepen-content/logo.png" class="item-img"></div>
+            </div>
+          
+        </div>
+        <h3 class="date">FEBRUARY 21, 2023</h3>
+        <h3 class="wait-time">Wait time: <span style="color:var(--accent-color-tangerine-dark);">15 minutes</span></h3>
+        <img src="dist/images/preeti-img/background-elements/qr-code.png" alt="barcode" class="barcode">
+        <h3 class="barcode-details">SHOW THIS QR CODE AT THE TRUCK 
+            TO PICK UP YOUR ORDER
+        </h3>
+        <h3 class="barcode-details-desktop">CLICK HERE TO TEXT QR CODE TO YOUR PHONE</h3>
+    </div>
+    <div class="row-two">
+        <h3 class="pickup-location-title">PICKUP LOCATION</h3>
+       <div class="location-box">
+            <img src="dist/images/preeti-img/background-elements/location.png" alt="" class="location-img">
+            <div class="location-text">
+                <h4 class="location-truck">HAPPY SUNSHINE</h4>
+                <p class="truck-address">
+                    33rd & Arch St.
+                    <br>Philadelphia, PA 19104
+                </p>
+            </div>
+        </div>
+        <div class="order-summary">
+            <h3 class="order-summary-title">ORDER SUMMARY</h3>
+            <div class="order-summary-item">
+                <div class="order-summary-item-title small-font low-opacity">
+                    <h4 class="order-summary-item-and-qty small-font"><span class="order-summary-item-qty">#</span>ITEM</h4>
+                    <p class="order-summary-price small-font">PRICE</p>
                 </div>
+            </div>
     <?php while($row = $order->fetch_assoc()) { ?>
         <?php include '_components/checkout-item.php'; ?>
     <?php } // End while loop ?>
     <hr class="cart-linebreak">
-            </div>
-            <h3 class="total-price">TOTAL: $<?php echo $orderTotalPrice; ?></h3>
+            <h3 class="total-price">TOTAL: <?php $orderTotal ?></h3>
         </div>
-        <div class="row-two">
-            <div class="secondary-details">
-                <h3 class="pickup-location-title">PICKUP LOCATION</h3>
-                <div class="location-box">
-                    <img src="dist/images/preeti-img/background-elements/location.png" alt="" class="location-img">
-                    <div class="location-text">
-                        <h4 class="location-truck">HAPPY SUNSHINE</h4>
-                        <p class="truck-address">
-                            33rd & Arch St.
-                            <br>Philadelphia, PA 19104
-                        </p>
-                    </div>
-                </div>
-                <h3 class="payment-method">PAYMENT METHOD</h3>
-                <div class="venmo-payment">
-                <div class="venmo-payment-icon-text">
-                    <img src="dist/images/preeti-img/icons/venmo-icon.png" alt="venmo" class="venmo-icon">
-                    <p class="venmo-account">Venmo Account</p>
-                </div>
-                <img src="dist/images/preeti-img/icons/right-icon.png" alt="" class="right-icon">
-                </div>
-                <div class="reward-box">
-                    <div class="reward-cup">
+        <div class="reward-box">
+            <div class="reward-cup">
 
 
                     <?php
@@ -112,23 +129,10 @@ $order = get_order_by_user_id($user['id']);
                     }
                     ?>
 
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 <?php } // End if ?>
-
-<a href="<?php echo "{$site_url}/confirmation.php" ?>" class="add-button mobile">
-    <button class="add-to-cart">
-        PLACE ORDER
-    </button>
-</a>
-
-<a href="<?php echo "{$site_url}/confirmation.php" ?>" class="add-button tablet">
-    <button class="add-to-cart-tablet">
-        PLACE ORDER
-    </button>
-</a>
 
 <?php 
 include_once '_includes/mobile-footer.php'; 
