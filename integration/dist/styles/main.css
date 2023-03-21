@@ -353,7 +353,7 @@ p {
 }
 
 .hero-statement {
-    margin-bottom: .5rem;
+    margin: .5rem 0rem;
 }
 
 .search-bar {
@@ -477,6 +477,7 @@ p {
 
 .item-name {
     font-family: 'Single Day', cursive;
+    text-transform: uppercase;
     font-size: 2rem;
     margin: 0rem;
     padding: 2rem 0rem .5rem 0rem;
@@ -617,8 +618,8 @@ p {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: var(--text-color-eggshell);
-  border: 1px solid var(--text-color-mushroom);
+  background-color: #eee;
+  /* border: 1px solid var(--text-color-mushroom); */
   margin-top: .2rem;
 }
 
@@ -716,6 +717,7 @@ p {
     text-decoration: none;
     background: var(--text-color-mushroom);
     color: var(--text-color-eggshell);
+    font-family: 'Poppins', sans-serif;
     font-size: .875rem;
     font-size: 1.125rem;
     font-weight: 500;
@@ -1010,8 +1012,7 @@ p {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 4rem 0rem 0rem 0rem;
-    height: 70vh;
+    margin: 0rem 0rem 0rem 0rem;
 }
 
 .empty-cart {
@@ -1106,7 +1107,7 @@ p {
 
 .pickup-location-title {
     text-align: left;
-    margin-bottom: .5rem;
+    margin: .5rem 0rem;
 }
 .payment-details {
     margin: 1rem 1rem 12rem 1rem;
@@ -1146,15 +1147,24 @@ p {
 }
 
 .payment-method {
-    margin-bottom: .5rem;
+    margin: .5rem 0rem;
+    cursor: pointer;
 }
 
 .venmo-payment {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: .5rem 0rem;
     background-color: var(--accent-color-eggshell-dark);
     border-radius: .375rem;
+    cursor: pointer;
+}
+
+.venmo-account {
+    display: flex;
+    align-self: center;
+    cursor: pointer;
 }
 
 .right-icon {
@@ -1343,7 +1353,7 @@ p {
 
 .profile-name {
     margin-top: .2rem;
-    margin-bottom: 0rem;
+    margin-bottom: .5rem;
 }
 
 .profile-details {
@@ -1604,6 +1614,7 @@ a.desktop-link:active {
         text-decoration: none;
         background: var(--text-color-mushroom);
         color: var(--text-color-eggshell);
+        font-family: 'Poppins', sans-serif;
         font-size: .875rem;
         font-size: 1.125rem;
         font-weight: 500;
@@ -1737,6 +1748,7 @@ a.desktop-link:active {
     
         .row-one {
             margin: 0rem auto;
+            padding-right: 1rem;
         }
     
         .row-two {
@@ -1744,7 +1756,8 @@ a.desktop-link:active {
         }
 
         .order-summary {
-            width: 18rem;
+            margin-top: .5rem;
+            width: 26rem;
         }
 
         .item-image-mobile {
