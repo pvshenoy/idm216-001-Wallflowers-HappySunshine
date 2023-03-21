@@ -7,10 +7,9 @@
       <input
           id='protein-<?php echo $row['id']; ?>'
           name='proteinID' type='radio'
-          value='<?php echo $row['id']; ?>'>
+          value='<?php echo $row['id']; ?>' required>
 
       <span class="radio-button"></span>
-      <h3 class="price-addition"><?php echo ' $' . number_format("{$row['proteinPrice']}", 2); ?></h3>
     </label>
         
     <hr class="item-linebreak">

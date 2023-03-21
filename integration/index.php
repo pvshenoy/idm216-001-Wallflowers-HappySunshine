@@ -22,7 +22,7 @@ if (!$user['isGuest']) {
         <main class='content'>
         <div class='order-details'>
             <h3 class='order-confirmation-details-text'>Your order is in<br> the works!</h3>
-            <a href='order-confirmation.html' class='general-button'>
+            <a href='{$site_url}/confirmation-details.php' class='general-button'>
                 <button class='order-details-button increase-width'>VIEW ORDER DETAILS</button>
             </a>
             <img src='{$site_url}/dist/images/preeti-img/background-elements/clouds.png' alt='' class='clouds'>
