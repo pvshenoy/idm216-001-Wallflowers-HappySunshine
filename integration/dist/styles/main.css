@@ -1012,8 +1012,7 @@ p {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 4rem 0rem 0rem 0rem;
-    height: 70vh;
+    margin: 0rem 0rem 0rem 0rem;
 }
 
 .empty-cart {
@@ -1149,6 +1148,7 @@ p {
 
 .payment-method {
     margin: .5rem 0rem;
+    cursor: pointer;
 }
 
 .venmo-payment {
@@ -1158,11 +1158,13 @@ p {
     padding: .5rem 0rem;
     background-color: var(--accent-color-eggshell-dark);
     border-radius: .375rem;
+    cursor: pointer;
 }
 
 .venmo-account {
     display: flex;
     align-self: center;
+    cursor: pointer;
 }
 
 .right-icon {
