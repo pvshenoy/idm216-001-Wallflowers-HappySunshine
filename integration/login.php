@@ -6,8 +6,11 @@ include_once __DIR__ . '/_components/headers/login-header.php';
 $site_url = site_url();
 ?>
 
-<body class="login-background">
-  <img src="<?php site_url() ?>dist/images/preeti-img/background-elements/desktop-background.png" alt="" class="desktop-login-background">
+<body>
+    <img src="<?php site_url() ?>/dist/images/preeti-img/background-elements/top-right.png" alt="" class="top-right">
+    <img src="<?php site_url() ?>/dist/images/preeti-img/background-elements/top-left.png" alt="" class="top-left">
+    <img src="<?php site_url() ?>/dist/images/preeti-img/background-elements/bottom-right.png" alt="" class="bottom-right">
+    <img src="<?php site_url() ?>/dist/images/preeti-img/background-elements/bottom-left.png" alt="" class="bottom-left">
   <section class="login">
     <img src="<?php site_url() ?>/dist/images/logo.png" alt="" class="logo logo-login" style="margin-top: 3rem;">
     <h4 class="login-warning">
