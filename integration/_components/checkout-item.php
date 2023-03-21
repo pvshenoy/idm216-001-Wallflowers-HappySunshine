@@ -67,22 +67,25 @@ $id = $row['catID'];
         <?php 
     
         if ($id == 1) {
-        if (!$row['toppingNames']) {
-            echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')';
+            if (!$row['toppingNames']) {
+                echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')';
             }
+            elseif (!$row['proteinName']) {
+                echo $row['breadName'] . ", " . $row['toppingNames'];
+             }
             else {
-            echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')' . ", " . $row['toppingNames'];
+                echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')' . ", " . $row['toppingNames'];
             }
         }
         elseif ($id == 10) {
-        echo $row['sideNames'];
+            echo $row['sideNames'];
         }
         elseif ($id == 11) {
-        $drinkPrices = explode(',', $row['drinkPrices']);
-        $drinkNames = explode(',', $row['drinkNames']);
-        $drinkString = '';
-        foreach ($drinkPrices as $index => $drinkPrice) {
-            $drinkString .= $drinkNames[$index] . ' ($' . $drinkPrice . '), ';
+            $drinkPrices = explode(',', $row['drinkPrices']);
+            $drinkNames = explode(',', $row['drinkNames']);
+            $drinkString = '';
+            foreach ($drinkPrices as $index => $drinkPrice) {
+                $drinkString .= $drinkNames[$index] . ' ($' . $drinkPrice . '), ';
         }
         // Remove the trailing comma and space from the string
         $drinkString = rtrim($drinkString, ', ');
@@ -92,10 +95,13 @@ $id = $row['catID'];
         }
         else {
             if (!$row['toppingNames']) {
-            echo $row['proteinName'];
+                echo $row['proteinName'];
+            }
+            elseif (!$row['proteinName']) {
+                echo $row['toppingNames'];
             }
             else {
-            echo $row['proteinName'] . ", " . $row['toppingNames'];
+                echo $row['proteinName'] . ", " . $row['toppingNames'];
             }
         }
         ?>

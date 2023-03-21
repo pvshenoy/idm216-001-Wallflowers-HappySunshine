@@ -60,6 +60,9 @@ $site_url = site_url();
                 if (!$row['toppingNames']) {
                     echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')';
                  }
+                 elseif (!$row['proteinName']) {
+                    echo $row['breadName'] . ", " . $row['toppingNames'];
+                 }
                  else {
                     echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')' . ", " . $row['toppingNames'];
                  }
@@ -84,6 +87,9 @@ $site_url = site_url();
                  if (!$row['toppingNames']) {
                     echo $row['proteinName'];
                  }
+                 elseif (!$row['proteinName']) {
+                    echo $row['toppingNames'];
+                }
                  else {
                     echo $row['proteinName'] . ", " . $row['toppingNames'];
                  }
