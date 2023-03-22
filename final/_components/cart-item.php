@@ -18,7 +18,7 @@ $site_url = site_url();
         </div>
         <div class="cart-item-text-content">
             <div class="cart-item-name-and-price">
-                <h3 class="cart-item-name"><?php echo $row['cat']; ?></h3>
+                <h3 class="cart-item-name truncate-title"><?php echo $row['cat']; ?></h3>
                 <h3 class="cart-item-price">
                 
                 <?php 
@@ -52,7 +52,8 @@ $site_url = site_url();
 
                 </h3>
             </div>
-            <p class="cart-item-description">
+            <div class="test-cont">
+            <p class="cart-item-description truncate">
             
             <?php 
             
@@ -145,6 +146,7 @@ $site_url = site_url();
                     </div>
                 </div>
             <?php } // END IF ?>
+            </div>
         </div>
     </div>
 </li>

@@ -13,6 +13,7 @@ $order = get_order_by_user_id($user['id']);
 ?>
 
 <?php if ($order->num_rows > 0) { ?>
+    <h1 class='page-title desktop'>CHECKOUT</h1>
     <section class="payment-details">
         <div class="row-one">
             <div class="order-summary">
