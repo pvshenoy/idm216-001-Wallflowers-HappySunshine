@@ -13,6 +13,11 @@ global $db_connection;
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         $quantity = $row['quantity'];
+
+        if ($quantity == 1) {
+            redirect_to('/cart.php');
+        }
+
         $newQuantity = $quantity - 1;
     }
 

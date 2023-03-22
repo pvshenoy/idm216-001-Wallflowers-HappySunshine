@@ -105,9 +105,8 @@ $site_url = site_url();
                 <div class="cart-item-actions">
                     <div class="item-quantity">
                         <div class="quantity-field" >
-                            <form action='<?php echo "{$site_url}/_includes/decrease-quantity.php" ?>' method='POST'>
-                            <button 
-                                id="minus-button" class="value-button decrease-button" 
+                            <form id="minus-button" action='<?php echo "{$site_url}/_includes/decrease-quantity.php" ?>' method='POST'>
+                            <button class="value-button decrease-button"
                                 onclick="decreaseValue(this)" 
                                 title="Decrease">-</button>
                                 <input type="hidden" name="qty" value="<?php echo $quantity; ?>">
@@ -133,8 +132,7 @@ $site_url = site_url();
                                         ?>
                                 </div>
                                 <form action='<?php echo "{$site_url}/_includes/increase-quantity.php" ?>' method='POST'>
-                                <button 
-                                    class="value-button increase-button" 
+                                <button class="value-button increase-button"
                                     onclick="increaseValue(this, 99)"
                                     title="Increase"
                                 >+</button>
