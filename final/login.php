@@ -17,9 +17,9 @@ $site_url = site_url();
         Please sign in to your Happy Sunshine account to complete your purchase!
     </h4>
     <form class="user-login" action="<?php echo site_url() . '/_includes/process-users.php' ?>" method="POST">
-        <input type="text" class="search-bar login-bar" placeholder="username" name="username">
+        <input type="text" class="search-bar login-bar" placeholder="username" name="username" required>
         <input type="number" class="search-bar login-bar" placeholder="(xxx)-xxx-xxxx" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" name="phone">
-        <input type="password" class="search-bar login-bar" placeholder="password" name="pass">
+        <input type="password" class="search-bar login-bar" placeholder="password" name="pass" required>
         <input type="submit" class="submit-login" value="SUBMIT">
     </form>
     </section>
