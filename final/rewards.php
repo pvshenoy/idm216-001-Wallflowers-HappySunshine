@@ -88,7 +88,7 @@ if (!$user['isGuest']) {
         <section class='empty-cart-content'>
             <div class='empty-cart'>
                 <img src='dist/images/logo.png' alt='' class='logo'>
-                <h2 style='text-align: center; margin-bottom: 0rem;'>Looks like you have no orders yet . . .</h2>
+                <h2 style='text-align: center; margin-bottom: 0rem; margin-top: 1rem;'>Looks like you have no orders yet . . .</h2>
                 <h3 class='cart-is-empty'>Start an order to begin earning rewards!</h3>
             </div>
             <div class='empty-button-container'>
@@ -108,7 +108,7 @@ else {
     <section class='empty-cart-content'>
         <div class='empty-cart'>
             <img src='dist/images/logo.png' alt='' class='logo'>
-            <h2 style='text-align: center; margin-bottom: 0rem;'>Looks like you're not logged in . . .</h2>
+            <h2 style='text-align: center; margin-bottom: 0rem; margin-top: 1rem;'>Looks like you're not logged in . . .</h2>
             <h3 class='cart-is-empty'>Login or create an account to order food and start tracking your orders!</h3>
         </div>
         <div class='empty-button-container'>
