@@ -20,7 +20,7 @@ if (!$user['isGuest']) {
         <section class='profile'>
             <img src='{$site_url}/dist/images/preeti-img/background-elements/profile-picture.png' alt='' class='profile-picture'>
             <h2 class='profile-name red-text'>{$user['username']}</h2>
-            <p class='profile-details'><span class='blue-text'>{$count}</span> orders - Customer since 2016</p>
+            <p class='profile-details'><span class='blue-text'>{$count}</span> orders - Customer since 2023</p>
         </section>
         ";
         echo '<h3 class="order-history">ORDER HISTORY</h3>
@@ -113,7 +113,7 @@ if (!$user['isGuest']) {
         <section class='profile'>
             <img src='{$site_url}/dist/images/preeti-img/background-elements/profile-picture.png' alt='' class='profile-picture'>
             <h2 class='profile-name red-text'>{$user['username']}</h2>
-            <p class='profile-details'><span class='blue-text'>{$count}</span> orders - Customer since 2016</p>
+            <p class='profile-details'><span class='blue-text'>{$count}</span> orders - Customer since 2023</p>
         </section>
         ";
     }
