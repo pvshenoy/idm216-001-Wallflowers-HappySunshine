@@ -29,7 +29,7 @@ $document_title = $page_title;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="<?php echo site_url(); ?>/dist/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="<?php echo site_url(); ?>/dist/images/logo.png">
   <link rel="stylesheet" href="<?php echo site_url()?>/dist/styles/main.css">
   <link rel="stylesheet" href="https://use.typekit.net/ner2naf.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
