@@ -53,11 +53,6 @@ ul {
     list-style: none;
 }
 
-.headers {
-    position: relative;
-    z-index: 1000;
-}
-
 /* font sizes match the heading styles in the coding page of the figma*/
 
 /* 
@@ -183,28 +178,6 @@ p {
 .center {
     justify-content: center;
 }
-
-.empty-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.empty-button {
-    text-align: center;
-    border: none;
-    border-radius: 2rem;
-    padding: calc(0.667em + 2px) calc(1.333em + 2px);
-    margin: 1rem 1.25rem;
-    text-decoration: none;
-    background: var(--text-color-mushroom);
-    color: var(--text-color-eggshell);
-    font-size: .875rem;
-    font-size: 1.125rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-
 /* HEADER / NAVIGATION */
 
 .cloud-header {
@@ -269,10 +242,8 @@ p {
 }
 
 .filled-container {
-    /* width: 4rem;
-    height: 4rem; */
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     margin: 2rem;
     position: relative;
     background-color: var(--accent-color-eggshell-dark);
@@ -282,15 +253,13 @@ p {
 }
 
 .item-details-cart-icon {
-    width: 1.7rem;
+    width: 2rem;
     margin: .75rem;
 }
 
 .item-details-back-icon {
-    /* width: 1.15rem;
-    margin: 1rem 0 0 0; */
-    width: 1rem;
-    margin: .8rem .3rem 0 0;
+    width: 1.15rem;
+    margin: 1rem 0 0 0;
 }
 
 .page-title {
@@ -362,7 +331,7 @@ p {
 }
 
 .hero-statement {
-    margin: .5rem 0rem;
+    margin-bottom: .5rem;
 }
 
 .search-bar {
@@ -486,7 +455,6 @@ p {
 
 .item-name {
     font-family: 'Single Day', cursive;
-    text-transform: uppercase;
     font-size: 2rem;
     margin: 0rem;
     padding: 2rem 0rem .5rem 0rem;
@@ -581,7 +549,7 @@ p {
     display: flex;
     justify-content: flex-end;
     font-weight: 400;
-    bottom: 1.8rem;
+    bottom: 2.3rem;
     z-index: 40;
     color: var(--text-color-mushroom);
     opacity: .5;
@@ -627,8 +595,8 @@ p {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
-  /* border: 1px solid var(--text-color-mushroom); */
+  background-color: var(--text-color-eggshell);
+  border: 1px solid var(--text-color-mushroom);
   margin-top: .2rem;
 }
 
@@ -726,7 +694,6 @@ p {
     text-decoration: none;
     background: var(--text-color-mushroom);
     color: var(--text-color-eggshell);
-    font-family: 'Poppins', sans-serif;
     font-size: .875rem;
     font-size: 1.125rem;
     font-weight: 500;
@@ -828,12 +795,11 @@ p {
 .item-quantity {
     display: flex;
     flex-direction: row;
-    /* background-color: var(--text-color-mushroom); */
+    background-color: var(--text-color-mushroom);
     color: var(--text-color-eggshell);
-    /* border-radius: 1.169rem; */
-    /* height: 1.8rem; */
-    /* font-size: .75rem; */
-    font-family: 'Poppins', sans-serif;
+    border-radius: 1.169rem;
+    height: 1.8rem;
+    font-size: .75rem;
     z-index: 30;
 }
 
@@ -883,7 +849,7 @@ p {
 .cart-item-actions {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin: .2rem .5rem 0rem 0rem;
 }
 
@@ -1020,10 +986,10 @@ p {
 
 .empty-cart-content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin: 0rem 0rem 8rem 0rem;
+    margin: 4rem 0rem 0rem 0rem;
+    height: 70vh;
 }
 
 .empty-cart {
@@ -1072,7 +1038,7 @@ p {
 
 .login {
     margin: 1rem;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 .login-warning {
@@ -1089,19 +1055,19 @@ p {
 }
 
 .login-bar {
-    max-width: 18rem;
+    width: 60%;
     margin: .5rem auto;
 }
 
 .submit-login {
-    width: 9rem;
+    width: 30%;
     border: none;
     border-radius: 1.563rem; 
     padding: 0rem 1.063rem;
     height: 2.313rem;
     margin: .5rem auto; 
     text-decoration: none;
-    background: var(--text-color-mushroom);
+    background: var(--accent-color-flip-flop);
     color: var(--text-color-eggshell);
     font-size: .875rem;
     font-size: 1.125rem;
@@ -1111,7 +1077,7 @@ p {
 }
 
 .submit-login:hover {
-    background: var(--text-color-accent-mushroom);
+    background: var(--accent-color-flip-flop-dark);
 }
 
 .top-right {
@@ -1119,7 +1085,6 @@ p {
     width: 12rem;
     top: 0;
     right: 0;
-    z-index: 0;
 }
 
 .top-left {
@@ -1127,7 +1092,6 @@ p {
     width: 12rem;
     top: 0;
     left: 0;
-    z-index: 0;
 }
 
 .bottom-right {
@@ -1135,22 +1099,20 @@ p {
     width: 10rem;
     bottom: 0;
     right: 0;
-    z-index: 0;
 }
 
 .bottom-left {
     position: absolute;
-    width: 20rem;
+    width: 10rem;
     bottom: 0;
     left: 0;
-    z-index: 0;
 }
 
 /* PAYMENT PAGE */
 
 .pickup-location-title {
     text-align: left;
-    margin: .5rem 0rem;
+    margin-bottom: .5rem;
 }
 .payment-details {
     margin: 1rem 1rem 12rem 1rem;
@@ -1190,24 +1152,15 @@ p {
 }
 
 .payment-method {
-    margin: .5rem 0rem;
-    cursor: pointer;
+    margin-bottom: .5rem;
 }
 
 .venmo-payment {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .5rem 0rem;
     background-color: var(--accent-color-eggshell-dark);
     border-radius: .375rem;
-    cursor: pointer;
-}
-
-.venmo-account {
-    display: flex;
-    align-self: center;
-    cursor: pointer;
 }
 
 .right-icon {
@@ -1238,7 +1191,7 @@ p {
 
 .reward-cup-text {
     position: absolute;
-    margin-left: 1.8rem;
+    left: 3.5rem;
     margin-top: 1.4rem;
 }
 
@@ -1256,6 +1209,22 @@ p {
     margin: 0rem 1rem;
     color: var(--accent-color-flip-flop-dark);
     align-self: center;
+}
+
+.empty-button {
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 2rem;
+    padding: 1.2rem 1rem;
+    margin: 1rem 1.25rem;
+    text-decoration: none;
+    background: var(--text-color-mushroom);
+    color: var(--text-color-eggshell);
+    font-size: .875rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .order-summary-item {
@@ -1305,13 +1274,9 @@ p {
     margin: 1rem 1rem 8rem 1rem;
 }
 
-.order-number {
-    margin-bottom: 1rem;
-}
-
 .barcode {
     width: 16rem;
-    margin: .5rem 0rem 0rem 0rem;
+    margin: .5rem 0rem 1rem 0rem;
 }
 
 .barcode-details {
@@ -1400,7 +1365,7 @@ p {
 
 .profile-name {
     margin-top: .2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0rem;
 }
 
 .profile-details {
@@ -1562,8 +1527,6 @@ a.desktop-link:active {
     display: none;
 }
 
-
-
 /* MEDIA QUERIES  */
 
 
@@ -1575,10 +1538,6 @@ a.desktop-link:active {
     .tablet {
         display: flex;
         justify-content: flex-end;
-    }
-
-    .desktop {
-        display: block;
     }
 
     .mobile-header {
@@ -1652,6 +1611,7 @@ a.desktop-link:active {
         height: 100vh;
         overflow-y: hidden;
         z-index: 25;
+        background-repeat: none;
     }
 
     .login {
@@ -1667,7 +1627,6 @@ a.desktop-link:active {
         text-decoration: none;
         background: var(--text-color-mushroom);
         color: var(--text-color-eggshell);
-        font-family: 'Poppins', sans-serif;
         font-size: .875rem;
         font-size: 1.125rem;
         font-weight: 500;
@@ -1691,35 +1650,6 @@ a.desktop-link:active {
     .toppings {
         margin-bottom: 6rem;
     }
-
-
-    .bottom-right {
-        width: 15rem;
-        
-    }
-
-    .bottom-left {
-        width: 15rem;
-    }
-
-    .top-right {
-        top: 4rem;
-    }
-
-    .top-left {
-        top: 4rem;
-    }
-
-    .past-orders {
-        margin: 0rem auto;
-        max-width: 36rem;
-    }
-
-    .order-history {
-        text-align: center;
-    }
-
-
 }
 
 /* TABLET SIZE */
@@ -1830,7 +1760,6 @@ a.desktop-link:active {
     
         .row-one {
             margin: 0rem auto;
-            padding-right: 1rem;
         }
     
         .row-two {
@@ -1838,8 +1767,7 @@ a.desktop-link:active {
         }
 
         .order-summary {
-            margin-top: .5rem;
-            width: 26rem;
+            max-width: 25rem;
         }
 
         .item-image-mobile {
@@ -2020,8 +1948,8 @@ a.desktop-link:active {
   .quantity-field .value-button{ 
     border: 1px solid #361E10;
     margin: 0px;
-    height: 30px;
     width: 40px;
+    height: 100%;   
     padding: 0;
     background: #361E10; 
     color: #FFFBF4;
@@ -2030,6 +1958,7 @@ a.desktop-link:active {
   }
   
   .quantity-field .decrease-button {
+    transform: translate(20px);
     margin-right: -4px;
     border-radius: 22px 0 0 22px;
     z-index: -1;
@@ -2051,10 +1980,11 @@ a.desktop-link:active {
     height: 100%;
     line-height: 30px;
     font-size: 11pt;
+    border-radius: 11px 0 0 11px;
     box-sizing: border-box; 
     background: #361E10;
     color: #FFFBF4;
-    font-family: 'Poppins', sans-serif;
+    font-family: calibri;
     z-index: 5;
   }
   
