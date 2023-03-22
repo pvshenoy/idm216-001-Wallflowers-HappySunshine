@@ -65,7 +65,7 @@
                 <a href="<?php echo site_url()?>/rewards.php" class="desktop-link"><h3 class="desktop-menu-link-item">REWARDS</h3></a>
             </li>
             <li class="menu-item-desktop">
-                <a href="<?php echo site_url()?>/profile.php" class="desktop-link"><h3 class="desktop-menu-link-item">PROFILE</h3></a>
+                <a href="<?php echo site_url()?>/profile.php" class="desktop-link"><h3 class="desktop-menu-link-item white-text">PROFILE</h3></a>
             </li>
             <li class="menu-item-desktop">
                 <a href="<?php echo site_url()?>/cart.php" class="desktop-link">

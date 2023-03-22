@@ -34,7 +34,7 @@ include_once __DIR__ . '/_components/header.php';
             <li class="menu-item-desktop">
                 <a href="<?php echo site_url()?>/cart.php" class="desktop-link">
                     <svg class="desktop-cart-icon shopping-bag" viewbox="0 0 34.96 39.96"><defs>
-                        <style>.stroke{stroke-linecap:round;}.stroke,.fill{fill:none;stroke:#361e10;stroke-width:3.02px;}</style></defs>
+                        <style>.stroke{stroke-linecap:round;}.stroke,.fill{fill:none;stroke:#FFFBF4;stroke-width:3.02px;}</style></defs>
                         <path class="fill" d="m2.68,16.71c.12-1.37.19-2.05.64-2.47.45-.41,1.14-.41,2.52-.41h23.29c1.38,0,2.06,0,2.52.41.45.41.52,1.1.64,2.47l.72,7.91c.59,6.47.88,9.7-1,11.77-1.89,2.07-5.13,2.07-11.63,2.07h-5.78c-6.5,0-9.74,0-11.63-2.07-1.89-2.07-1.59-5.3-1-11.77l.72-7.91Z"/>
                         <path class="fill" d="m9.58,10.04v-.63c0-4.36,3.53-7.9,7.9-7.9h0c4.36,0,7.9,3.54,7.9,7.9v.63"/>
                         <path class="stroke" d="m9.58,21.4v-2.84"/>
@@ -59,7 +59,7 @@ include_once __DIR__ . '/_components/header.php';
             <li class="menu-item-desktop">
                 <a href="<?php echo site_url()?>/cart.php" class="desktop-link">
                     <svg class="desktop-cart-icon shopping-bag" viewbox="0 0 34.96 39.96"><defs>
-                        <style>.stroke{stroke-linecap:round;}.stroke,.fill{fill:none;stroke:#361e10;stroke-width:3.02px;}</style></defs>
+                        <style>.stroke{stroke-linecap:round;}.stroke,.fill{fill:none;stroke:#FFFBF4;stroke-width:3.02px;}</style></defs>
                         <path class="fill" d="m2.68,16.71c.12-1.37.19-2.05.64-2.47.45-.41,1.14-.41,2.52-.41h23.29c1.38,0,2.06,0,2.52.41.45.41.52,1.1.64,2.47l.72,7.91c.59,6.47.88,9.7-1,11.77-1.89,2.07-5.13,2.07-11.63,2.07h-5.78c-6.5,0-9.74,0-11.63-2.07-1.89-2.07-1.59-5.3-1-11.77l.72-7.91Z"/>
                         <path class="fill" d="m9.58,10.04v-.63c0-4.36,3.53-7.9,7.9-7.9h0c4.36,0,7.9,3.54,7.9,7.9v.63"/>
                         <path class="stroke" d="m9.58,21.4v-2.84"/>
