@@ -2020,8 +2020,8 @@ a.desktop-link:active {
   .quantity-field .value-button{ 
     border: 1px solid #361E10;
     margin: 0px;
+    height: 30px;
     width: 40px;
-    height: 100%;   
     padding: 0;
     background: #361E10; 
     color: #FFFBF4;
@@ -2030,7 +2030,6 @@ a.desktop-link:active {
   }
   
   .quantity-field .decrease-button {
-    transform: translate(20px);
     margin-right: -4px;
     border-radius: 22px 0 0 22px;
     z-index: -1;
@@ -2052,7 +2051,6 @@ a.desktop-link:active {
     height: 100%;
     line-height: 30px;
     font-size: 11pt;
-    border-radius: 11px 0 0 11px;
     box-sizing: border-box; 
     background: #361E10;
     color: #FFFBF4;
