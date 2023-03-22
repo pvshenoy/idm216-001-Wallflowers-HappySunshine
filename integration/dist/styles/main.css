@@ -53,6 +53,11 @@ ul {
     list-style: none;
 }
 
+.headers {
+    position: relative;
+    z-index: 1000;
+}
+
 /* font sizes match the heading styles in the coding page of the figma*/
 
 /* 
@@ -264,8 +269,10 @@ p {
 }
 
 .filled-container {
-    width: 4rem;
-    height: 4rem;
+    /* width: 4rem;
+    height: 4rem; */
+    width: 3.5rem;
+    height: 3.5rem;
     margin: 2rem;
     position: relative;
     background-color: var(--accent-color-eggshell-dark);
@@ -275,13 +282,15 @@ p {
 }
 
 .item-details-cart-icon {
-    width: 2rem;
+    width: 1.7rem;
     margin: .75rem;
 }
 
 .item-details-back-icon {
-    width: 1.15rem;
-    margin: 1rem 0 0 0;
+    /* width: 1.15rem;
+    margin: 1rem 0 0 0; */
+    width: 1rem;
+    margin: .8rem .3rem 0 0;
 }
 
 .page-title {
@@ -1063,7 +1072,7 @@ p {
 
 .login {
     margin: 1rem;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .login-warning {
@@ -1080,19 +1089,19 @@ p {
 }
 
 .login-bar {
-    width: 60%;
+    max-width: 18rem;
     margin: .5rem auto;
 }
 
 .submit-login {
-    width: 30%;
+    width: 9rem;
     border: none;
     border-radius: 1.563rem; 
     padding: 0rem 1.063rem;
     height: 2.313rem;
     margin: .5rem auto; 
     text-decoration: none;
-    background: var(--accent-color-flip-flop);
+    background: var(--text-color-mushroom);
     color: var(--text-color-eggshell);
     font-size: .875rem;
     font-size: 1.125rem;
@@ -1102,7 +1111,39 @@ p {
 }
 
 .submit-login:hover {
-    background: var(--accent-color-flip-flop-dark);
+    background: var(--text-color-accent-mushroom);
+}
+
+.top-right {
+    position: absolute;
+    width: 12rem;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.top-left {
+    position: absolute;
+    width: 12rem;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.bottom-right {
+    position: absolute;
+    width: 10rem;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.bottom-left {
+    position: absolute;
+    width: 20rem;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
 }
 
 /* PAYMENT PAGE */
@@ -1521,6 +1562,8 @@ a.desktop-link:active {
     display: none;
 }
 
+
+
 /* MEDIA QUERIES  */
 
 
@@ -1532,6 +1575,10 @@ a.desktop-link:active {
     .tablet {
         display: flex;
         justify-content: flex-end;
+    }
+
+    .desktop {
+        display: block;
     }
 
     .mobile-header {
@@ -1644,6 +1691,35 @@ a.desktop-link:active {
     .toppings {
         margin-bottom: 6rem;
     }
+
+
+    .bottom-right {
+        width: 15rem;
+        
+    }
+
+    .bottom-left {
+        width: 15rem;
+    }
+
+    .top-right {
+        top: 4rem;
+    }
+
+    .top-left {
+        top: 4rem;
+    }
+
+    .past-orders {
+        margin: 0rem auto;
+        max-width: 36rem;
+    }
+
+    .order-history {
+        text-align: center;
+    }
+
+
 }
 
 /* TABLET SIZE */

@@ -29,7 +29,7 @@
             <li class="tangerine menu-item-desktop">
                 <a href="<?php echo site_url()?>/rewards.php" class="desktop-link">
                     <svg viewbox="0 0 25.5 25" class="rewards-icon">
-                        <defs><style>.star-svg-tablet{fill:none;stroke:#361e10;stroke-linejoin:round;stroke-width:1.75px;}</style></defs>
+                        <defs><style>.star-svg-tablet{fill:none;stroke:#FFFBF4;stroke-linejoin:round;stroke-width:1.75px;}</style></defs>
                         <path class="star-svg-tablet" d="m9,8.5l3.5-7.5,4,7.5,8,1.5-6,6,1.5,8-7.5-3.5-7.5,3.5,1.5-8L1,10l8-1.5Z"/>
                     </svg>
                 </a>
@@ -62,7 +62,7 @@
                     <a href="<?php echo site_url()?>/index.php" class="desktop-link"><h3 class="desktop-menu-link-item">MENU</h3></a>
             </li>
             <li class="menu-item-desktop">
-                <a href="<?php echo site_url()?>/rewards.php" class="desktop-link"><h3 class="desktop-menu-link-item">REWARDS</h3></a>
+                <a href="<?php echo site_url()?>/rewards.php" class="desktop-link"><h3 class="desktop-menu-link-item white-text">REWARDS</h3></a>
             </li>
             <li class="menu-item-desktop">
                 <a href="<?php echo site_url()?>/profile.php" class="desktop-link"><h3 class="desktop-menu-link-item">PROFILE</h3></a>
