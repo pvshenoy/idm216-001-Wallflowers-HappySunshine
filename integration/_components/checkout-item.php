@@ -67,12 +67,15 @@ $id = $row['catID'];
         <?php 
     
         if ($id == 1) {
-            if (!$row['toppingNames']) {
+            if (!$row['toppingNames'] AND !$row['proteinName']) {
+                echo $row['breadName'];
+             }
+            elseif (!$row['toppingNames']) {
                 echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')';
-            }
+             }
             elseif (!$row['proteinName']) {
                 echo $row['breadName'] . ", " . $row['toppingNames'];
-             }
+            }
             else {
                 echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')' . ", " . $row['toppingNames'];
             }

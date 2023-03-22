@@ -12,5 +12,4 @@ global $db_connection;
     // die;
     $result = mysqli_query($db_connection, $query);
     redirect_to('/cart.php');
-    echo("success");
 ?>
