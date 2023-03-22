@@ -1,18 +1,17 @@
-<div class="toppings-section">
-  <h4>Toppings: <span>Optional</span></h4>
-  <div class="toppings-groups">
+<h4 class="ingredient-title">Toppings: <span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">Optional</span></h4>
+  <div class="toppings bottom-margin">
     <?php while($row = $result->fetch_assoc()) { ?>
-    <div class="toppings-option">
       <label
-        for='toppings-<?php echo $row['id']; ?>'><?php echo $row['toppingName']; ?></label>
-      <div>
-        <input
+      class="container" for='toppings-<?php echo $row['id']; ?>'><?php echo $row['toppingName']; ?>
+    
+      <input
           id='toppings-<?php echo $row['id']; ?>'
           name='toppingID[]' type='checkbox'
           value='<?php echo $row['id']; ?>'>
-      </div>
-    </div>
+
+      <span class="checkmark"></span>
+    </label>
+        
+    <hr class="item-linebreak">
     <?php } // End while loop ?>
-    <hr>
   </div>
-</div>
