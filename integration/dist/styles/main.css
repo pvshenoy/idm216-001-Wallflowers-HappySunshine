@@ -1577,6 +1577,10 @@ a.desktop-link:active {
         justify-content: flex-end;
     }
 
+    .desktop {
+        display: block;
+    }
+
     .mobile-header {
         display: none;
     }
@@ -1689,22 +1693,31 @@ a.desktop-link:active {
     }
 
 
-.bottom-right {
-    width: 15rem;
-    
-}
+    .bottom-right {
+        width: 15rem;
+        
+    }
 
-.bottom-left {
-    width: 15rem;
-}
+    .bottom-left {
+        width: 15rem;
+    }
 
-.top-right {
-    top: 4rem;
-}
+    .top-right {
+        top: 4rem;
+    }
 
-.top-left {
-    top: 4rem;
-}
+    .top-left {
+        top: 4rem;
+    }
+
+    .past-orders {
+        margin: 0rem auto;
+        max-width: 36rem;
+    }
+
+    .order-history {
+        text-align: center;
+    }
 
 
 }
