@@ -269,8 +269,10 @@ p {
 }
 
 .filled-container {
-    width: 4rem;
-    height: 4rem;
+    /* width: 4rem;
+    height: 4rem; */
+    width: 3.5rem;
+    height: 3.5rem;
     margin: 2rem;
     position: relative;
     background-color: var(--accent-color-eggshell-dark);
@@ -280,13 +282,15 @@ p {
 }
 
 .item-details-cart-icon {
-    width: 2rem;
+    width: 1.7rem;
     margin: .75rem;
 }
 
 .item-details-back-icon {
-    width: 1.15rem;
-    margin: 1rem 0 0 0;
+    /* width: 1.15rem;
+    margin: 1rem 0 0 0; */
+    width: 1rem;
+    margin: .8rem .3rem 0 0;
 }
 
 .page-title {
@@ -1557,6 +1561,8 @@ a.desktop-link:active {
 .tablet {
     display: none;
 }
+
+
 
 /* MEDIA QUERIES  */
 
