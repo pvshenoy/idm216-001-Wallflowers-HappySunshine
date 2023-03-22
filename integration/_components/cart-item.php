@@ -57,7 +57,10 @@ $site_url = site_url();
             <?php 
             
              if ($id == 1) {
-                if (!$row['toppingNames']) {
+                 if (!$row['toppingNames'] AND !$row['proteinName']) {
+                    echo $row['breadName'];
+                 }
+                elseif (!$row['toppingNames']) {
                     echo $row['breadName'] . ", " . $row['proteinName'] . " (+$" . number_format("{$row['proteinPrice']}", 2) . ')';
                  }
                  elseif (!$row['proteinName']) {
@@ -102,12 +105,15 @@ $site_url = site_url();
                 <div class="cart-item-actions">
                     <div class="item-quantity">
                         <div class="quantity-field" >
+                            <form action='<?php echo "{$site_url}/_includes/decrease-quantity.php" ?>' method='POST'>
                             <button 
                                 id="minus-button" class="value-button decrease-button" 
                                 onclick="decreaseValue(this)" 
-                                title="Azalt">-</button>
+                                title="Decrease">-</button>
+                                <input type="hidden" name="qty" value="<?php echo $quantity; ?>">
+                                <input type="hidden" name="orderID" value="<?php echo "{$row['id']}"; ?>">
+                            </form>
                                 <div id="num" class="number">
-                                    <p class="quantity">
                                         <?php 
                                             if ($id == 10) {
                                                 $sideNamesArray = explode(', ', $row['sideNames']);
@@ -125,14 +131,18 @@ $site_url = site_url();
                                                 echo $quantity;
                                             }
                                         ?>
-                                    </p>
                                 </div>
-                            <button 
-                                class="value-button increase-button" 
-                                onclick="increaseValue(this, 99)"
-                                title="Arrtır"
-                            >+
-                            </button>
+                                <form action='<?php echo "{$site_url}/_includes/increase-quantity.php" ?>' method='POST'>
+                                <button 
+                                    class="value-button increase-button" 
+                                    onclick="increaseValue(this, 99)"
+                                    title="Increase"
+                                >+</button>
+                                <input type="hidden" name="qty" value="<?php echo $quantity; ?>">
+                                <input type="hidden" name="orderID" value="<?php echo "{$row['id']}"; ?>">
+                                </form>
+                            <input type="hidden" name="qty" value="<?php echo $quantity; ?>">
+                                <input type="hidden" name="orderID" value="<?php echo "{$row['id']}"; ?>">
                         </div>
                     </div>
                 </div>
