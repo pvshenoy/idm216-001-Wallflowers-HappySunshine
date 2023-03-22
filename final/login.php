@@ -7,12 +7,12 @@ $site_url = site_url();
 ?>
 
 <body>
-    <img src="{<?php echo site_url() ?>}/dist/images/preeti-img/background-elements/top-right.png" alt="" class="top-right">
+    <img src="<?php echo site_url() ?>/dist/images/preeti-img/background-elements/top-right.png" alt="" class="top-right">
     <img src="<?php echo site_url() ?>/dist/images/preeti-img/background-elements/top-left.png" alt="" class="top-left">
     <img src="<?php echo site_url() ?>/dist/images/preeti-img/background-elements/bottom-right.png" alt="" class="bottom-right">
     <img src="<?php echo site_url() ?>/dist/images/preeti-img/background-elements/bottom-left.png" alt="" class="bottom-left">
   <section class="login">
-    <img src="<?php site_url() ?>/dist/images/logo.png" alt="" class="logo logo-login" style="margin-top: 3rem;">
+    <img src="<?php echo site_url() ?>/dist/images/logo.png" alt="" class="logo logo-login" style="margin-top: 3rem;">
     <h4 class="login-warning">
         Please sign in to your Happy Sunshine account to complete your purchase!
     </h4>
