@@ -1,18 +1,18 @@
-<div class="drinks-section">
-  <h4>Drinks:</h4>
-  <div class="drinks-groups">
+<h4 class="ingredient-title">Drinks: <span style="font-weight: 300; color: var(--accent-color-tangerine-dark);">Optional</span></h4>
+  <div class="toppings bottom-margin">
     <?php while($row = $result->fetch_assoc()) { ?>
-    <div class="drinks-option">
       <label
-        for='drinks-<?php echo $row['id']; ?>'><?php echo $row['drinkName'] . ' $' . number_format("{$row['drinkPrice']}", 2); ?></label>
-      <div>
-        <input
-          id='drinks-<?php echo $row['id']; ?>'
+      class="container" for='toppings-<?php echo $row['id']; ?>'><?php echo $row['drinkName']; ?>
+    
+      <input
+          id='toppings-<?php echo $row['id']; ?>'
           name='drinkID[]' type='checkbox'
           value='<?php echo $row['id']; ?>'>
-      </div>
-    </div>
+
+      <span class="checkmark"></span>
+      <h3 class="price-addition"><?php echo ' $' . number_format("{$row['drinkPrice']}", 2); ?></h3>
+    </label>
+        
+    <hr class="item-linebreak">
     <?php } // End while loop ?>
-    <hr>
   </div>
-</div>

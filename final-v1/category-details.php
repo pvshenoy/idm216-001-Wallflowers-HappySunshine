@@ -1,6 +1,5 @@
 <?php 
 include_once 'app.php';
-include_once '_components/headers/item-details-header.php';
 $site_url = site_url();
 ?>
 
@@ -26,58 +25,43 @@ $catID = $_GET['id'];
 include_once '_components/header.php';
 ?>
 
+    </header>
+
+    <div class="hero-img" style="background-image: url(<?php echo site_url(); ?><?php echo $menu['img']?>);"></div>
 
 
-
-
-<div class="item-container row center">
-        <div class="item-image-mobile">
-            <img src="<?php echo site_url(); ?><?php echo $menu['img'];?>" alt="Cheesesteak" class="item-image">
-            <div class="top-nav-inner-page">
-                <a href="<?php echo "{$site_url}/index.php" ?>" class="back-button">
-                    <div class="filled-container">
-                       <svg class="icon-filled item-details-back-icon" viewbox="0 0 14.5 26.5">
-                        <defs><style>.cls-1{fill:none;stroke:#361e10;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5px;}</style></defs>
-                        <path class="cls-1" d="m13.25,1.25L1.25,13.25l12,12"/>
-                    </svg>
-                    </div>
-                </a>
-                <a href="<?php echo "{$site_url}/cart.php" ?>" class="cart-button">
-                    <div class="filled-container">
-                        <svg class="icon-filled item-details-cart-icon shopping-bag" viewbox="0 0 34.96 39.96"><defs>
-                            <style>.stroke{stroke-linecap:round;}.stroke,.fill{fill:none;stroke:#361e10;stroke-width:3.02px;}</style></defs>
-                            <path class="fill" d="m2.68,16.71c.12-1.37.19-2.05.64-2.47.45-.41,1.14-.41,2.52-.41h23.29c1.38,0,2.06,0,2.52.41.45.41.52,1.1.64,2.47l.72,7.91c.59,6.47.88,9.7-1,11.77-1.89,2.07-5.13,2.07-11.63,2.07h-5.78c-6.5,0-9.74,0-11.63-2.07-1.89-2.07-1.59-5.3-1-11.77l.72-7.91Z"/>
-                            <path class="fill" d="m9.58,10.04v-.63c0-4.36,3.53-7.9,7.9-7.9h0c4.36,0,7.9,3.54,7.9,7.9v.63"/>
-                            <path class="stroke" d="m9.58,21.4v-2.84"/>
-                            <path class="stroke" d="m25.37,21.4v-2.84"/>
-                        </svg>
-                    </div>
-                </a>
-            </div>
+    <div class="details-container">
+        <div class="back-button">
+                <a href='main.php'><p class='back-button-arrow'><</p></a>
         </div>
-        <div class="item-image-desktop">
-            <img src="<?php echo site_url(); ?><?php echo $menu['img'];?>" alt="Cheesesteak" class="item-image">
-            <h2 class="item-name"><?php echo $menu['cat']?><span class="blue-text"><?php
-                                                                                if($catID !== '11') {
-                                                                                    echo "<span> $</span>{$dollarPrice}";
-                                                                                }
-                                                                                ?></span></h2>
 
+        <div class="overview">
+            <div class="overview-line1">
+                <h2 class="ingredients-headers"><?php echo $menu['cat']?></h2>
 
-
-            <p class="item-description"><?php echo $menu['descrip']?></p>
-        </div>
-        <section class="item">
-            <div class="basic-item-details">
-                <h2 class="item-name"><?php echo $menu['cat']?><span class="blue-text"><?php
-                                                                                if($catID !== '11') {
-                                                                                    echo "<span> $</span>{$dollarPrice}";
-                                                                                }
-                                                                                ?></span></h2>
-                <p class="item-description"><?php echo $menu['descrip']?></p>
+                <?php
+                // var_dump($catID);
+                // die;
+                if($catID !== '11') {
+                    echo "<div><span>$</span>{$dollarPrice}</div>";
+                }
+                ?>
             </div>
+            <div class="overview-para"><?php echo $menu['descrip']?></div>
+        </div>
 
-<form class="customizations" action='<?php echo "{$site_url}/_includes/process-orders.php" ?>' method='POST'>
+        <div class="ingredients">
+            <h2 class="ingredients-headers">Image</h2>
+            <img src="<?php echo site_url(); ?><?php echo $menu['img'];?>" alt="">
+        </div>
+
+        <div class="ingredients">
+            <h2 class="ingredients-headers">ID</h2>
+            <div class="ingredient-bullet"><?php echo $menu['id']?></div>
+        </div>
+    </div>
+
+<form action='<?php echo "{$site_url}/_includes/process-orders.php" ?>' method='POST'>
     <?php
 
     //BREAKFAST SANDWICHES
@@ -115,7 +99,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id = 8) OR (id BETWEEN 12 AND 13)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options-required.php';
+            include_once '_components/protein-options.php';
         } 
 
         $query = "SELECT * FROM toppings WHERE (id BETWEEN 2 AND 6) OR (id BETWEEN 12 AND 13) OR (id BETWEEN 15 AND 17)";
@@ -130,7 +114,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id = 14) OR (id = 19)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options-required.php';
+            include_once '_components/protein-options.php';
         }
 
         $query = "SELECT * FROM toppings WHERE (id = 5) OR (id = 7) OR (id = 9) OR (id = 14)";
@@ -145,7 +129,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id BETWEEN 14 AND 15) OR (id = 19)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options-required.php';
+            include_once '_components/protein-options.php';
         }
 
         $query = "SELECT * FROM toppings WHERE (id = 5) OR (id BETWEEN 7 AND 9)";
@@ -160,7 +144,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id = 7) OR (id = 10) OR (id BETWEEN 20 AND 21)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options-required.php';
+            include_once '_components/protein-options.php';
         }
     }
 
@@ -169,7 +153,7 @@ include_once '_components/header.php';
         $query = "SELECT * FROM protein WHERE (id BETWEEN 3 AND 4) OR (id = 16) OR (id BETWEEN 23 AND 24)";
         $result = mysqli_query($db_connection, $query);
         if ($result->num_rows > 0) {
-            include_once '_components/protein-options-required.php';
+            include_once '_components/protein-options.php';
         }
 
         $query = "SELECT * FROM toppings WHERE (id BETWEEN 3 AND 4) OR (id = 5) OR (id = 7) OR (id BETWEEN 9 AND 14)";
@@ -217,25 +201,9 @@ include_once '_components/header.php';
     ?>
     <input type='hidden' name='userID' value='<?php echo "{$user['id']}"; ?>'/>
     <input type='hidden' name='catID' value='<?php echo "{$catID}"; ?>'/>
-
-    <div class="add-button tablet">
-        <button class="add-to-cart-tablet" type='submit'>
-            ADD TO CART
-        </button>
-</div>
-
-<div class="add-button mobile">
-        <button class="add-to-cart" type='submit'>
-            ADD TO CART
-        </button>
-</div>
-
-
-    <!-- <button type='submit'>Submit</button> -->
+    <button type='submit'>Submit</button>
 </form>
-</section>
-</div>
 
 <?php 
-include_once '_includes/mobile-footer.php'; 
+include_once '_components/footer.php'; 
 ?>
