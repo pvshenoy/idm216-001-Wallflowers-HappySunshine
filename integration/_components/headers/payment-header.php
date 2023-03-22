@@ -28,7 +28,7 @@
             <li class="menu-item-desktop">
                     <a href="<?php echo site_url()?>/index.php" class="desktop-link">
                         <svg viewbox="0 0 21.33 26.67" class="menu-icon">
-                            <defs><style>.menu-svg-tablet{fill:#FFFBF4;stroke:#90C5D3;stroke-width:.4px;}</style></defs>
+                            <defs><style>.menu-svg-tablet{fill:#361E10;stroke:#90C5D3;stroke-width:.4px;}</style></defs>
                             <path class="menu-svg-tablet" d="m7.47,12.13c-.21.21-.5.33-.8.33s-.59-.12-.8-.33c-.21-.21-.33-.5-.33-.8s.12-.59.33-.8c.21-.21.5-.33.8-.33s.59.12.8.33c.21.21.33.5.33.8s-.12.59-.33.8Zm2.07-.8c0-.3.12-.59.33-.8.21-.21.5-.33.8-.33h4c.3,0,.59.12.8.33.21.21.33.5.33.8s-.12.59-.33.8c-.21.21-.5.33-.8.33h-4c-.3,0-.59-.12-.8-.33-.21-.21-.33-.5-.33-.8Zm.33,3.2c.21-.21.5-.33.8-.33h4c.3,0,.59.12.8.33.21.21.33.5.33.8s-.12.59-.33.8c-.21.21-.5.33-.8.33h-4c-.3,0-.59-.12-.8-.33-.21-.21-.33-.5-.33-.8s.12-.59.33-.8Zm0,4c.21-.21.5-.33.8-.33h4c.3,0,.59.12.8.33s.33.5.33.8-.12.59-.33.8c-.21.21-.5.33-.8.33h-4c-.3,0-.59-.12-.8-.33-.21-.21-.33-.5-.33-.8s.12-.59.33-.8Zm-2.07-3.2c0,.3-.12.59-.33.8-.21.21-.5.33-.8.33s-.59-.12-.8-.33c-.21-.21-.33-.5-.33-.8s.12-.59.33-.8c.21-.21.5-.33.8-.33s.59.12.8.33c.21.21.33.5.33.8Zm-.33,4.8c-.21.21-.5.33-.8.33s-.59-.12-.8-.33c-.21-.21-.33-.5-.33-.8s.12-.59.33-.8c.21-.21.5-.33.8-.33s.59.12.8.33c.21.21.33.5.33.8s-.12.59-.33.8Z"/>
                             <path class="menu-svg-tablet" d="m5.33,1.53h.2v-.2c0-.3.12-.59.33-.8.21-.21.5-.33.8-.33h8c.3,0,.59.12.8.33.21.21.33.5.33.8v.2h2.87c.65,0,1.28.26,1.74.72.46.46.72,1.09.72,1.74v20c0,.65-.26,1.28-.72,1.74-.46.46-1.09.72-1.74.72H2.67c-.65,0-1.28-.26-1.74-.72-.46-.46-.72-1.09-.72-1.74V4c0-.65.26-1.28.72-1.74.46-.46,1.09-.72,1.74-.72h2.67Zm10.67,2.27h-.2v1.53c0,.3-.12.59-.33.8-.21.21-.5.33-.8.33H6.67c-.3,0-.59-.12-.8-.33-.21-.21-.33-.5-.33-.8v-1.53h-3.07v20.4h16.4V3.8h-2.87Zm-8.2.2v.2h5.73v-1.73h-5.73v1.53Z"/>
                         </svg>
@@ -67,7 +67,7 @@
         <a href="<?php echo site_url()?>/index.php" class="logo-link"><img src="dist/images/preeti-img/background-elements/happy-sunshine-desktop-logo.png" alt="" class="desktop-logo"></a>
         <ul class="desktop-menu">
             <li class="menu-item-desktop">
-                    <a href="<?php echo site_url()?>/index.php" class="desktop-link"><h3 class="desktop-menu-link-item white-text">MENU</h3></a>
+                    <a href="<?php echo site_url()?>/index.php" class="desktop-link"><h3 class="desktop-menu-link-item">MENU</h3></a>
             </li>
             <li class="menu-item-desktop">
                 <a href="<?php echo site_url()?>/rewards.php" class="desktop-link"><h3 class="desktop-menu-link-item">REWARDS</h3></a>
