@@ -78,7 +78,7 @@ $site_url = site_url();
                 $drinkNames = explode(',', $row['drinkNames']);
                 $drinkString = '';
                 foreach ($drinkPrices as $index => $drinkPrice) {
-                    $drinkString .= $drinkNames[$index] . ' ($' . $drinkPrice . '), ';
+                    $drinkString .= $drinkNames[$index] . ' ($' . number_format("{$drinkPrice}", 2) . '), ';
                 }
                 // Remove the trailing comma and space from the string
                 $drinkString = rtrim($drinkString, ', ');
