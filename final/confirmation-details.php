@@ -16,7 +16,7 @@ $order = get_recent_order_by_user_id($user['id']);
 <?php if ($order->num_rows > 0) { ?>
     <div class="top-nav-inner-page x-icon-order-confirmed">
     <a href="<?php echo site_url()?>/index.php" class="back-button">
-        <img src="dist/images/preeti-img/icons/x-icon.png" alt="" class="back-icon">
+        <img src="dist/images/preeti-img/icons/x-icon.png" alt="" class="back-icon new-x">
     </a>
 </div>
 <h1 class="page-title desktop">YOUR ORDER HAS BEEN CONFIRMED!</h1>
@@ -37,7 +37,7 @@ $order = get_recent_order_by_user_id($user['id']);
         <h3 class="date">FEBRUARY 21, 2023</h3>
         <h3 class="wait-time">Wait time: <span style="color:var(--accent-color-tangerine-dark);">15 minutes</span></h3>
         <img src="dist/images/preeti-img/background-elements/qr-code.png" alt="barcode" class="barcode">
-        <p class="order-number"> ORDER #1234</p>
+        <h3 class="order-number"> ORDER #1234</h3>
         <h3 class="barcode-details">SHOW THIS QR CODE AT THE TRUCK 
             TO PICK UP YOUR ORDER
         </h3>

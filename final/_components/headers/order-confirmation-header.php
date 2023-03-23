@@ -11,7 +11,7 @@
                     </svg>
                 </a>
             </div>
-            <h1 class="page-title">YOUR ORDER HAS BEEN CONFIRMED!</h1>
+            <h1 class="page-title">YOUR ORDER HAS<br>BEEN CONFIRMED!</h1>
     </header>
     <header class="flip-flop tablet-header">
         <a href="<?php echo site_url()?>/index.php" class="logo-link"><img src="dist/images/preeti-img/background-elements/happy-sunshine-desktop-logo.png" alt="" class="desktop-logo"></a>
