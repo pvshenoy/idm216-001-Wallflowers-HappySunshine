@@ -14,7 +14,7 @@ $order = get_order_by_user_id($user['id']);
 
 if ($order->num_rows > 0) {
     echo "
-    <h1 class='page-title desktop'>CART</h1>
+    <h1 class='page-title desktop top-margin'>CART</h1>
     <section class='cart'>
     <div class='wait-time-cart'>
         <img src='{$site_url}/dist/images/preeti-img/icons/time-icon.png' alt='' class='time-icon'>

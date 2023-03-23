@@ -29,6 +29,10 @@ main {
     margin: 0rem 1.25rem;
 }
 
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
 a {
     text-decoration: none;
 }
@@ -149,6 +153,8 @@ p {
 .no-margin {
     margin: 0rem;
 }
+
+
 
 .bottom-margin {
     margin-bottom: 8rem;
@@ -478,7 +484,7 @@ p {
     position: relative;
     background-color: var(--text-color-eggshell);
     height: fit-content;
-    margin: 30vh 0rem 12rem 0rem;
+    margin: 15vh 0rem 12rem 0rem;
     z-index: 3;
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem;
@@ -893,20 +899,25 @@ p {
 
 .cart-item-price {
     color: var(--text-color-mushroom);
-    margin: 0rem 1.5rem 0rem auto;
+    margin: 0rem 1rem 0rem auto;
     line-height: 1.5rem;
 }
 
 .cart-item-description {
     opacity: .7;
+    /* max-width: 60%; */
     margin: 0rem;
 }
 
 .cart-item-actions {
     display: flex;
+    align-self: flex-end;
     /* flex-direction: row-reverse;
     justify-content: flex-start; */
-    margin: .2rem .5rem 0rem 0rem;
+    /* position: absolute;
+    bottom: 0;
+    right: 0; */
+    margin: 3rem .5rem .5rem 0rem;
 }
 
 .test-cont {
@@ -1595,6 +1606,10 @@ a.desktop-link:active {
     display: none;
 }
 
+.details-desktop-nav {
+    display: none;
+}
+
 
 
 /* MEDIA QUERIES  */
@@ -1629,6 +1644,14 @@ a.desktop-link:active {
     .barcode-details-desktop {
         display: block;
         cursor: pointer;
+    }
+
+    .page-title {
+        margin-top: 0rem;
+    }
+
+    .top-margin {
+        margin-top: 2rem;
     }
 
     .barcode-details-desktop:hover {
@@ -1744,14 +1767,29 @@ a.desktop-link:active {
     }
 
     .past-orders {
-        margin: 0rem auto;
+        margin: 2rem auto;
         max-width: 36rem;
+    }
+
+    .reward-box {
+        margin: 2rem auto;
+        max-width: 36rem;
+        justify-content: center;
     }
 
     .order-history {
         text-align: center;
     }
 
+    .back-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .new-x {
+        width: 3rem;
+        height: 3rem;
+    }
 
 }
 
@@ -1828,6 +1866,7 @@ a.desktop-link:active {
     .desktop-cart-icon {
         margin-top: .375rem;
     }
+
 }
 
 @media only screen and (max-width: 800px) and (min-width: 680px) {
@@ -1848,6 +1887,10 @@ a.desktop-link:active {
 
     .tablet {
         display: block;
+    }
+
+    .details-desktop-nav {
+        display: flex;
     }
         /* centering everything */
 
@@ -1899,15 +1942,19 @@ a.desktop-link:active {
         }
     
         .item-name {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 20rem;
             text-align: left;
             padding-top: 0rem;
             margin-left: 2rem;
+            font-size: 2rem;
         }
     
         .item-description {
             text-align: left;
             margin-left: 2rem;
-            width: 15rem;
+            width: 20rem;
         }
     
         .item {
@@ -1925,7 +1972,7 @@ a.desktop-link:active {
         .item-image {
             display: flex;
             position: relative;
-            width: 15rem;
+            width: 20rem;
             border-radius: .5rem;
             margin: 2rem;
         }

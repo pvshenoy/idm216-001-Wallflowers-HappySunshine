@@ -13,6 +13,14 @@ $order = get_order_by_user_id($user['id']);
 ?>
 
 <?php if ($order->num_rows > 0) { ?>
+    <div class="top-nav-inner-page desktop">
+        <a href="<?php echo site_url()?>/cart.php" class="back-button">
+            <svg class="back-icon" viewbox="0 0 14.5 26.5">
+                <defs><style>.cls-1{fill:none;stroke:#361e10;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5px;}</style></defs>
+                <path class="cls-1" d="m13.25,1.25L1.25,13.25l12,12"/>
+            </svg>
+        </a>
+    </div>
     <h1 class='page-title desktop'>CHECKOUT</h1>
     <section class="payment-details">
         <div class="row-one">

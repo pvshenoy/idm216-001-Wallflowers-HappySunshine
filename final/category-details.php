@@ -29,7 +29,14 @@ include_once '_components/header.php';
 
 
 
-
+<div class="top-nav-inner-page details-desktop-nav">
+    <a href="<?php echo site_url()?>/index.php" class="back-button">
+        <svg class="back-icon" viewbox="0 0 14.5 26.5">
+            <defs><style>.cls-1{fill:none;stroke:#361e10;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5px;}</style></defs>
+            <path class="cls-1" d="m13.25,1.25L1.25,13.25l12,12"/>
+        </svg>
+    </a>
+</div>
 <div class="item-container row center">
         <div class="item-image-mobile">
             <img src="<?php echo site_url(); ?><?php echo $menu['img'];?>" alt="Cheesesteak" class="item-image">
@@ -57,7 +64,7 @@ include_once '_components/header.php';
         </div>
         <div class="item-image-desktop">
             <img src="<?php echo site_url(); ?><?php echo $menu['img'];?>" alt="Cheesesteak" class="item-image">
-            <h2 class="item-name"><?php echo $menu['cat']?><span class="blue-text"><?php
+            <h2 class="item-name"><?php echo $menu['cat']?><span class="blue-text"> <?php
                                                                                 if($catID !== '11') {
                                                                                     echo "<span> $</span>{$dollarPrice}";
                                                                                 }
